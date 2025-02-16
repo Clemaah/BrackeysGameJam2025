@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4210691777765190932, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ed89d478c79ccb34daab012397b0bdb6, type: 2}
     - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
       propertyPath: destroyOnDeath
       value: 1

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ProjectileRange
   m_EditorClassIdentifier: 
   description: projectile range (in m)
-  baseValue: 10
-  value: 10
+  baseValue: 16
+  value: 16

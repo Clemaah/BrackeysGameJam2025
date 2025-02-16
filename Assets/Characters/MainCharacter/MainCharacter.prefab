@@ -44,8 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 407d15ef166e30748bed75e592e5a1e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 4406779837786537268, guid: e357287bda59ad7478a5469cd5875e74, type: 3}
-  fireRate: 3
+  projectile: {fileID: 4918667775969441015, guid: 6fa241726b473c342aaf8ff7ee561843, type: 3}
+  fireRate:
+    type: 1
+    value: 0
+    stat: {fileID: 11400000, guid: 64000aec49016cb4789fb2f4efe8bd32, type: 2}
 --- !u!1001 &2932756867878724553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -98,6 +101,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 4210691777765190932, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c9f8d453878648e4da5efec78b185683, type: 2}
     m_RemovedComponents:
     - {fileID: 6155456830694979179, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
     m_RemovedGameObjects: []
@@ -132,5 +139,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba1f1ab19ad8b314d81a565fee4bfb31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {fileID: 11400000, guid: d7ad82eb2df6dcc46a8e2cc881440406, type: 2}
+  speed:
+    type: 1
+    value: 0
+    stat: {fileID: 11400000, guid: d7ad82eb2df6dcc46a8e2cc881440406, type: 2}
   projectileLauncher: {fileID: 8832291201348459258}

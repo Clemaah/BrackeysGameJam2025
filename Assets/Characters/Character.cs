@@ -5,7 +5,7 @@ public class Character : MonoBehaviour
 {
     protected CharacterController CharacterController;
     
-    public StatSO speed;
+    public FloatValue speed;
 
     private void Awake()
     {

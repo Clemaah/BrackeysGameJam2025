@@ -3,17 +3,17 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float speed;
-    public float distanceMax;
+    public FloatValue speed;
+    public FloatValue distanceMax;
 
     private void Start()
     {
-        Invoke(nameof(DestroyProjectile), distanceMax / speed);
+        Invoke(nameof(DestroyProjectile), distanceMax.Get() / speed.Get());
     }
 
     private void FixedUpdate()
     {
-        transform.Translate(0, 0, speed * Time.fixedDeltaTime);
+        transform.Translate(0, 0, speed.Get() * Time.fixedDeltaTime);
     }
 
     public void DestroyProjectile()

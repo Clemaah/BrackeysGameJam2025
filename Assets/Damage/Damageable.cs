@@ -5,9 +5,9 @@ using UnityEngine.Events;
 public class Damageable : MonoBehaviour
 {
 
-    public float health = 100f;
     [HideInInspector]
-    public float maxHealth = 100f;
+    public float health;
+    public FloatValue maxHealth;
     
     public bool destroyOnDeath = false;
     
@@ -16,7 +16,7 @@ public class Damageable : MonoBehaviour
 
     private void Awake()
     {
-        maxHealth = health;
+        health = maxHealth.Get();
     }
 
     public void TakeDamage(float damage)

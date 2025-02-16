@@ -37,7 +37,7 @@ public class HealthBat : MonoBehaviour
 
     private void UpdateBar()
     {
-        _materialPropertyBlock.SetFloat(NormalizedHealth, _damageable.health / _damageable.maxHealth);
+        _materialPropertyBlock.SetFloat(NormalizedHealth, _damageable.health / _damageable.maxHealth.Get());
         _meshRenderer.SetPropertyBlock(_materialPropertyBlock);
     }
 }

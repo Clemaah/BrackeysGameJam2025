@@ -4,7 +4,7 @@ using UnityEngine;
 public class Damager : MonoBehaviour
 {
     
-    public float damage;
+    public FloatValue damage;
     
     public bool destroyOnDamage = true;
 
@@ -12,7 +12,7 @@ public class Damager : MonoBehaviour
     {
         Damageable damageable = other.GetComponent<Damageable>();
         if (damageable == null) return;
-        damageable.TakeDamage(damage);
+        damageable.TakeDamage(damage.Get());
         if (destroyOnDamage) Destroy(gameObject);
     }
 }

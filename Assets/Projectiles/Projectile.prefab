@@ -47,8 +47,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6e1938bc2461364eab75122cfcb099d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  distanceMax: 16
+  speed:
+    type: 0
+    value: 4
+    stat: {fileID: 0}
+  distanceMax:
+    type: 0
+    value: 16
+    stat: {fileID: 0}
 --- !u!114 &5611565086670981495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,7 +67,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 921701cefd3bcbf489734e3d3bb94101, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage:
+    type: 0
+    value: 10
+    stat: {fileID: 0}
   destroyOnDamage: 1
 --- !u!135 &2048630887430250967
 SphereCollider:

@@ -48,7 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da2cd92be6f9fc9439d0a7f45eafba22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {fileID: 0}
+  speed:
+    type: 0
+    value: 4
+    stat: {fileID: 0}
 --- !u!143 &7179164541507884879
 CharacterController:
   m_ObjectHideFlags: 0
@@ -87,7 +90,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  maxHealth: 100
+  maxHealth:
+    type: 0
+    value: 100
+    stat: {fileID: 0}
   destroyOnDeath: 0
   onDamage:
     m_PersistentCalls:
