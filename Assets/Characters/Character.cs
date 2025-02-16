@@ -1,10 +1,16 @@
+using System;
 using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-
-    public StatSO speed;
+    protected CharacterController CharacterController;
     
+    public StatSO speed;
+
+    private void Awake()
+    {
+        CharacterController = GetComponent<CharacterController>();
+    }
 
     void Update()
     {
