@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 219faae0057d74a4f8d990ac7a45fa3f, type: 3}
   m_Name: DashDistance
   m_EditorClassIdentifier: 
-  description: Character's dash distance (s)
+  description: The distance the character travel during a dash (in m)
   baseValue: 2
   value: 0

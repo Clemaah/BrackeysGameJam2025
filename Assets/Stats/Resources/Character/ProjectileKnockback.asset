@@ -9,13 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cefc6bbff5bb3eb49bebbff89ea9d655, type: 3}
-  m_Name: Test
+  m_Script: {fileID: 11500000, guid: 219faae0057d74a4f8d990ac7a45fa3f, type: 3}
+  m_Name: ProjectileKnockback
   m_EditorClassIdentifier: 
-  Modifiers:
-  - statRef: {fileID: 0}
-    bonus: 0
-    multiplier: 0
-  - statRef: {fileID: 0}
-    bonus: 0
-    multiplier: 0
+  description: Projectile knockback
+  baseValue: 0.5
+  value: 0.5

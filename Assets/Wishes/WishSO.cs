@@ -16,6 +16,7 @@ public struct StatModifier {
 [CreateAssetMenu(fileName = "WishSO", menuName = "Scriptable Objects/Wish")]
 public class WishSO : ScriptableObject
 {
+    public string Name;
     public StatModifier[] Modifiers;
 
     void ApplyWish()

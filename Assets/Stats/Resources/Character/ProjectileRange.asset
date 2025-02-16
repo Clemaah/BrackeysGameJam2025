@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 219faae0057d74a4f8d990ac7a45fa3f, type: 3}
   m_Name: ProjectileRange
   m_EditorClassIdentifier: 
-  description: 
+  description: projectile range (in m)
   baseValue: 10
-  value: 0
+  value: 10

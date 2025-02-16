@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 219faae0057d74a4f8d990ac7a45fa3f, type: 3}
   m_Name: ProjectileCount
   m_EditorClassIdentifier: 
-  description: 
+  description: The number of projectiles shoot at the same time
   baseValue: 1
-  value: 0
+  value: 1

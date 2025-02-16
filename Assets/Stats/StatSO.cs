@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "StatSO", menuName = "Scriptable Objects/Stat")]
@@ -12,5 +13,10 @@ public class StatSO : ScriptableObject
     public void Reset()
     {
         value = baseValue;
+    }
+
+    private void OnValidate()
+    {
+        Reset();
     }
 }
