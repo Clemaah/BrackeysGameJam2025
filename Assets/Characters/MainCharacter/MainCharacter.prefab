@@ -1,5 +1,51 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8301432068079080026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1262872575802568592}
+  - component: {fileID: 8832291201348459258}
+  m_Layer: 0
+  m_Name: ProjectileLauncher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1262872575802568592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8301432068079080026}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.697}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3779942388884348271}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8832291201348459258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8301432068079080026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407d15ef166e30748bed75e592e5a1e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 4406779837786537268, guid: e357287bda59ad7478a5469cd5875e74, type: 3}
+  fireRate: 3
 --- !u!1001 &2932756867878724553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55,12 +101,20 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6155456830694979179, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2073401055711542950, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1262872575802568592}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2206425894980230158, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
       insertIndex: 1
       addedObject: {fileID: 6498571919807872337}
   m_SourcePrefab: {fileID: 100100000, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+--- !u!4 &3779942388884348271 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2073401055711542950, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+  m_PrefabInstance: {fileID: 2932756867878724553}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3904043068402876359 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2206425894980230158, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
@@ -79,3 +133,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: {fileID: 11400000, guid: d7ad82eb2df6dcc46a8e2cc881440406, type: 2}
+  projectileLauncher: {fileID: 8832291201348459258}
