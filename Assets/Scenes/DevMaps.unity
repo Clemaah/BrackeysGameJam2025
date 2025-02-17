@@ -429,8 +429,9 @@ MonoBehaviour:
     maxEntrances: 3
     maxNbRooms: 2
     probability: 0.5
-  pathLengthBounds: {x: 4, y: 6}
-  offset: {x: 36, y: 24}
+  player: {fileID: 6498571919807872337, guid: 24fbaac8ad69d74429dc9612e2d32221, type: 3}
+  pathLengthBounds: {x: 2, y: 3}
+  offset: {x: 56, y: 44}
 --- !u!4 &748754121
 Transform:
   m_ObjectHideFlags: 0
