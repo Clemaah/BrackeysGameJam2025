@@ -283,8 +283,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd4331a696a596d419cfc9dd489b0adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _wishText: {fileID: 1135881798930312969}
-  _genieCommentaryText: {fileID: 9067418392503398803}
+  wishText: {fileID: 1135881798930312969}
+  genieCommentaryText: {fileID: 9067418392503398803}
 --- !u!1 &6900206487672186372
 GameObject:
   m_ObjectHideFlags: 0

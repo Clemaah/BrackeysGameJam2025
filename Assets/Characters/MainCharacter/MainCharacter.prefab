@@ -175,13 +175,13 @@ MonoBehaviour:
   dashForce:
     type: 0
     value: 0.75
-    stat: {fileID: 0}
+    stat: {fileID: 11400000, guid: 10c34cde43012ad42abe142ef79c0dd7, type: 2}
   dashDuration:
     type: 0
     value: 0.125
-    stat: {fileID: 0}
+    stat: {fileID: 11400000, guid: 45794d9bd9611224f880093257fb27bd, type: 2}
   dashCooldown:
     type: 0
     value: 1
-    stat: {fileID: 0}
+    stat: {fileID: 11400000, guid: 9da5064c721199746845cf782cecd6c2, type: 2}
   projectileLauncher: {fileID: 8832291201348459258}

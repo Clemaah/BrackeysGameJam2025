@@ -8,7 +8,6 @@ public class WishesManager : MonoBehaviour
     private List<WishSO> _remainingWishes;
     private List<WishSO> _currentWishes;
 
-    
     public void Start()
     {
         _remainingWishes = new List<WishSO>(_allWishes);

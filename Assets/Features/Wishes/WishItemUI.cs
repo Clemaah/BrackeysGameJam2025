@@ -3,20 +3,21 @@ using UnityEngine;
 
 public class WishItemUI : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _wishText;
-    [SerializeField] private TextMeshProUGUI  _genieCommentaryText;
+    [SerializeField] private TextMeshProUGUI wishText;
+    [SerializeField] private TextMeshProUGUI  genieCommentaryText;
     private WishSO _wish;
     
     public void UpdateWish(WishSO newWish)
     {
+        gameObject.SetActive(true);
         _wish = newWish;
-        _wishText.text = _wish.name;
-        _genieCommentaryText.text = _wish.name;
+        wishText.text = _wish.name;
+        genieCommentaryText.text = _wish.name;
     }
 
     public void HideWish()
     {
-        _wish = null;
         gameObject.SetActive(false);
+        _wish = null;
     }
 }

@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 219faae0057d74a4f8d990ac7a45fa3f, type: 3}
-  m_Name: DashSpeed
+  m_Script: {fileID: 11500000, guid: cefc6bbff5bb3eb49bebbff89ea9d655, type: 3}
+  m_Name: SuperStrength
   m_EditorClassIdentifier: 
-  description: The movement speed when a dash is performed (in m)
-  baseValue: 10
-  value: 10
+  wish: 
+  genieCommentary: 
+  modifiers:
+  - statRef: {fileID: 11400000, guid: 64000aec49016cb4789fb2f4efe8bd32, type: 2}
+    bonus: 0
+    multiplier: 0

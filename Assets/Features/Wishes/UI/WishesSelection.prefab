@@ -59,8 +59,8 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_VertexColorAlwaysGammaSpace: 1
+  m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -117,9 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 835b3e9bda183aa42a5e310fcec6b21f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _UIManager: {fileID: 0}
-  _wishesManager: {fileID: 0}
-  _wishesItems:
+  wishesItems:
   - {fileID: 2731103926009475125}
   - {fileID: 8682118984214541136}
   - {fileID: 4371745191766488280}

@@ -29,15 +29,16 @@ public class LevelGenerator : MonoBehaviour
     }
 
     public Vector2Int size;
-    public int startPos = 0;
+    public int startPos;
     public Room[] rooms;
-    public MainCharacter player;
     public Vector2 pathLengthBounds;
     public Vector2 offset;
     List<Cell> board;
     int [,] graph;
     
-    void Start() {
+    void Start()
+    {
+        //GameManager.Instance.CurrentLevel;
         GenerateMaze();
     }
 
@@ -76,15 +77,14 @@ public class LevelGenerator : MonoBehaviour
     }
 
     bool IsNextToSpecialRoom(int cellNumber) {
-        for(int neighbor = 0; neighbor < graph.GetLength(0); neighbor++) {
-            if(graph[cellNumber, neighbor] == 1) {
-                Cell neighborCell = board[neighbor];
+        for(int neighbor = 0; neighbor < graph.GetLength(0); neighbor++)
+        {
+            if (graph[cellNumber, neighbor] != 1) continue;
+            
+            Cell neighborCell = board[neighbor];
 
-                // Check if the neighbor cell is a special room (i.e. an entrance room, an exit room, a heal room or a wish room) :
-                if(neighborCell.type > 0) {
-                    return true;
-                }
-            }
+            // Check if the neighbor cell is a special room (i.e. an entrance room, an exit room, a heal room or a wish room) :
+            if(neighborCell.type > 0) return true;
         }
 
         return false;
@@ -97,12 +97,12 @@ public class LevelGenerator : MonoBehaviour
         for(int i = 0; i < size.x; i++) {
             for(int j = 0; j < size.y; j++) {
                 Cell currentCell = board[i + j * size.x];
-                if(currentCell.visited) {
-                    int count = CountDoors(currentCell.status);
+                if (!currentCell.visited) continue;
+                
+                int count = CountDoors(currentCell.status);
 
-                    if(count == 1) {
-                        availableExitRooms.Add((i, j));
-                    }
+                if(count == 1) {
+                    availableExitRooms.Add((i, j));
                 }
             }
         }
@@ -126,11 +126,11 @@ public class LevelGenerator : MonoBehaviour
             for(int j = 0; j < size.y; j++) {
                 Cell currentCell = board[i + j * size.x];
 
-                if(currentCell.visited) {
-                    int shortestPath = GetShortestPathLength(exitCoordinates.x + exitCoordinates.y * size.x, i + j * size.x);
-                    if(shortestPath >= pathLengthBounds.x && shortestPath <= pathLengthBounds.y){
-                        availableEntranceRooms.Add((i, j));
-                    }
+                if (!currentCell.visited) continue;
+                
+                int shortestPath = GetShortestPathLength(exitCoordinates.x + exitCoordinates.y * size.x, i + j * size.x);
+                if(shortestPath >= pathLengthBounds.x && shortestPath <= pathLengthBounds.y){
+                    availableEntranceRooms.Add((i, j));
                 }
             }
         }
@@ -141,8 +141,9 @@ public class LevelGenerator : MonoBehaviour
         entranceCell.type = 1;
         entranceCell.coordinates = entranceCoordinates;
 
-        var newPlayer = Instantiate(player, new Vector3(entranceCoordinates.x * offset.x, 1, -entranceCoordinates.y * offset.y), Quaternion.identity);
-        Camera.main.transform.position = new Vector3(entranceCoordinates.x * offset.x, 20, -entranceCoordinates.y * offset.y - 15); 
+        Vector3 playerPosition = new Vector3(entranceCoordinates.x * offset.x, 1, -entranceCoordinates.y * offset.y);
+        Vector3 cameraPosition = new Vector3(entranceCoordinates.x * offset.x, 20, -entranceCoordinates.y * offset.y - 15);
+        MainCharacter.Instance.TeleportTo(playerPosition, cameraPosition);
 
         var entranceRoom = Instantiate(rooms[1].room, new Vector3(entranceCoordinates.x * offset.x, 0, -entranceCoordinates.y * offset.y), Quaternion.identity, transform).GetComponent<RoomBehaviour>();
         entranceRoom.name += " " + entranceCoordinates.x + "-" + entranceCoordinates.y;
@@ -197,7 +198,7 @@ public class LevelGenerator : MonoBehaviour
         }
     }
 
-    void GenerateMaze() {
+    public void GenerateMaze() {
         board = new List<Cell>();
 
         for(int i = 0; i < size.x; i++) {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    public CharacterController CharacterController;
+    protected CharacterController CharacterController;
     protected Animator Animator;
     
     public FloatValue speed;
@@ -17,7 +17,7 @@ public class Character : MonoBehaviour
     
     protected bool IsDashing;
 
-    private void Awake()
+    protected void Awake()
     {
         CharacterController = GetComponent<CharacterController>();
         Animator = GetComponentInChildren<Animator>();
@@ -38,8 +38,12 @@ public class Character : MonoBehaviour
         float frequency = 0.016f;
         for (float t = 0.0f; t < duration; t += frequency)
         {
-            float f = force * frequency / duration;
-            CharacterController.Move(direction * f);
+            if (!GameManager.Instance.Paused)
+            {
+                float f = force * frequency / duration;
+                CharacterController.Move(direction * f);
+            }
+            
             yield return new WaitForSeconds(frequency);
         }
         DashEnd();

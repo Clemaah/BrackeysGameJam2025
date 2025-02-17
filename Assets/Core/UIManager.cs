@@ -14,18 +14,18 @@ public struct MenuPair
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private MenuPair[] _menuList;
+    [SerializeField] private MenuPair[] menuList;
     
     private MenuType _activeUI = MenuType.None;
 
     
-    public void DisplayUI(MenuType UIToDisplay)
+    public void DisplayUI(MenuType menuToDisplay)
     {
         if (_activeUI != MenuType.None)
             HideUI();
         
-        Time.timeScale = 0f;
-        _activeUI = UIToDisplay;
+        GameManager.Instance.PauseGame(true);
+        _activeUI = menuToDisplay;
         GetActiveUI().SetActive(true);
     }
     
@@ -33,13 +33,12 @@ public class UIManager : MonoBehaviour
     {
         GetActiveUI().SetActive(false);
         _activeUI = MenuType.None;
-        //GameManager.PauseGame(false);
-        Time.timeScale = 1f;
+        GameManager.Instance.PauseGame(false);
     }
 
     private GameObject GetActiveUI()
     {
-        foreach (MenuPair menu in _menuList)
+        foreach (MenuPair menu in menuList)
         {
             if (menu.type != _activeUI) continue;
             
