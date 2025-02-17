@@ -12,9 +12,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        UIManager = gameObject.GetComponent<UIManager>();
-        WishesManager = gameObject.GetComponent<WishesManager>();
-        
         if (Instance == null)
         {
             Instance = this;
@@ -24,6 +21,12 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Start()
+    {
+        UIManager = gameObject.GetComponent<UIManager>();
+        WishesManager = gameObject.GetComponent<WishesManager>();
     }
 
     public void NextLevel()
