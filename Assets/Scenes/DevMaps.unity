@@ -542,31 +542,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948799ceaf606b14cbdaab24390f6cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: {x: 4, y: 4}
+  levelsConfigs:
+  - size: {x: 3, y: 3}
+    pathLengthBounds: {x: 3, y: 4}
+    rooms:
+    - room: {fileID: 5381774497645018182, guid: ee800d534ff39d3469620b19dcd5d8cd, type: 3}
+      maxEntrances: 4
+      maxNbRooms: -1
+      probability: 1
+    - room: {fileID: 5381774497645018182, guid: 0cc62c93823e1c94987ca793c35938df, type: 3}
+      maxEntrances: 4
+      maxNbRooms: 1
+      probability: 1
+    - room: {fileID: 5381774497645018182, guid: 8054b299204f87c4587181edf4cfa23e, type: 3}
+      maxEntrances: 1
+      maxNbRooms: 1
+      probability: 1
+    - room: {fileID: 5381774497645018182, guid: e1ce371a7d71fc8498186ce66f638d32, type: 3}
+      maxEntrances: 2
+      maxNbRooms: 1
+      probability: 0.5
+    - room: {fileID: 5381774497645018182, guid: 52857bb6a5a7b3a4cbe02d3d02e26261, type: 3}
+      maxEntrances: 2
+      maxNbRooms: 1
+      probability: 0.1
+  - size: {x: 4, y: 4}
+    pathLengthBounds: {x: 5, y: 6}
+    rooms:
+    - room: {fileID: 5381774497645018182, guid: ee800d534ff39d3469620b19dcd5d8cd, type: 3}
+      maxEntrances: 4
+      maxNbRooms: -1
+      probability: 1
+    - room: {fileID: 5381774497645018182, guid: 0cc62c93823e1c94987ca793c35938df, type: 3}
+      maxEntrances: 4
+      maxNbRooms: 1
+      probability: 1
+    - room: {fileID: 5381774497645018182, guid: 8054b299204f87c4587181edf4cfa23e, type: 3}
+      maxEntrances: 1
+      maxNbRooms: 1
+      probability: 1
+    - room: {fileID: 5381774497645018182, guid: e1ce371a7d71fc8498186ce66f638d32, type: 3}
+      maxEntrances: 2
+      maxNbRooms: 2
+      probability: 0.5
+    - room: {fileID: 5381774497645018182, guid: 52857bb6a5a7b3a4cbe02d3d02e26261, type: 3}
+      maxEntrances: 2
+      maxNbRooms: 1
+      probability: 0.25
+  - size: {x: 5, y: 5}
+    pathLengthBounds: {x: 7, y: 8}
+    rooms:
+    - room: {fileID: 5381774497645018182, guid: ee800d534ff39d3469620b19dcd5d8cd, type: 3}
+      maxEntrances: 4
+      maxNbRooms: -1
+      probability: 1
+    - room: {fileID: 5381774497645018182, guid: 0cc62c93823e1c94987ca793c35938df, type: 3}
+      maxEntrances: 4
+      maxNbRooms: 1
+      probability: 1
+    - room: {fileID: 5381774497645018182, guid: 8054b299204f87c4587181edf4cfa23e, type: 3}
+      maxEntrances: 1
+      maxNbRooms: 1
+      probability: 1
+    - room: {fileID: 5381774497645018182, guid: e1ce371a7d71fc8498186ce66f638d32, type: 3}
+      maxEntrances: 2
+      maxNbRooms: 2
+      probability: 0.5
+    - room: {fileID: 5381774497645018182, guid: 52857bb6a5a7b3a4cbe02d3d02e26261, type: 3}
+      maxEntrances: 2
+      maxNbRooms: 1
+      probability: 0.5
   startPos: 0
-  rooms:
-  - room: {fileID: 5381774497645018182, guid: ee800d534ff39d3469620b19dcd5d8cd, type: 3}
-    maxEntrances: 4
-    maxNbRooms: -1
-    probability: 1
-  - room: {fileID: 5381774497645018182, guid: 0cc62c93823e1c94987ca793c35938df, type: 3}
-    maxEntrances: 4
-    maxNbRooms: 1
-    probability: 1
-  - room: {fileID: 5381774497645018182, guid: 8054b299204f87c4587181edf4cfa23e, type: 3}
-    maxEntrances: 1
-    maxNbRooms: 1
-    probability: 1
-  - room: {fileID: 5381774497645018182, guid: e1ce371a7d71fc8498186ce66f638d32, type: 3}
-    maxEntrances: 3
-    maxNbRooms: 2
-    probability: 0.5
-  - room: {fileID: 5381774497645018182, guid: 52857bb6a5a7b3a4cbe02d3d02e26261, type: 3}
-    maxEntrances: 3
-    maxNbRooms: 2
-    probability: 0.5
-  pathLengthBounds: {x: 2, y: 3}
-  offset: {x: 56, y: 44}
+  offset: {x: 36, y: 24}
 --- !u!4 &777759369
 Transform:
   m_ObjectHideFlags: 0
