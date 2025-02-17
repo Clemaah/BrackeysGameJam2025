@@ -25,7 +25,7 @@ public class MainCharacter : Character
 
     void Update()
     {
-        if (GameManager.Instance.Paused) return;
+        if (GameManager.Instance && GameManager.Instance.Paused) return;
         
         Vector2 inputs = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         inputs = Quaternion.Euler(0, 0, -Camera.main.transform.rotation.eulerAngles.y) * inputs;
