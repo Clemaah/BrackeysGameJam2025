@@ -613,7 +613,7 @@ MonoBehaviour:
       maxNbRooms: 1
       probability: 0.5
   startPos: 0
-  offset: {x: 36, y: 24}
+  offset: {x: 56, y: 44}
 --- !u!4 &777759369
 Transform:
   m_ObjectHideFlags: 0
