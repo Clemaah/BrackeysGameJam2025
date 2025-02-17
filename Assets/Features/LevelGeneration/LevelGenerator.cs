@@ -149,7 +149,7 @@ public class LevelGenerator : MonoBehaviour
         entranceCell.coordinates = entranceCoordinates;
 
         Vector3 playerPosition = new Vector3(entranceCoordinates.x * offset.x, 1, -entranceCoordinates.y * offset.y);
-        Vector3 cameraPosition = new Vector3(entranceCoordinates.x * offset.x, 20, -entranceCoordinates.y * offset.y - 15);
+        Vector3 cameraPosition = new Vector3(entranceCoordinates.x * offset.x, 20, -entranceCoordinates.y * offset.y - 10);
         MainCharacter.Instance.TeleportTo(playerPosition, cameraPosition);
 
         var entranceRoom = Instantiate(currentLevelConfig.rooms[1].room, new Vector3(entranceCoordinates.x * offset.x, 0, -entranceCoordinates.y * offset.y), Quaternion.identity, transform).GetComponent<RoomBehaviour>();

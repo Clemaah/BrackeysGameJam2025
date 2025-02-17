@@ -11,26 +11,66 @@ public class RoomBehaviour : MonoBehaviour
 
     private void Start() {
         foreach (GameObject angleWall in angleWalls) {
-            int random = Random.Range(0, 3);
+            int random;
+            if (angleWall.name == "NorthWest" || angleWall.name == "NorthEast") {
+                random = Random.Range(0, 4);
 
-            if (random == 0) {
-                angleWall.transform.GetChild(0).gameObject.SetActive(true);
-                angleWall.transform.GetChild(1).gameObject.SetActive(false);
-                angleWall.transform.GetChild(2).gameObject.SetActive(false);
+                if (random == 0)
+                {
+                    angleWall.transform.GetChild(0).gameObject.SetActive(true);
+                    angleWall.transform.GetChild(1).gameObject.SetActive(false);
+                    angleWall.transform.GetChild(2).gameObject.SetActive(false);
+                    angleWall.transform.GetChild(3).gameObject.SetActive(false);
+                }
+
+                else if (random == 1)
+                {
+                    angleWall.transform.GetChild(0).gameObject.SetActive(false);
+                    angleWall.transform.GetChild(1).gameObject.SetActive(true);
+                    angleWall.transform.GetChild(2).gameObject.SetActive(false);
+                    angleWall.transform.GetChild(3).gameObject.SetActive(false);
+                }
+
+                else if (random == 2)
+                {
+                    angleWall.transform.GetChild(0).gameObject.SetActive(false);
+                    angleWall.transform.GetChild(1).gameObject.SetActive(true);
+                    angleWall.transform.GetChild(2).gameObject.SetActive(true);
+                    angleWall.transform.GetChild(3).gameObject.SetActive(false);
+                }
+
+                else if (random == 3)
+                {
+                    angleWall.transform.GetChild(0).gameObject.SetActive(false);
+                    angleWall.transform.GetChild(1).gameObject.SetActive(true);
+                    angleWall.transform.GetChild(2).gameObject.SetActive(false);
+                    angleWall.transform.GetChild(3).gameObject.SetActive(true);
+                }
             }
 
-            else if (random == 1)
-            {
-                angleWall.transform.GetChild(0).gameObject.SetActive(false);
-                angleWall.transform.GetChild(1).gameObject.SetActive(true);
-                angleWall.transform.GetChild(2).gameObject.SetActive(false);
-            }
+            else {
+                random = Random.Range(0, 3);
 
-            else if (random == 2)
-            {
-                angleWall.transform.GetChild(0).gameObject.SetActive(false);
-                angleWall.transform.GetChild(1).gameObject.SetActive(true);
-                angleWall.transform.GetChild(2).gameObject.SetActive(true);
+                if (random == 0)
+                {
+                    angleWall.transform.GetChild(0).gameObject.SetActive(true);
+                    angleWall.transform.GetChild(1).gameObject.SetActive(false);
+                    angleWall.transform.GetChild(2).gameObject.SetActive(false);
+                }
+
+                else if (random == 1)
+                {
+                    angleWall.transform.GetChild(0).gameObject.SetActive(false);
+                    angleWall.transform.GetChild(1).gameObject.SetActive(true);
+                    angleWall.transform.GetChild(2).gameObject.SetActive(false);
+                }
+
+                else if (random == 2)
+                {
+                    angleWall.transform.GetChild(0).gameObject.SetActive(false);
+                    angleWall.transform.GetChild(1).gameObject.SetActive(true);
+                    angleWall.transform.GetChild(2).gameObject.SetActive(true);
+                }
             }
         }
     }
