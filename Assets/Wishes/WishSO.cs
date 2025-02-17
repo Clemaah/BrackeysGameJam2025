@@ -16,12 +16,15 @@ public struct StatModifier {
 [CreateAssetMenu(fileName = "WishSO", menuName = "Scriptable Objects/Wish")]
 public class WishSO : ScriptableObject
 {
-    public string Name;
-    public StatModifier[] Modifiers;
+    [TextArea]
+    public string wish;
+    [TextArea]
+    public string genieCommentary;
+    public StatModifier[] modifiers;
 
-    void ApplyWish()
+    public void Apply()
     {
-        foreach (var modifier in Modifiers)
+        foreach (var modifier in modifiers)
         {
             modifier.statRef.value = (modifier.statRef.value + modifier.bonus) * modifier.multiplier;
         }

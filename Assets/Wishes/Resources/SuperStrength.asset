@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SuperStrength
   m_EditorClassIdentifier: 
   Name: 
+  Wish: I wish i was super strong
   Modifiers:
   - statRef: {fileID: 11400000, guid: 9a3767f9cdb56624996aa5638f771464, type: 2}
     bonus: 5

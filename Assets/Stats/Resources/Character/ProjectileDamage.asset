@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ProjectileDamage
   m_EditorClassIdentifier: 
   description: Projectile damage
-  baseValue: 3
-  value: 3
+  baseValue: 15
+  value: 15
