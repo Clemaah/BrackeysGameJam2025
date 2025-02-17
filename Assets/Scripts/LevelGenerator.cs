@@ -31,6 +31,7 @@ public class LevelGenerator : MonoBehaviour
     public Vector2Int size;
     public int startPos = 0;
     public Room[] rooms;
+    public MainCharacter player;
     public Vector2 pathLengthBounds;
     public Vector2 offset;
     List<Cell> board;
@@ -140,11 +141,16 @@ public class LevelGenerator : MonoBehaviour
         entranceCell.type = 1;
         entranceCell.coordinates = entranceCoordinates;
 
+        var newPlayer = Instantiate(player, new Vector3(entranceCoordinates.x * offset.x, 1, -entranceCoordinates.y * offset.y), Quaternion.identity);
+        Camera.main.transform.position = new Vector3(entranceCoordinates.x * offset.x, 20, -entranceCoordinates.y * offset.y - 15); 
+
         var entranceRoom = Instantiate(rooms[1].room, new Vector3(entranceCoordinates.x * offset.x, 0, -entranceCoordinates.y * offset.y), Quaternion.identity, transform).GetComponent<RoomBehaviour>();
         entranceRoom.name += " " + entranceCoordinates.x + "-" + entranceCoordinates.y;
         entranceRoom.UpdateRoom(entranceCell.status);
 
         rooms[1].maxNbRooms--;
+
+
 
 
         // Generate other rooms :
