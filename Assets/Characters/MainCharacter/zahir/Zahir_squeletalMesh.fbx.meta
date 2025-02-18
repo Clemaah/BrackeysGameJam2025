@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d174d587b028d8c4196f36fb32deb096
+guid: 794886b518074cf4083c1aa995b319b2
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,13 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_Snake_eyes
-    second: {fileID: 2100000, guid: 6edc225718fd5dd4883c71867589a54d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_snake_body
-    second: {fileID: 2100000, guid: 7e6f18d5febdeca4d91891dcef089e52, type: 2}
+      name: M_Zahir
+    second: {fileID: -876546973899608171, guid: c4fb131205cb56f4188c9fee1df93105, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -39,65 +34,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Snake_Armature|Snake_Crawl
-      takeName: Snake_Armature|Snake_Crawl
-      internalID: -29588075007978878
-      firstFrame: 0
-      lastFrame: 87
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Snake_Armature|Snake_Shoot
-      takeName: Snake_Armature|Snake_Shoot
-      internalID: -3142228239584594409
-      firstFrame: 0
-      lastFrame: 71
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 0
   meshes:
     lODScreenPercentages: []
