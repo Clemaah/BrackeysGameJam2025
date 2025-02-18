@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 219faae0057d74a4f8d990ac7a45fa3f, type: 3}
   m_Name: CharacterRegen
   m_EditorClassIdentifier: 
-  description: Character's Regen
+  description: Character regen
   baseValue: 0
   value: 0
