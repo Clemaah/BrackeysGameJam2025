@@ -21,6 +21,7 @@ public class MainCharacter : Character
         {
             Destroy(gameObject);
         }
+        
     }
 
     void Update()
@@ -41,7 +42,6 @@ public class MainCharacter : Character
 
         if (IsDashing) return;
 
-        characterController.transform.localScale = new Vector3(scale.Get(), scale.Get(), scale.Get());
         characterController.Move(inputs.X0Y().normalized * (speed.Get() * Time.deltaTime));
 
         if (Input.GetMouseButton(0))

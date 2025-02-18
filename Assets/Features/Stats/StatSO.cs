@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "StatSO", menuName = "Scriptable Objects/Stat")]
 public class StatSO : ScriptableObject
@@ -7,6 +8,7 @@ public class StatSO : ScriptableObject
     [TextArea]
     public string description;
     
+    public event Action OnValueChanged;
     public float baseValue;
     public float value;
 
@@ -18,6 +20,12 @@ public class StatSO : ScriptableObject
     private void OnValidate()
     {
         Reset();
+    }
+
+    public void ChangeValue(float bonus, float multiplier)
+    {
+        value = (value + bonus) * multiplier;
+        OnValueChanged?.Invoke();
     }
 }
 

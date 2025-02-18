@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: distanceMax.type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5292647831762556461, guid: e357287bda59ad7478a5469cd5875e74, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.375
+      objectReference: {fileID: 0}
     - target: {fileID: 5373382495602469487, guid: e357287bda59ad7478a5469cd5875e74, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

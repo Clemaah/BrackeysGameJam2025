@@ -26,7 +26,7 @@ public class WishSO : ScriptableObject
     {
         foreach (var modifier in modifiers)
         {
-            modifier.statRef.value = (modifier.statRef.value + modifier.bonus) * modifier.multiplier;
+            modifier.statRef.ChangeValue(modifier.bonus, modifier.multiplier);
         }
     }
 }

@@ -148,7 +148,7 @@ public class LevelGenerator : MonoBehaviour
         entranceCell.type = 1;
         entranceCell.coordinates = entranceCoordinates;
 
-        Vector3 playerPosition = new Vector3(entranceCoordinates.x * offset.x, 1, -entranceCoordinates.y * offset.y);
+        Vector3 playerPosition = new Vector3(entranceCoordinates.x * offset.x, 0.5f, -entranceCoordinates.y * offset.y);
         Vector3 cameraPosition = new Vector3(entranceCoordinates.x * offset.x, 20, -entranceCoordinates.y * offset.y - 10);
         MainCharacter.Instance.TeleportTo(playerPosition, cameraPosition);
 

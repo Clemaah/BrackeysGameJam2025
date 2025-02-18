@@ -914,21 +914,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1838867871180918977, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2568326509913580587, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: cb4f62613ef63e0448dc2e8ceededf97, type: 2}
+    - target: {fileID: 3408622534029679705, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4052972136235883723, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: m_Name
       value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 4208599833675267683, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4208599833675267683, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4208599833675267683, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: m_LocalPosition.z
