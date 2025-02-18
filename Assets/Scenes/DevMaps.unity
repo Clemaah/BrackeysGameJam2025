@@ -730,6 +730,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
+      propertyPath: _allWishes.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
+      propertyPath: '_allWishes.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 3b23766e16c719649b0da29fef723626, type: 2}
+    - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
+      propertyPath: '_allWishes.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 8506bde2866be964ebc69ff589ba6e2e, type: 2}
     - target: {fileID: 7233516460837193556, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
       propertyPath: prefabMenuList.Array.size
       value: 1
