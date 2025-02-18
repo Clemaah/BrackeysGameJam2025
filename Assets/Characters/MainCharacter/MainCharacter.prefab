@@ -171,6 +171,10 @@ MonoBehaviour:
     type: 1
     value: 0
     stat: {fileID: 11400000, guid: d7ad82eb2df6dcc46a8e2cc881440406, type: 2}
+  scale:
+    type: 1
+    value: 0
+    stat: {fileID: 11400000, guid: 804fbbf81087acb41879905f8cdd03f2, type: 2}
   dashDelay: 0.0625
   dashForce:
     type: 0

@@ -41,6 +41,7 @@ public class MainCharacter : Character
 
         if (IsDashing) return;
 
+        CharacterController.transform.localScale = new Vector3(scale.Get(), scale.Get(), scale.Get());
         CharacterController.Move(inputs.X0Y().normalized * (speed.Get() * Time.deltaTime));
 
         if (Input.GetMouseButton(0))

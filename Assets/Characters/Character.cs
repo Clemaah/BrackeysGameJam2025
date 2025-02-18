@@ -6,8 +6,9 @@ public class Character : MonoBehaviour
 {
     protected CharacterController CharacterController;
     protected Animator Animator;
-    
+
     public FloatValue speed;
+    public FloatValue scale;
 
     public float dashDelay;
     public FloatValue dashForce;
