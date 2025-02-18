@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cefc6bbff5bb3eb49bebbff89ea9d655, type: 3}
-  m_Name: SuperSize
+  m_Name: MiniSize
   m_EditorClassIdentifier: 
   wish: 
   genieCommentary: 
   modifiers:
   - statRef: {fileID: 11400000, guid: 804fbbf81087acb41879905f8cdd03f2, type: 2}
     bonus: 0
-    multiplier: 2
+    multiplier: 0.5
   - statRef: {fileID: 11400000, guid: d7ad82eb2df6dcc46a8e2cc881440406, type: 2}
     bonus: 0
-    multiplier: 0.5
+    multiplier: 2
   - statRef: {fileID: 11400000, guid: 69669869756308c4ca00de70f8f14f9e, type: 2}
     bonus: 0
-    multiplier: 2
+    multiplier: 0.5

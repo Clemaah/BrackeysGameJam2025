@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 [RequireComponent(typeof(MeshRenderer))]
-public class HealthBat : MonoBehaviour
+public class HealthBar : MonoBehaviour
 {
     private static readonly int NormalizedHealth = Shader.PropertyToID("_NormalizedHealth");
     
@@ -27,6 +27,7 @@ public class HealthBat : MonoBehaviour
 
     private void OnDestroy()
     {
+        if (_damageable == null) return;
         _damageable.onDamage.RemoveListener(UpdateBar);
     }
 

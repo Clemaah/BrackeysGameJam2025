@@ -17,11 +17,23 @@ PrefabInstance:
       value: ProjectileMainCharacter
       objectReference: {fileID: 0}
     - target: {fileID: 4406779837786537268, guid: e357287bda59ad7478a5469cd5875e74, type: 3}
+      propertyPath: scale.stat
+      value: 
+      objectReference: {fileID: 11400000, guid: 69669869756308c4ca00de70f8f14f9e, type: 2}
+    - target: {fileID: 4406779837786537268, guid: e357287bda59ad7478a5469cd5875e74, type: 3}
+      propertyPath: scale.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4406779837786537268, guid: e357287bda59ad7478a5469cd5875e74, type: 3}
       propertyPath: speed.stat
       value: 
       objectReference: {fileID: 11400000, guid: 95c3e8ffaa24dc247a295eaa4e204280, type: 2}
     - target: {fileID: 4406779837786537268, guid: e357287bda59ad7478a5469cd5875e74, type: 3}
       propertyPath: speed.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4406779837786537268, guid: e357287bda59ad7478a5469cd5875e74, type: 3}
+      propertyPath: scale.value
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4406779837786537268, guid: e357287bda59ad7478a5469cd5875e74, type: 3}
