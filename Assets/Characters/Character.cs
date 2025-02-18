@@ -1,10 +1,11 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Character : MonoBehaviour
 {
-    protected CharacterController CharacterController;
+    [HideInInspector] public CharacterController characterController;
     protected Animator Animator;
 
     public FloatValue speed;
@@ -20,7 +21,7 @@ public class Character : MonoBehaviour
 
     protected void Awake()
     {
-        CharacterController = GetComponent<CharacterController>();
+        characterController = GetComponent<CharacterController>();
         Animator = GetComponentInChildren<Animator>();
     }
 
@@ -42,7 +43,7 @@ public class Character : MonoBehaviour
             if (!GameManager.Instance || !GameManager.Instance.Paused)
             {
                 float f = force * frequency / duration;
-                CharacterController.Move(direction * f);
+                characterController.Move(direction * f);
             }
             
             yield return new WaitForSeconds(frequency);

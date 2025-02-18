@@ -82,11 +82,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006ff16377fb1884382e1dbd38d20b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 0}
   speed:
     type: 0
     value: 4
     stat: {fileID: 0}
-  dashDelay: 0
+  dashDelay: 0.5
   dashForce:
     type: 0
     value: 12

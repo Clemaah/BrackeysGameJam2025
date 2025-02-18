@@ -18,12 +18,13 @@ public class Bat : Enemy
         }
             
         transform.forward = relativeTargetPosition;
-        CharacterController.Move(relativeTargetPosition.normalized * (math.remap(8.0f, 12.0f, -0.125f, 1.0f, relativeTargetPosition.magnitude) * speed.Get() * Time.deltaTime));
+        characterController.Move(relativeTargetPosition.normalized * (math.remap(8.0f, 12.0f, -0.125f, 1.0f, relativeTargetPosition.magnitude) * speed.Get() * Time.deltaTime));
     }
 
     protected override void DashStart()
     {
         base.DashStart();
+        //Tween.To(0.375f, 0.0f, 0.25f, f => transform.forward = target.transform.position + target.characterController.velocity * f - transform.position);
         Animator.SetBool("Attack", true);
     }
 

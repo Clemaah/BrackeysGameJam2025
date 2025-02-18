@@ -12661,9 +12661,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002af0970d83ecd46a5775cf8170fe69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 0}
   speed:
     type: 0
-    value: 2
+    value: 1
     stat: {fileID: 0}
   dashDelay: 0
   dashForce:
@@ -12680,3 +12681,4 @@ MonoBehaviour:
     stat: {fileID: 0}
   target: {fileID: 0}
   detectionRadius: 24
+  meteor: {fileID: 67379153135357420, guid: 57df9154723d11f488957019268fd94b, type: 3}

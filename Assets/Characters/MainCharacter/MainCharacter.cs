@@ -32,7 +32,7 @@ public class MainCharacter : Character
 
         if (inputs.magnitude > 0.1f 
             && (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.LeftShift)) 
-            && TryDash(CharacterController.velocity.X0Z())) 
+            && TryDash(characterController.velocity.X0Z())) 
             return;
         
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -41,8 +41,8 @@ public class MainCharacter : Character
 
         if (IsDashing) return;
 
-        CharacterController.transform.localScale = new Vector3(scale.Get(), scale.Get(), scale.Get());
-        CharacterController.Move(inputs.X0Y().normalized * (speed.Get() * Time.deltaTime));
+        characterController.transform.localScale = new Vector3(scale.Get(), scale.Get(), scale.Get());
+        characterController.Move(inputs.X0Y().normalized * (speed.Get() * Time.deltaTime));
 
         if (Input.GetMouseButton(0))
         {
@@ -52,9 +52,9 @@ public class MainCharacter : Character
 
     public void TeleportTo(Vector3 playerPosition, Vector3 cameraPosition)
     {
-        CharacterController.enabled = false;
+        characterController.enabled = false;
         transform.position = playerPosition;
         Camera.main.transform.position = cameraPosition;
-        CharacterController.enabled = true;
+        characterController.enabled = true;
     }
 }
