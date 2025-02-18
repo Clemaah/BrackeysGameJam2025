@@ -31,7 +31,7 @@ public class MainCharacter : Character
         inputs = Quaternion.Euler(0, 0, -Camera.main.transform.rotation.eulerAngles.y) * inputs;
 
         if (inputs.magnitude > 0.1f 
-            && (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.LeftShift)) 
+            && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift)) 
             && TryDash(characterController.velocity.X0Z())) 
             return;
         
