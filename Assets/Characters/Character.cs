@@ -25,6 +25,11 @@ public class Character : MonoBehaviour
         Animator = GetComponentInChildren<Animator>();
     }
 
+    private void Start()
+    {
+        scale.stat.OnValueChanged += ()=> { transform.localScale = Vector3.one * scale.Get(); };
+    }
+
     public bool TryDash(Vector3 direction)
     {
         if (Time.time < _nextDash) return false;

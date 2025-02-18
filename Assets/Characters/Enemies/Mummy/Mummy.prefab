@@ -12572,7 +12572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3408622534029679705, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4052972136235883723, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: m_Name
@@ -12617,6 +12617,10 @@ PrefabInstance:
     - target: {fileID: 4208599833675267683, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4972048873079445386, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
+      propertyPath: m_Radius
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8096709403176930831, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: maxHealth.value
@@ -12665,6 +12669,10 @@ MonoBehaviour:
   speed:
     type: 0
     value: 1
+    stat: {fileID: 0}
+  scale:
+    type: 0
+    value: 0
     stat: {fileID: 0}
   dashDelay: 0
   dashForce:

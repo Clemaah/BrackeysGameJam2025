@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ProjectileRadius
   m_EditorClassIdentifier: 
   description: Projectile size (in m)
-  baseValue: 0.1
-  value: 0.1
+  baseValue: 1
+  value: 1

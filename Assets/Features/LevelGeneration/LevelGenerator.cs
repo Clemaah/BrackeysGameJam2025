@@ -39,7 +39,9 @@ public class LevelGenerator : MonoBehaviour
     public LevelConfig[] levelsConfigs;
     public int startPos;
     public Vector2 offset;
-    
+    public Vector3 cameraPosition;
+    public Quaternion cameraRotation;
+
     LevelConfig currentLevelConfig;
     List<Cell> board;
     int [,] graph;
@@ -148,9 +150,10 @@ public class LevelGenerator : MonoBehaviour
         entranceCell.type = 1;
         entranceCell.coordinates = entranceCoordinates;
 
-        Vector3 playerPosition = new Vector3(entranceCoordinates.x * offset.x, 1, -entranceCoordinates.y * offset.y);
-        Vector3 cameraPosition = new Vector3(entranceCoordinates.x * offset.x, 20, -entranceCoordinates.y * offset.y - 10);
+        Vector3 playerPosition = new Vector3(entranceCoordinates.x * offset.x, 0.5f, -entranceCoordinates.y * offset.y);
+        cameraPosition += new Vector3(entranceCoordinates.x * offset.x, 0, -entranceCoordinates.y * offset.y - 10);
         MainCharacter.Instance.TeleportTo(playerPosition, cameraPosition);
+        Camera.main.transform.rotation = cameraRotation;
 
         var entranceRoom = Instantiate(currentLevelConfig.rooms[1].room, new Vector3(entranceCoordinates.x * offset.x, 0, -entranceCoordinates.y * offset.y), Quaternion.identity, transform).GetComponent<RoomBehaviour>();
         entranceRoom.name += " " + entranceCoordinates.x + "-" + entranceCoordinates.y;

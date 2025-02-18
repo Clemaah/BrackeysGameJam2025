@@ -21,6 +21,7 @@ public class MainCharacter : Character
         {
             Destroy(gameObject);
         }
+        
     }
 
     void Update()
@@ -31,17 +32,16 @@ public class MainCharacter : Character
         inputs = Quaternion.Euler(0, 0, -Camera.main.transform.rotation.eulerAngles.y) * inputs;
 
         if (inputs.magnitude > 0.1f 
-            && (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.LeftShift)) 
+            && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift)) 
             && TryDash(characterController.velocity.X0Z())) 
             return;
         
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Vector3 intersection = ray.origin + ray.direction * Mathf.Abs(ray.origin.y / ray.direction.y);
+        Vector3 intersection = ray.origin + ray.direction * Mathf.Abs((ray.origin.y - transform.position.y) / ray.direction.y);
         transform.forward = (intersection - transform.position).X0Z();
 
         if (IsDashing) return;
 
-        characterController.transform.localScale = new Vector3(scale.Get(), scale.Get(), scale.Get());
         characterController.Move(inputs.X0Y().normalized * (speed.Get() * Time.deltaTime));
 
         if (Input.GetMouseButton(0))
