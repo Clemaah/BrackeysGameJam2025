@@ -143,6 +143,10 @@ PrefabInstance:
       propertyPath: maxHealth.value
       value: 32
       objectReference: {fileID: 0}
+    - target: {fileID: 7179164541507884879, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      propertyPath: m_Radius
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 7653229620170483480, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
       propertyPath: m_Name
       value: Mesh
