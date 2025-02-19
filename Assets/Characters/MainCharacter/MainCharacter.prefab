@@ -991,4 +991,8 @@ MonoBehaviour:
     type: 1
     value: 1
     stat: {fileID: 11400000, guid: 9da5064c721199746845cf782cecd6c2, type: 2}
+  speedMultiplierWhileShooting:
+    type: 1
+    value: 0.8
+    stat: {fileID: 11400000, guid: 3a1c7c891c3ee754eb237d6585a2fb47, type: 2}
   projectileLauncher: {fileID: 8832291201348459258}
