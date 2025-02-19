@@ -614,6 +614,8 @@ MonoBehaviour:
       probability: 0.5
   startPos: 0
   offset: {x: 56, y: 44}
+  cameraPosition: {x: 0, y: 20, z: 0}
+  cameraRotation: {x: 0.53729963, y: 0, z: 0, w: 0.8433914}
 --- !u!4 &777759369
 Transform:
   m_ObjectHideFlags: 0
