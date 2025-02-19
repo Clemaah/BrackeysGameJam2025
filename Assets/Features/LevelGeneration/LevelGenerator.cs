@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
+using static LevelGenerator;
 
 public class LevelGenerator : MonoBehaviour
 {
@@ -12,8 +14,10 @@ public class LevelGenerator : MonoBehaviour
     }
 
     [System.Serializable]
-    public class Room {
+    public class Room
+    {
         public GameObject room;
+        public int maxDifficulty;
         public int maxEntrances;
         public int maxNbRooms;
         public float probability;
@@ -28,26 +32,32 @@ public class LevelGenerator : MonoBehaviour
         }
     }
 
-
     [System.Serializable]
-    public class LevelConfig {
-        public Vector2Int size;
-        public Vector2Int pathLengthBounds;
+    public class LevelConfig
+    {
+        public Vector2Int mapSize;
+        public Vector2Int pathLength;
         public Room[] rooms;
     }
 
-    public LevelConfig[] levelsConfigs;
-    public int startPos;
-    public Vector2 offset;
+        // In inspector :
+    // Camera settings :
     public Vector3 cameraPosition;
     public Quaternion cameraRotation;
 
+    // Level settings :
+    public LevelConfig[] levelsConfigs;
+
+
+        // Not in inspector :
     LevelConfig currentLevelConfig;
     List<Cell> board;
     int [,] graph;
+    Vector2 roomOffset;
     
     void Start() {
         currentLevelConfig = levelsConfigs[(int)GameManager.Instance.CurrentLevel - 1];
+        roomOffset = new Vector2(56, 44);
         GenerateMaze();
     }
 
@@ -103,9 +113,9 @@ public class LevelGenerator : MonoBehaviour
         // Generate exit room :
         List<(int x, int y)> availableExitRooms = new List<(int x, int y)>();
 
-        for(int i = 0; i < currentLevelConfig.size.x; i++) {
-            for(int j = 0; j < currentLevelConfig.size.y; j++) {
-                Cell currentCell = board[i + j * currentLevelConfig.size.x];
+        for(int i = 0; i < currentLevelConfig.mapSize.x; i++) {
+            for(int j = 0; j < currentLevelConfig.mapSize.y; j++) {
+                Cell currentCell = board[i + j * currentLevelConfig.mapSize.x];
                 if (!currentCell.visited) continue;
                 
                 int count = CountDoors(currentCell.status);
@@ -118,27 +128,27 @@ public class LevelGenerator : MonoBehaviour
 
         (int x, int y) exitCoordinates = availableExitRooms[Random.Range(0, availableExitRooms.Count)];
         
-        Cell exitCell = board[exitCoordinates.x + exitCoordinates.y * currentLevelConfig.size.x];
+        Cell exitCell = board[exitCoordinates.x + exitCoordinates.y * currentLevelConfig.mapSize.x];
         exitCell.type = 2;
         exitCell.coordinates = exitCoordinates;
 
-        var exitRoom = Instantiate(currentLevelConfig.rooms[2].room, new Vector3(exitCoordinates.x * offset.x, 0, -exitCoordinates.y * offset.y), Quaternion.identity, transform).GetComponent<RoomBehaviour>();
+        var exitRoom = Instantiate(currentLevelConfig.rooms[2].room, new Vector3(exitCoordinates.x * roomOffset.x, 0, -exitCoordinates.y * roomOffset.y), Quaternion.identity, transform).GetComponent<RoomBehaviour>();
         exitRoom.name += " " + exitCoordinates.x + "-" + exitCoordinates.y;
-        exitRoom.UpdateRoom(exitCell.status);
+        exitRoom.BuildRoom(exitCell.status, 0);
 
         currentLevelConfig.rooms[2].maxNbRooms--;
 
         // Generate entrance room :
         List<(int x, int y)> availableEntranceRooms = new List<(int x, int y)>();
         
-        for(int i = 0; i < currentLevelConfig.size.x; i++) {
-            for(int j = 0; j < currentLevelConfig.size.y; j++) {
-                Cell currentCell = board[i + j * currentLevelConfig.size.x];
+        for(int i = 0; i < currentLevelConfig.mapSize.x; i++) {
+            for(int j = 0; j < currentLevelConfig.mapSize.y; j++) {
+                Cell currentCell = board[i + j * currentLevelConfig.mapSize.x];
 
                 if (!currentCell.visited) continue;
                 
-                int shortestPath = GetShortestPathLength(exitCoordinates.x + exitCoordinates.y * currentLevelConfig.size.x, i + j * currentLevelConfig.size.x);
-                if(shortestPath >= currentLevelConfig.pathLengthBounds.x && shortestPath <= currentLevelConfig.pathLengthBounds.y){
+                int shortestPath = GetShortestPathLength(exitCoordinates.x + exitCoordinates.y * currentLevelConfig.mapSize.x, i + j * currentLevelConfig.mapSize.x);
+                if(shortestPath >= currentLevelConfig.pathLength.x && shortestPath <= currentLevelConfig.pathLength.y){
                     availableEntranceRooms.Add((i, j));
                 }
             }
@@ -146,18 +156,18 @@ public class LevelGenerator : MonoBehaviour
 
         (int x, int y) entranceCoordinates = availableEntranceRooms[Random.Range(0, availableEntranceRooms.Count)];
         
-        Cell entranceCell = board[entranceCoordinates.x + entranceCoordinates.y * currentLevelConfig.size.x];
+        Cell entranceCell = board[entranceCoordinates.x + entranceCoordinates.y * currentLevelConfig.mapSize.x];
         entranceCell.type = 1;
         entranceCell.coordinates = entranceCoordinates;
 
-        Vector3 playerPosition = new Vector3(entranceCoordinates.x * offset.x, 0.5f, -entranceCoordinates.y * offset.y);
-        cameraPosition += new Vector3(entranceCoordinates.x * offset.x, 0, -entranceCoordinates.y * offset.y - 10);
+        Vector3 playerPosition = new Vector3(entranceCoordinates.x * roomOffset.x, 0.5f, -entranceCoordinates.y * roomOffset.y);
+        cameraPosition += new Vector3(entranceCoordinates.x * roomOffset.x, 0, -entranceCoordinates.y * roomOffset.y - 10);
         MainCharacter.Instance.TeleportTo(playerPosition, cameraPosition);
         Camera.main.transform.rotation = cameraRotation;
 
-        var entranceRoom = Instantiate(currentLevelConfig.rooms[1].room, new Vector3(entranceCoordinates.x * offset.x, 0, -entranceCoordinates.y * offset.y), Quaternion.identity, transform).GetComponent<RoomBehaviour>();
+        var entranceRoom = Instantiate(currentLevelConfig.rooms[1].room, new Vector3(entranceCoordinates.x * roomOffset.x, 0, -entranceCoordinates.y * roomOffset.y), Quaternion.identity, transform).GetComponent<RoomBehaviour>();
         entranceRoom.name += " " + entranceCoordinates.x + "-" + entranceCoordinates.y;
-        entranceRoom.UpdateRoom(entranceCell.status);
+        entranceRoom.BuildRoom(entranceCell.status, 0);
 
         currentLevelConfig.rooms[1].maxNbRooms--;
 
@@ -165,12 +175,12 @@ public class LevelGenerator : MonoBehaviour
 
 
         // Generate other rooms :
-        for(int i = 0; i < currentLevelConfig.size.x; i++) {
-            for(int j = 0; j < currentLevelConfig.size.y; j++) {
-                int cellNumber = i + j * currentLevelConfig.size.x;
+        for(int i = 0; i < currentLevelConfig.mapSize.x; i++) {
+            for(int j = 0; j < currentLevelConfig.mapSize.y; j++) {
+                int cellNumber = i + j * currentLevelConfig.mapSize.x;
                 Cell currentCell = board[cellNumber];
 
-                if(currentCell.visited && cellNumber != (entranceCoordinates.x + entranceCoordinates.y * currentLevelConfig.size.x) && cellNumber != (exitCoordinates.x + exitCoordinates.y * currentLevelConfig.size.x)) {
+                if(currentCell.visited && cellNumber != (entranceCoordinates.x + entranceCoordinates.y * currentLevelConfig.mapSize.x) && cellNumber != (exitCoordinates.x + exitCoordinates.y * currentLevelConfig.mapSize.x)) {
                     int randomRoom = -1;
                     List<int> availableRooms = new List<int>();
 
@@ -197,9 +207,9 @@ public class LevelGenerator : MonoBehaviour
                         currentLevelConfig.rooms[randomRoom].maxNbRooms--;
                     }
 
-                    var newRoom = Instantiate(currentLevelConfig.rooms[randomRoom].room, new Vector3(i * offset.x, 0, -j * offset.y), Quaternion.identity, transform).GetComponent<RoomBehaviour>();
+                    var newRoom = Instantiate(currentLevelConfig.rooms[randomRoom].room, new Vector3(i * roomOffset.x, 0, -j * roomOffset.y), Quaternion.identity, transform).GetComponent<RoomBehaviour>();
                     newRoom.name += " " + i + "-" + j;
-                    newRoom.UpdateRoom(currentCell.status);
+                    newRoom.BuildRoom(currentCell.status, currentLevelConfig.rooms[randomRoom].maxDifficulty);
 
                     currentCell.type = randomRoom;
                     currentCell.coordinates = (i, j);
@@ -211,8 +221,8 @@ public class LevelGenerator : MonoBehaviour
     public void GenerateMaze() {
         board = new List<Cell>();
 
-        for(int i = 0; i < currentLevelConfig.size.x; i++) {
-            for(int j = 0; j < currentLevelConfig.size.y; j++) {
+        for(int i = 0; i < currentLevelConfig.mapSize.x; i++) {
+            for(int j = 0; j < currentLevelConfig.mapSize.y; j++) {
                 board.Add(new Cell());
             }
         }
@@ -225,7 +235,7 @@ public class LevelGenerator : MonoBehaviour
             }
         }
 
-        int currentCell = startPos;
+        int currentCell = 0;
         Stack<int> path = new Stack<int> ();
         int k = 0;
 
@@ -295,22 +305,22 @@ public class LevelGenerator : MonoBehaviour
         List<int> neighbors = new List<int>();
 
         // Check north neighbor :
-        if(cell - currentLevelConfig.size.x >= 0 && !board[cell - currentLevelConfig.size.x].visited) {
-            neighbors.Add(cell - currentLevelConfig.size.x);
+        if(cell - currentLevelConfig.mapSize.x >= 0 && !board[cell - currentLevelConfig.mapSize.x].visited) {
+            neighbors.Add(cell - currentLevelConfig.mapSize.x);
         }
 
         // Check south neighbor :
-        if(cell + currentLevelConfig.size.x < board.Count && !board[cell + currentLevelConfig.size.x].visited) {
-            neighbors.Add(cell + currentLevelConfig.size.x);
+        if(cell + currentLevelConfig.mapSize.x < board.Count && !board[cell + currentLevelConfig.mapSize.x].visited) {
+            neighbors.Add(cell + currentLevelConfig.mapSize.x);
         }
 
         // Check west neighbor :
-        if((cell + 1) % currentLevelConfig.size.x != 0 && !board[cell + 1].visited) {
+        if((cell + 1) % currentLevelConfig.mapSize.x != 0 && !board[cell + 1].visited) {
             neighbors.Add(cell + 1);
         }
 
         // Check east neighbor :
-        if(cell % currentLevelConfig.size.x != 0 && !board[cell - 1].visited) {
+        if(cell % currentLevelConfig.mapSize.x != 0 && !board[cell - 1].visited) {
             neighbors.Add(cell - 1);
         }
 
