@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: CharacterSpeed
   m_EditorClassIdentifier: 
   description: Character walking speed (m/s)
-  baseValue: 6
-  value: 6
+  baseValue: 10
+  value: 10

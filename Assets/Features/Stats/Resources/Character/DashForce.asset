@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: DashForce
   m_EditorClassIdentifier: 
   description: The force of a dash
-  baseValue: 0.75
-  value: 0.75
+  baseValue: 0.6
+  value: 0.6

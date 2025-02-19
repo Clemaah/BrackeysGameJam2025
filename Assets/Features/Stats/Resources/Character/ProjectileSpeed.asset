@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ProjectileSpeed
   m_EditorClassIdentifier: 
   description: Projectile speed (in m/s)
-  baseValue: 10
-  value: 10
+  baseValue: 30
+  value: 30
