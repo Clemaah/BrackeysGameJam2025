@@ -55,6 +55,10 @@ MonoBehaviour:
     type: 0
     value: 16
     stat: {fileID: 0}
+  scale:
+    type: 0
+    value: 1
+    stat: {fileID: 0}
 --- !u!114 &5611565086670981495
 MonoBehaviour:
   m_ObjectHideFlags: 0

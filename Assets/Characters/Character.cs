@@ -27,7 +27,7 @@ public class Character : MonoBehaviour
 
     private void Start()
     {
-        scale.stat.OnValueChanged += ()=> { transform.localScale = Vector3.one * scale.Get(); };
+        scale.stat.OnValueChanged += () => StartCoroutine(Tween.To(0.5f, transform.localScale, Vector3.one * scale.Get(), v => transform.localScale = v, easeType: Tween.EaseType.EaseOutBack));
     }
 
     public bool TryDash(Vector3 direction)
