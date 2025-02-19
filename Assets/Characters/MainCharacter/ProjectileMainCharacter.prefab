@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 2048630887430250967, guid: e357287bda59ad7478a5469cd5875e74, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2427739790168192369, guid: e357287bda59ad7478a5469cd5875e74, type: 3}
       propertyPath: m_Name
       value: ProjectileMainCharacter
