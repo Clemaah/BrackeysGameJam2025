@@ -31,9 +31,11 @@ public class Mummy : Enemy
 
     private IEnumerator SpawnMeteor()
     {
-        yield return new WaitForSeconds(0.625f);
-        GameObject go = Instantiate(meteor, target.transform.position + target.characterController.velocity * 0.125f + Vector3.up * 4.0f, Quaternion.LookRotation(Vector3.down));
-        yield return new WaitForSeconds(0.125f);
+        yield return new WaitForSeconds(0.5f);
+        GameObject go = Instantiate(meteor, target.transform.position + target.characterController.velocity * 0.25f + Vector3.up * 4.0f, Quaternion.LookRotation(Vector3.down));
+        yield return Tween.To(0.25f, Vector3.zero, Vector3.one,
+            v => go.transform.localScale = v,
+            easeType: Tween.EaseType.EaseOutCubic);
         yield return Tween.To(0.5f, go.transform.position, go.transform.position + Vector3.down * 5.0f,
             t => go.transform.position = t,
             easeType: Tween.EaseType.EaseInCubic);

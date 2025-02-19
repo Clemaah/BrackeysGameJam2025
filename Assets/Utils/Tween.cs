@@ -12,8 +12,10 @@ public static class Tween
         Linear,
         EaseInCubic,
         EaseOutCubic,
+        EaseOutBack
     }
 
+    // https://easings.net/
     public static float Ease(float t, EaseType easeType)
     {
         return easeType switch
@@ -21,6 +23,7 @@ public static class Tween
             EaseType.Linear => t,
             EaseType.EaseInCubic => t * t * t,
             EaseType.EaseOutCubic => 1 - (1 - t) * (1 - t) * (1 - t),
+            EaseType.EaseOutBack => 1.0f + (1.70158f + 1.0f) * Mathf.Pow(t - 1.0f, 3.0f) + 1.70158f * Mathf.Pow(t - 1.0f, 2.0f),
             _ => t
         };
     }
@@ -36,23 +39,23 @@ public static class Tween
         // Dispatch to the correct implementation for T.
         if (typeof(T) == typeof(float))
         {
-            oc = Mathf.Lerp((float)oa, (float)ob, t);
+            oc = Mathf.LerpUnclamped((float)oa, (float)ob, t);
         }
         else if (typeof(T) == typeof(Vector2))
         {
-            oc = Vector2.Lerp((Vector2)oa, (Vector2)ob, t);
+            oc = Vector2.LerpUnclamped((Vector2)oa, (Vector2)ob, t);
         }
         else if (typeof(T) == typeof(Vector3))
         {
-            oc = Vector3.Lerp((Vector3)oa, (Vector3)ob, t);
+            oc = Vector3.LerpUnclamped((Vector3)oa, (Vector3)ob, t);
         }
         else if (typeof(T) == typeof(Vector4))
         {
-            oc = Vector4.Lerp((Vector4)oa, (Vector4)ob, t);
+            oc = Vector4.LerpUnclamped((Vector4)oa, (Vector4)ob, t);
         }
         else if (typeof(T) == typeof(Quaternion))
         {
-            oc = Quaternion.Lerp((Quaternion)oa, (Quaternion)ob, t);
+            oc = Quaternion.LerpUnclamped((Quaternion)oa, (Quaternion)ob, t);
         }
 
         // Unbox the result.
