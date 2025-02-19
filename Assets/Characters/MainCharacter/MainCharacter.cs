@@ -37,7 +37,7 @@ public class MainCharacter : Character
             return;
         
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Vector3 intersection = ray.origin + ray.direction * Mathf.Abs((ray.origin.y - transform.position.y) / ray.direction.y);
+        Vector3 intersection = ray.origin + ray.direction * Mathf.Abs((ray.origin.y - projectileLauncher.transform.position.y) / ray.direction.y);
         transform.forward = (intersection - transform.position).X0Z();
 
         if (IsDashing) return;

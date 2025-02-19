@@ -628,6 +628,14 @@ MonoBehaviour:
     type: 1
     value: 0
     stat: {fileID: 11400000, guid: 64000aec49016cb4789fb2f4efe8bd32, type: 2}
+  accuracy:
+    type: 1
+    value: 30
+    stat: {fileID: 11400000, guid: 90a3d38c32ef82c4b97d7152fe4dcce8, type: 2}
+  projectileCount:
+    type: 1
+    value: 3
+    stat: {fileID: 11400000, guid: 89f604a130dbb714ba6b4fa1b94a05cc, type: 2}
 --- !u!1 &8327095017631512685
 GameObject:
   m_ObjectHideFlags: 0
