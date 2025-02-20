@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.Events;
+using static UnityEngine.GraphicsBuffer;
 
 public class Damageable : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class Damageable : MonoBehaviour
     public UnityEvent<float> onHealthChanged;
     public UnityEvent onDeath;
 
+    [SerializeField] public ParticleSystem _damageParticles;
+
+    private ParticleSystem _damageParticlesInstance;
     private float _nextHealthChange;
 
     private void Awake()
@@ -28,17 +32,21 @@ public class Damageable : MonoBehaviour
         if (Time.time >= _nextHealthChange)
         {
             _nextHealthChange = Time.time + 1.0f;
-            TakeDamage(-healthChange.Get());
+            Quaternion nullQuaternion = new Quaternion();
+            TakeDamage(-healthChange.Get(), false, nullQuaternion);
         }
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage, bool spawnParticles, Quaternion direction)
     {
         float preDamageHealth = health;
         health -= damage;
         health = Mathf.Clamp(health, 0.0f, maxHealth.Get());
         float damageTaken = preDamageHealth - health;
         if (Mathf.Abs(damageTaken) < 0.001f) return;
+
+        if (spawnParticles) SpawnDamageParticles(direction);
+
         onHealthChanged.Invoke(-damageTaken);
         if (health <= 0)
         {
@@ -48,5 +56,9 @@ public class Damageable : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+    }
+
+    private void SpawnDamageParticles(Quaternion direction) {
+        _damageParticlesInstance = Instantiate(_damageParticles, transform.position - transform.forward, direction);
     }
 }

@@ -910,6 +910,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      propertyPath: _damageParticles
+      value: 
+      objectReference: {fileID: 6909222436772635727, guid: 6e9113f7049b4d342acbcef711dde298, type: 3}
+    - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
       propertyPath: healthChange.stat
       value: 
       objectReference: {fileID: 11400000, guid: 1a6dd3d7097f9014bb308cdbd8e1d0ea, type: 2}

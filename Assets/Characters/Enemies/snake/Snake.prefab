@@ -412,6 +412,10 @@ MonoBehaviour:
     type: 0
     value: 1
     stat: {fileID: 0}
+  recoil:
+    type: 0
+    value: 0
+    stat: {fileID: 0}
 --- !u!1 &6821499943734336317
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,6 +709,10 @@ PrefabInstance:
       propertyPath: maxHealth.value
       value: 48
       objectReference: {fileID: 0}
+    - target: {fileID: 8096709403176930831, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
+      propertyPath: _damageParticles
+      value: 
+      objectReference: {fileID: 6909222436772635727, guid: 6e9113f7049b4d342acbcef711dde298, type: 3}
     m_RemovedComponents:
     - {fileID: 2470128689710398569, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
     m_RemovedGameObjects:
