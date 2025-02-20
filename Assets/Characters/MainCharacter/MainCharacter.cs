@@ -6,8 +6,12 @@ using UnityEngine;
 public class MainCharacter : Character
 {
     public static MainCharacter Instance { get; private set; }
+
+    public FloatValue speedMultiplierWhileShooting;
     
     public ProjectileLauncher projectileLauncher;
+
+    private bool _isShooting;
     
     protected new void Awake()
     {
@@ -37,14 +41,16 @@ public class MainCharacter : Character
             return;
         
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Vector3 intersection = ray.origin + ray.direction * Mathf.Abs((ray.origin.y - transform.position.y) / ray.direction.y);
+        Vector3 intersection = ray.origin + ray.direction * Mathf.Abs((ray.origin.y - projectileLauncher.transform.position.y) / ray.direction.y);
         transform.forward = (intersection - transform.position).X0Z();
 
         if (IsDashing) return;
 
-        characterController.Move(inputs.X0Y().normalized * (speed.Get() * Time.deltaTime));
+        _isShooting = Input.GetMouseButton(0);
 
-        if (Input.GetMouseButton(0))
+        characterController.Move(inputs.X0Y().normalized * ((_isShooting ? speedMultiplierWhileShooting.Get() : 1.0f) * speed.Get() * Time.deltaTime));
+        
+        if (_isShooting)
         {
             projectileLauncher.TryFire();
         }

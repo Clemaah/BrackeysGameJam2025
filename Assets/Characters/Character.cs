@@ -65,4 +65,10 @@ public class Character : MonoBehaviour
     {
         IsDashing = false;
     }
+
+    public void Push(Vector3 direction, float force)
+    {
+        StartCoroutine(Tween.To(Mathf.Log(force * 0.0625f + 1.0f), direction, Vector3.zero, 
+            v => characterController.Move(v * (force * Time.deltaTime)), easeType: Tween.EaseType.EaseOutCubic));
+    }
 }

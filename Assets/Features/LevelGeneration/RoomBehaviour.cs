@@ -128,20 +128,23 @@ public class RoomBehaviour : MonoBehaviour
                 }
             }
 
-            int difficulty = Random.Range(0, maxDifficulty + 1);
-            int nbEmptySpaces = CountEmptySpaces(map);
-            int nbEnemies = 0;
-            if (difficulty > 0) nbEnemies = (int)Mathf.Floor(nbEmptySpaces / 3) * difficulty;
+            if (maxDifficulty > 0) {
+                int difficulty = Random.Range(1, maxDifficulty + 1);
+                int nbEmptySpaces = CountEmptySpaces(map);
+                int nbEnemies = Mathf.Max(Mathf.Min(maxDifficulty, nbEmptySpaces), (int)Mathf.Floor(nbEmptySpaces / 3) * difficulty);
+                
+                List<int> enemiesPositions = new List<int>();
+                while (nbEnemies > 0)
+                {
+                    int randomPosition = Random.Range(0, 9);
 
-            List<int> enemiesPositions = new List<int>();
-            while (nbEnemies > 0) {
-                int randomPosition = Random.Range(0, 9);
-
-                if (!map[randomPosition] && !enemiesPositions.Contains(randomPosition)) {
-                    int randomEnemy = Random.Range(0, 3);
-                    mapEnemies[randomPosition].transform.GetChild(randomEnemy).gameObject.SetActive(true);
-                    enemiesPositions.Add(randomPosition);
-                    nbEnemies--;
+                    if (!map[randomPosition] && !enemiesPositions.Contains(randomPosition))
+                    {
+                        int randomEnemy = Random.Range(0, 3);
+                        mapEnemies[randomPosition].transform.GetChild(randomEnemy).gameObject.SetActive(true);
+                        enemiesPositions.Add(randomPosition);
+                        nbEnemies--;
+                    }
                 }
             }
         }

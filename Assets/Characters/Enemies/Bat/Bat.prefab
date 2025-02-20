@@ -914,6 +914,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 122118283520026524, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
+      propertyPath: knockBackType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 122118283520026524, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
+      propertyPath: knockback.value
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1838867871180918977, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0

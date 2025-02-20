@@ -18,7 +18,7 @@ public class HealthBar : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        _damageable.onDamage.AddListener(UpdateBar);
+        _damageable.onHealthChanged.AddListener(_ => UpdateBar());
         _meshRenderer = GetComponent<MeshRenderer>();
         _materialPropertyBlock = new MaterialPropertyBlock();
         
@@ -28,7 +28,7 @@ public class HealthBar : MonoBehaviour
     private void OnDestroy()
     {
         if (_damageable == null) return;
-        _damageable.onDamage.RemoveListener(UpdateBar);
+        _damageable.onHealthChanged.RemoveListener(_ => UpdateBar());
     }
 
     private void Update()

@@ -628,6 +628,18 @@ MonoBehaviour:
     type: 1
     value: 0
     stat: {fileID: 11400000, guid: 64000aec49016cb4789fb2f4efe8bd32, type: 2}
+  accuracy:
+    type: 1
+    value: 30
+    stat: {fileID: 11400000, guid: 90a3d38c32ef82c4b97d7152fe4dcce8, type: 2}
+  projectileCount:
+    type: 1
+    value: 3
+    stat: {fileID: 11400000, guid: 89f604a130dbb714ba6b4fa1b94a05cc, type: 2}
+  recoil:
+    type: 1
+    value: 0
+    stat: {fileID: 11400000, guid: 9a3767f9cdb56624996aa5638f771464, type: 2}
 --- !u!1 &8327095017631512685
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,6 +909,14 @@ PrefabInstance:
       propertyPath: maxHealth.type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      propertyPath: healthChange.stat
+      value: 
+      objectReference: {fileID: 11400000, guid: 1a6dd3d7097f9014bb308cdbd8e1d0ea, type: 2}
+    - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      propertyPath: healthChange.type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7179164541507884879, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
       propertyPath: m_Center.y
       value: 1
@@ -983,4 +1003,8 @@ MonoBehaviour:
     type: 1
     value: 1
     stat: {fileID: 11400000, guid: 9da5064c721199746845cf782cecd6c2, type: 2}
+  speedMultiplierWhileShooting:
+    type: 1
+    value: 0.8
+    stat: {fileID: 11400000, guid: 3a1c7c891c3ee754eb237d6585a2fb47, type: 2}
   projectileLauncher: {fileID: 8832291201348459258}

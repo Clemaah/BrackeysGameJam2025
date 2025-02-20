@@ -542,8 +542,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948799ceaf606b14cbdaab24390f6cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraPosition: {x: 0, y: 20, z: 0}
-  cameraRotation: {x: 0.53729963, y: 0, z: 0, w: 0.8433914}
+  cameraPosition: {x: 0, y: 18, z: 5}
+  cameraRotation: {x: 0.6087614, y: 0, z: 0, w: 0.7933533}
   levelsConfigs:
   - mapSize: {x: 3, y: 3}
     pathLength: {x: 2, y: 4}
@@ -629,6 +629,7 @@ MonoBehaviour:
       maxEntrances: 2
       maxNbRooms: 1
       probability: 0.5
+  bossRoom: {fileID: 5381774497645018182, guid: c8ea8e135dcf5c745a230d6814a47f9f, type: 3}
 --- !u!4 &777759369
 Transform:
   m_ObjectHideFlags: 0
