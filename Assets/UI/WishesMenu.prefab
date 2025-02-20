@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 728419490545364458}
   - component: {fileID: 6954960378387186277}
   - component: {fileID: 2886023235788409857}
+  - component: {fileID: 2373827475180617525}
   m_Layer: 5
-  m_Name: WishesSelection
+  m_Name: WishesMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,6 +122,18 @@ MonoBehaviour:
   - {fileID: 2731103926009475125}
   - {fileID: 8682118984214541136}
   - {fileID: 4371745191766488280}
+--- !u!114 &2373827475180617525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966946394515163904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34d5556058ca61d43864136aecd4a79b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &38723275011645834
 PrefabInstance:
   m_ObjectHideFlags: 0

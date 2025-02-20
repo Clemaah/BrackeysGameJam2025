@@ -7,7 +7,7 @@ public class WishTrigger : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
         
-        GameManager.UIManager.DisplayUI(MenuType.WishesSelection);
+        GameManager.UIManager.OpenMenu(MenuType.WishesSelection);
         Destroy(gameObject);
     }
 }

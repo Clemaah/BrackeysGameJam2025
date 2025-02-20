@@ -107,6 +107,10 @@ PrefabInstance:
       value: ProjectileSnake
       objectReference: {fileID: 0}
     - target: {fileID: 4406779837786537268, guid: e357287bda59ad7478a5469cd5875e74, type: 3}
+      propertyPath: bulletTrail
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4406779837786537268, guid: e357287bda59ad7478a5469cd5875e74, type: 3}
       propertyPath: speed.value
       value: 16
       objectReference: {fileID: 0}
@@ -229,6 +233,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3208010434895040766, guid: e357287bda59ad7478a5469cd5875e74, type: 3}
+    - {fileID: 3550521530189166068, guid: e357287bda59ad7478a5469cd5875e74, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5373382495602469487, guid: e357287bda59ad7478a5469cd5875e74, type: 3}
       insertIndex: -1

@@ -70,6 +70,11 @@ MonoBehaviour:
     type: 0
     value: 3
     stat: {fileID: 0}
+  knockback:
+    type: 0
+    value: 0
+    stat: {fileID: 0}
+  knockBackType: 0
   destroyOnDamage: 0
 --- !u!1001 &2783717178797473989
 PrefabInstance:
@@ -144,8 +149,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      propertyPath: maxHealth.stat
+      value: 
+      objectReference: {fileID: 11400000, guid: cb9074d414f4bc043878badbf02005c4, type: 2}
+    - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      propertyPath: maxHealth.type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
       propertyPath: maxHealth.value
       value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      propertyPath: healthChange.type
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7179164541507884879, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
       propertyPath: m_Radius
@@ -202,13 +219,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterController: {fileID: 0}
   speed:
-    type: 0
+    type: 2
     value: 4
-    stat: {fileID: 0}
+    stat: {fileID: 11400000, guid: ed5a694135ee831489b37660030ea845, type: 2}
   scale:
-    type: 0
+    type: 2
     value: 0
-    stat: {fileID: 0}
+    stat: {fileID: 11400000, guid: 3a92301d0363d844f9d2aad4bfdf3132, type: 2}
   dashDelay: 0.375
   dashForce:
     type: 0

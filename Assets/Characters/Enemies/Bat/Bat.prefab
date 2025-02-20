@@ -978,6 +978,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8096709403176930831, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
+      propertyPath: _damageParticles
+      value: 
+      objectReference: {fileID: 6909222436772635727, guid: 6e9113f7049b4d342acbcef711dde298, type: 3}
     m_RemovedComponents:
     - {fileID: 2470128689710398569, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
     m_RemovedGameObjects: []
@@ -1017,25 +1021,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterController: {fileID: 0}
   speed:
-    type: 0
+    type: 2
     value: 4
-    stat: {fileID: 0}
+    stat: {fileID: 11400000, guid: ed5a694135ee831489b37660030ea845, type: 2}
   scale:
-    type: 0
-    value: 0
-    stat: {fileID: 0}
+    type: 2
+    value: 1
+    stat: {fileID: 11400000, guid: 3a92301d0363d844f9d2aad4bfdf3132, type: 2}
   dashDelay: 0.5
   dashForce:
-    type: 0
+    type: 1
     value: 12
-    stat: {fileID: 0}
+    stat: {fileID: 11400000, guid: 59cfad40ef7cbcc41a473c54d9cd8d3a, type: 2}
   dashDuration:
-    type: 0
+    type: 1
     value: 0.5
-    stat: {fileID: 0}
+    stat: {fileID: 11400000, guid: edba2d20b25a19a4cb5b0f2f27bc3d8e, type: 2}
   dashCooldown:
-    type: 0
+    type: 1
     value: 4
-    stat: {fileID: 0}
+    stat: {fileID: 11400000, guid: 10ff08b5c1a43f74a8f7a26b85ea29c7, type: 2}
   target: {fileID: 0}
   detectionRadius: 16

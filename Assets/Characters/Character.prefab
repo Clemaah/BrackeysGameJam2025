@@ -164,16 +164,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   maxHealth:
-    type: 0
+    type: 1
     value: 100
+    stat: {fileID: 11400000, guid: 90b49b8f0588d9b44aa79e068791cb0a, type: 2}
+  healthChange:
+    type: 0
+    value: 0
     stat: {fileID: 0}
   destroyOnDeath: 0
-  onDamage:
+  onHealthChanged:
     m_PersistentCalls:
       m_Calls: []
   onDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  damageParticles: {fileID: 6909222436772635727, guid: 6e9113f7049b4d342acbcef711dde298, type: 3}
 --- !u!1 &4551623400493663217
 GameObject:
   m_ObjectHideFlags: 0
