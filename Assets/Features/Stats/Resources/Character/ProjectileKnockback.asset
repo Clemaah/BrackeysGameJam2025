@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ProjectileKnockback
   m_EditorClassIdentifier: 
   description: Projectile knockback
-  baseValue: 0.5
-  value: 0.5
+  baseValue: 2
+  value: 2

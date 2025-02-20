@@ -404,6 +404,14 @@ MonoBehaviour:
     type: 0
     value: 1
     stat: {fileID: 0}
+  accuracy:
+    type: 0
+    value: 5
+    stat: {fileID: 0}
+  projectileCount:
+    type: 0
+    value: 1
+    stat: {fileID: 0}
 --- !u!1 &6821499943734336317
 GameObject:
   m_ObjectHideFlags: 0
