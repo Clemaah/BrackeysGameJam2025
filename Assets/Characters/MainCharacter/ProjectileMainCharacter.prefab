@@ -104,6 +104,18 @@ PrefabInstance:
       propertyPath: damage.type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5611565086670981495, guid: e357287bda59ad7478a5469cd5875e74, type: 3}
+      propertyPath: knockback.stat
+      value: 
+      objectReference: {fileID: 11400000, guid: f18144528b4857349bcbb84d0cb384cf, type: 2}
+    - target: {fileID: 5611565086670981495, guid: e357287bda59ad7478a5469cd5875e74, type: 3}
+      propertyPath: knockback.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5611565086670981495, guid: e357287bda59ad7478a5469cd5875e74, type: 3}
+      propertyPath: knockback.value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

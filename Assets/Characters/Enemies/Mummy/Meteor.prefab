@@ -50,6 +50,11 @@ MonoBehaviour:
     type: 0
     value: 6
     stat: {fileID: 0}
+  knockback:
+    type: 0
+    value: 12
+    stat: {fileID: 0}
+  knockBackType: 1
   destroyOnDamage: 0
 --- !u!135 &3556853398008134193
 SphereCollider:

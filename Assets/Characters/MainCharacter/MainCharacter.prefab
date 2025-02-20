@@ -636,6 +636,10 @@ MonoBehaviour:
     type: 1
     value: 3
     stat: {fileID: 11400000, guid: 89f604a130dbb714ba6b4fa1b94a05cc, type: 2}
+  recoil:
+    type: 1
+    value: 0
+    stat: {fileID: 11400000, guid: 9a3767f9cdb56624996aa5638f771464, type: 2}
 --- !u!1 &8327095017631512685
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,6 +907,14 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 90b49b8f0588d9b44aa79e068791cb0a, type: 2}
     - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
       propertyPath: maxHealth.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      propertyPath: healthChange.stat
+      value: 
+      objectReference: {fileID: 11400000, guid: 1a6dd3d7097f9014bb308cdbd8e1d0ea, type: 2}
+    - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      propertyPath: healthChange.type
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7179164541507884879, guid: d3447ea875e30cf41a9a381a17222033, type: 3}

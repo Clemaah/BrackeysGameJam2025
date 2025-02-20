@@ -8,6 +8,8 @@ public class ProjectileLauncher : MonoBehaviour
     private float _nextFire;
     public FloatValue accuracy;
     public FloatValue projectileCount;
+    
+    public FloatValue recoil;
 
     public bool TryFire()
     {
@@ -18,6 +20,14 @@ public class ProjectileLauncher : MonoBehaviour
         {
             float angle = (i - (n - 1) * 0.5f + Random.Range(-0.5f, 0.5f)) * accuracy.Get();
             Instantiate(projectile, transform.position, transform.rotation * Quaternion.Euler(Vector3.up * angle));
+        }
+        
+        // knock-back
+        if (Mathf.Abs(recoil.Get()) > 0.01f)
+        {
+            Character character = transform.parent.GetComponent<Character>();
+            if (character)
+                    character.Push(-transform.forward, recoil.Get());
         }
         return true;
     }
