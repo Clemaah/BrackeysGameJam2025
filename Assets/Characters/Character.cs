@@ -45,11 +45,8 @@ public class Character : MonoBehaviour
         float frequency = 0.016f;
         for (float t = 0.0f; t < duration; t += frequency)
         {
-            if (!GameManager.Instance || !GameManager.Instance.Paused)
-            {
-                float f = force * frequency / duration;
-                characterController.Move(direction * f);
-            }
+            float f = force * frequency / duration;
+            characterController.Move(direction * f);
             
             yield return new WaitForSeconds(frequency);
         }

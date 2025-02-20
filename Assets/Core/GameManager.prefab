@@ -58,8 +58,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98c81c90fbdefef409bf937b88af1611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabMenuList: []
-  _menuList: []
+  prefabMenuList:
+  - type: 4
+    gameObject: {fileID: 1966946394515163904, guid: 76ebb05bb38d3c54ea6f3d9864f14895, type: 3}
+  - type: 1
+    gameObject: {fileID: 2371548813592820028, guid: 08250363a3616a541834c6d54986c013, type: 3}
+  - type: 5
+    gameObject: {fileID: 2371548813592820028, guid: c3b10c5d9b2538d4a82a9cb24102b635, type: 3}
+  - type: 2
+    gameObject: {fileID: 1966946394515163904, guid: 3cf5b46f71b9a0346804442909dc74f6, type: 3}
+  - type: 3
+    gameObject: {fileID: 1966946394515163904, guid: 318d347a2776e3e4bb633ccbc184e704, type: 3}
 --- !u!114 &6729066623072436334
 MonoBehaviour:
   m_ObjectHideFlags: 0

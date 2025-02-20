@@ -164,9 +164,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   maxHealth:
-    type: 0
+    type: 1
     value: 100
-    stat: {fileID: 0}
+    stat: {fileID: 11400000, guid: 90b49b8f0588d9b44aa79e068791cb0a, type: 2}
   destroyOnDeath: 0
   onDamage:
     m_PersistentCalls:
