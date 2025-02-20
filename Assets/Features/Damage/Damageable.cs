@@ -17,7 +17,7 @@ public class Damageable : MonoBehaviour
     public UnityEvent<float> onHealthChanged;
     public UnityEvent onDeath;
 
-    [SerializeField] public ParticleSystem _damageParticles;
+    [SerializeField] public ParticleSystem damageParticles;
 
     private ParticleSystem _damageParticlesInstance;
     private float _nextHealthChange;
@@ -59,6 +59,6 @@ public class Damageable : MonoBehaviour
     }
 
     private void SpawnDamageParticles(Quaternion direction) {
-        _damageParticlesInstance = Instantiate(_damageParticles, transform.position - transform.forward, direction);
+        _damageParticlesInstance = Instantiate(damageParticles, transform.position - transform.forward, direction);
     }
 }
