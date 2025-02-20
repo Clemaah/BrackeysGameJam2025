@@ -8,6 +8,8 @@ public class Mummy : Enemy
 
     public GameObject meteor;
     
+    private GameObject _currentMeteor;
+    
     private void FixedUpdate()
     {
         if (IsDashing) return;
@@ -32,16 +34,16 @@ public class Mummy : Enemy
     private IEnumerator SpawnMeteor()
     {
         yield return new WaitForSeconds(0.5f);
-        GameObject go = Instantiate(meteor, target.transform.position + target.characterController.velocity * 0.25f + Vector3.up * 4.0f, Quaternion.LookRotation(Vector3.down));
+        _currentMeteor = Instantiate(meteor, target.transform.position + target.characterController.velocity * 0.25f + Vector3.up * 4.0f, Quaternion.LookRotation(Vector3.down));
         yield return Tween.To(0.25f, Vector3.zero, Vector3.one,
-            v => go.transform.localScale = v,
+            v => _currentMeteor.transform.localScale = v,
             easeType: Tween.EaseType.EaseOutCubic);
-        yield return Tween.To(0.5f, go.transform.position, go.transform.position + Vector3.down * 5.0f,
-            t => go.transform.position = t,
+        yield return Tween.To(0.5f, _currentMeteor.transform.position, _currentMeteor.transform.position + Vector3.down * 5.0f,
+            t => _currentMeteor.transform.position = t,
             easeType: Tween.EaseType.EaseInCubic);
-        go.GetComponent<Damager>().enabled = true;
+        _currentMeteor.GetComponent<Damager>().enabled = true;
         yield return null;
-        Destroy(go);
+        Destroy(_currentMeteor);
         yield return null;
     }
 
@@ -49,5 +51,11 @@ public class Mummy : Enemy
     {
         base.DashEnd();
         Animator.SetBool("Attack", false);
+    }
+
+    private void OnDestroy()
+    {
+        if (_currentMeteor)
+            Destroy(_currentMeteor);
     }
 }
