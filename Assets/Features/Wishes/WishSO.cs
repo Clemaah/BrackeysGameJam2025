@@ -3,18 +3,20 @@ using UnityEngine;
 using UnityEditor;
 using UnityEngine.Events;
 
+[Serializable]
+public enum ModifierOperation
+{
+    Set, Mult, Add
+}
 [System.Serializable]
 public struct StatModifier {
     public StatSO statRef;
     
-    [Tooltip("Bonus modifier")]
-    public float bonus;
-    
-    [Tooltip("Multiplier modifier")]
-    public float multiplier;
+    public ModifierOperation operation;
+    public float value;
 }
 
-[CreateAssetMenu(fileName = "WishSO", menuName = "Scriptable Objects/Wish")]
+[CreateAssetMenu(fileName = "WishSO", menuName = "Wish", order = 2)]
 public class WishSO : ScriptableObject
 {
     [TextArea]
@@ -29,7 +31,7 @@ public class WishSO : ScriptableObject
     {
         foreach (var modifier in modifiers)
         {
-            modifier.statRef.ChangeValue(modifier.bonus, modifier.multiplier);
+            modifier.statRef.ChangeValue(modifier.operation, modifier.value);
         }
         
         onWishApplied?.Invoke();
@@ -43,10 +45,7 @@ public class WishSO : ScriptableObject
             Instantiate(prefab);
         }
     }
-    
 }
-
-
 
 
 // ModifierDrawer
@@ -71,19 +70,14 @@ public class StatModifierDrawer : PropertyDrawer
         EditorGUI.indentLevel = 0;
 
         // Calculate rects
-        var statRect = new Rect(position.x, position.y, position.width - 90, position.height);
-        var bonusRect = new Rect(position.x + position.width - 70, position.y, 25, position.height);
-        var multiplierRect = new Rect(position.x + position.width - 25, position.y, 25, position.height);
+        var statRect = new Rect(position.x, position.y, position.width - 130, position.height);
+        var operationRect = new Rect(position.x + position.width - 120, position.y, 60, position.height);
+        var valueRect = new Rect(position.x + position.width - 50, position.y, 50, position.height);
 
         // Draw fields - pass GUIContent.none to each so they are drawn without labels
         EditorGUI.PropertyField(statRect, property.FindPropertyRelative("statRef"), GUIContent.none);
-        EditorGUI.PropertyField(bonusRect, property.FindPropertyRelative("bonus"), GUIContent.none);
-        EditorGUI.PropertyField(multiplierRect, property.FindPropertyRelative("multiplier"), GUIContent.none);
-        
-        Rect addRect = new Rect(position.x + position.width - 85, position.y, 10, position.height);
-        EditorGUI.LabelField(addRect, "+");
-        Rect multRect = new Rect(position.x + position.width - 40, position.y, 10, position.height);
-        EditorGUI.LabelField(multRect, "x");
+        EditorGUI.PropertyField(operationRect, property.FindPropertyRelative("operation"), GUIContent.none);
+        EditorGUI.PropertyField(valueRect, property.FindPropertyRelative("value"), GUIContent.none);
 
         // Set indent back to what it was
         EditorGUI.indentLevel = indent;
