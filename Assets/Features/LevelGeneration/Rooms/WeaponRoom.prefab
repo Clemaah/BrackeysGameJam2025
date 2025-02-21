@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1339386146317216815}
   - component: {fileID: 4174957830532625522}
+  - component: {fileID: 2606887906733080573}
   m_Layer: 0
   m_Name: WeaponRoom
   m_TagString: Untagged
@@ -62,6 +63,20 @@ MonoBehaviour:
   - {fileID: 1141642348490341974}
   mapElements: []
   mapEnemies: []
+  lamp: {fileID: 0}
+  weapons: []
+--- !u!114 &2606887906733080573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5381774497645018182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415560a66e28d674393816bcf896989d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2780044889486471339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70,6 +85,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1339386146317216815}
     m_Modifications:
+    - target: {fileID: 856441870641143, guid: 522da4906094da541b1900a6b8fb4b46, type: 3}
+      propertyPath: weaponData
+      value: 
+      objectReference: {fileID: 11400000, guid: 2d8c5e243ad87984cb2a878ecf742584, type: 2}
     - target: {fileID: 1129508933104127252, guid: 522da4906094da541b1900a6b8fb4b46, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
@@ -140,6 +159,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1339386146317216815}
     m_Modifications:
+    - target: {fileID: 856441870641143, guid: 522da4906094da541b1900a6b8fb4b46, type: 3}
+      propertyPath: weaponData
+      value: 
+      objectReference: {fileID: 11400000, guid: e971c8474507dbc4faa36c7dafe64c53, type: 2}
     - target: {fileID: 1129508933104127252, guid: 522da4906094da541b1900a6b8fb4b46, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
@@ -210,6 +233,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1339386146317216815}
     m_Modifications:
+    - target: {fileID: 856441870641143, guid: 522da4906094da541b1900a6b8fb4b46, type: 3}
+      propertyPath: weaponData
+      value: 
+      objectReference: {fileID: 11400000, guid: 8d66fb60816eae841b6aaa789e29aca2, type: 2}
     - target: {fileID: 1129508933104127252, guid: 522da4906094da541b1900a6b8fb4b46, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25

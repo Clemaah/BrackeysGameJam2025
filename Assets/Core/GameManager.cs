@@ -62,6 +62,11 @@ public class GameManager : MonoBehaviour
     {
         CurrentLevel = 0;
         WishesManager.Reset();
+        ResetStats();
+    }
+
+    public void ResetStats()
+    {
         foreach (var stat in _stats)
         {
             stat.Reset();

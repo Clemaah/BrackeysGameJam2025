@@ -13,4 +13,10 @@ MonoBehaviour:
   m_Name: Precise
   m_EditorClassIdentifier: 
   weapon: 
-  modifiers: []
+  modifiers:
+  - statRef: {fileID: 11400000, guid: 95c3e8ffaa24dc247a295eaa4e204280, type: 2}
+    operation: 0
+    value: 100
+  - statRef: {fileID: 11400000, guid: 90a3d38c32ef82c4b97d7152fe4dcce8, type: 2}
+    operation: 0
+    value: 0
