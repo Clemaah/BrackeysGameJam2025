@@ -1,17 +1,22 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class WishesManager : MonoBehaviour
 {
+    public event Action<WishSO> OnWishAdded;
+    public event Action<WishSO> OnWishRemoved;
+        
     [SerializeField] private List<WishSO> _allWishes;
     
     private List<WishSO> _remainingWishes;
-    private List<WishSO> _currentWishes;
+    public List<WishSO> currentWishes;
 
     public void Start()
     {
         _remainingWishes = new List<WishSO>(_allWishes);
-        _currentWishes = new List<WishSO>();
+        currentWishes = new List<WishSO>();
     }
     
     public WishSO[] GetRandomWishes(int numberOfWishes)
@@ -32,13 +37,29 @@ public class WishesManager : MonoBehaviour
     
     public void SelectWish(WishSO wish)
     {
+        OnWishAdded?.Invoke(wish);
         wish.Apply();
-        _currentWishes.Add(wish);
+        currentWishes.Add(wish);
         _remainingWishes.Remove(wish);
+    }
+    
+    public void RemoveWish(WishSO wish)
+    {
+        OnWishRemoved?.Invoke(wish);
+        // Desapply wish.Apply();
+        _remainingWishes.Add(wish);
+        currentWishes.Remove(wish);
     }
 
     public void Reset()
     {
         _remainingWishes = new List<WishSO>(_allWishes);
+        ResetEvent();
+    }
+
+    public void ResetEvent()
+    {
+        OnWishAdded = null;
+        OnWishRemoved = null;
     }
 }

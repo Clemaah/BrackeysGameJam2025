@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddb71c52d6ff394eb512234c9d4e674, type: 3}
   m_Name: Multi
   m_EditorClassIdentifier: 
-  weapon: 
   modifiers:
   - statRef: {fileID: 11400000, guid: 89f604a130dbb714ba6b4fa1b94a05cc, type: 2}
     operation: 0

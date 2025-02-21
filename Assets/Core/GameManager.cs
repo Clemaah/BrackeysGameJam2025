@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
         {
             stat.ResetEvent();
         }
+        WishesManager.ResetEvent();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
