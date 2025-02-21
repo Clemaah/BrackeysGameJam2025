@@ -21,7 +21,7 @@ public class PlayerHealthBar : MonoBehaviour
     private void UpdateHealth()
     {
         UpdateMaxHealth();
-        _slider.SetValueWithoutNotify(damageable.health);
+        _slider.SetValueWithoutNotify(damageable.health.Get());
     }
 
     private void UpdateMaxHealth()

@@ -988,6 +988,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      propertyPath: health.stat
+      value: 
+      objectReference: {fileID: 11400000, guid: 4752d12ad001b784a95f80b156a37bbb, type: 2}
+    - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      propertyPath: health.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      propertyPath: health.value
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
       propertyPath: maxHealth.stat
       value: 
       objectReference: {fileID: 11400000, guid: 90b49b8f0588d9b44aa79e068791cb0a, type: 2}
@@ -999,6 +1011,14 @@ PrefabInstance:
       propertyPath: _damageParticles
       value: 
       objectReference: {fileID: 6909222436772635727, guid: 6e9113f7049b4d342acbcef711dde298, type: 3}
+    - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      propertyPath: healthRegen.stat
+      value: 
+      objectReference: {fileID: 11400000, guid: 1a6dd3d7097f9014bb308cdbd8e1d0ea, type: 2}
+    - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      propertyPath: healthRegen.type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
       propertyPath: healthChange.stat
       value: 

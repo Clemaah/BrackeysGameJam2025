@@ -6,8 +6,7 @@ using static UnityEngine.GraphicsBuffer;
 public class Damageable : MonoBehaviour
 {
 
-    [HideInInspector]
-    public float health;
+    public FloatValue health;
     public FloatValue maxHealth;
     public FloatValue armor;
     public FloatValue healthRegen;
@@ -24,11 +23,18 @@ public class Damageable : MonoBehaviour
 
     private void Awake()
     {
-        health = maxHealth.Get();
-        
         maxHealth.stat.OnValueChanged += ChangeHealthBy;
     }
 
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+        if (Application.isEditor) return;
+        
+        health.Set(maxHealth.Get());
+    }
+#endif
+    
     private void Update()
     {
         if (healthRegen.Get() == 0) return;
@@ -37,17 +43,18 @@ public class Damageable : MonoBehaviour
 
     public void ChangeHealthBy(float amount)
     {
-        float initialHealth = health;
-        health += (amount > 0) ? amount : amount * (1 - armor.Get());
+        float updatedHealth = health.Get();
+        updatedHealth += (amount > 0) ? amount : amount * (1 - armor.Get());
         
         
-        health = Mathf.Clamp(health, 0.0f, maxHealth.Get());
-        float healthChange = health - initialHealth;
+        updatedHealth = Mathf.Clamp(updatedHealth, 0.0f, maxHealth.Get());
+        float healthChange = updatedHealth - health.Get();
+        health.Set(updatedHealth);
         
         if (Mathf.Abs(healthChange) < 0.001f) return;
         onHealthChanged.Invoke(healthChange);
         
-        if (health > 0) return;
+        if (updatedHealth > 0) return;
             
         onDeath.Invoke();
         

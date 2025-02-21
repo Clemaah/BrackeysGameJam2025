@@ -61,11 +61,12 @@ public class GameManager : MonoBehaviour
 
     public void Reset()
     {
+        CurrentLevel = 1;
+        WishesManager.Reset();
         foreach (var stat in _stats)
         {
             stat.Reset();
         }
-        WishesManager.Reset();
     }
 
     public void TeleportCharacterBy(Vector3 characterOffset, Vector3 cameraOffset)

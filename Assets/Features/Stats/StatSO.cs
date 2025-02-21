@@ -70,4 +70,16 @@ public struct FloatValue
             _ => 0.0f
         };
     }
+
+    public void Set(float newValue)
+    {
+        switch(type) {
+            case FloatValueType.Stat:
+                stat.value = newValue;
+                break;
+            default:
+                value = newValue;
+                break;
+        }
+    }
 }

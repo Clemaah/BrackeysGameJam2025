@@ -39,6 +39,6 @@ public class WishesManager : MonoBehaviour
 
     public void Reset()
     {
-        _remainingWishes = _allWishes;
+        _remainingWishes = new List<WishSO>(_allWishes);
     }
 }
