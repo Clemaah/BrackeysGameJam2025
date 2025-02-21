@@ -11,8 +11,8 @@ public class WishItemUI : MonoBehaviour
     {
         gameObject.SetActive(true);
         _wish = newWish;
-        wishText.text = _wish.name;
-        genieCommentaryText.text = _wish.name;
+        wishText.text = _wish.wish;
+        genieCommentaryText.text = _wish.genieCommentary;
     }
 
     public void HideWish()

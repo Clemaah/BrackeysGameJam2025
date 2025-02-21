@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cefc6bbff5bb3eb49bebbff89ea9d655, type: 3}
+  m_Name: SuperBlast
+  m_EditorClassIdentifier: 
+  wish: ...to blast my enemies !
+  genieCommentary: Pay attention behind you.
+  modifiers:
+  - statRef: {fileID: 11400000, guid: 9a3767f9cdb56624996aa5638f771464, type: 2}
+    bonus: 40
+    multiplier: 1
+  - statRef: {fileID: 11400000, guid: 90a3d38c32ef82c4b97d7152fe4dcce8, type: 2}
+    bonus: 40
+    multiplier: 1
+  - statRef: {fileID: 11400000, guid: f18144528b4857349bcbb84d0cb384cf, type: 2}
+    bonus: 40
+    multiplier: 1

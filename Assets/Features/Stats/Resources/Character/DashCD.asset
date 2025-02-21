@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: DashCD
   m_EditorClassIdentifier: 
   description: Character's dash cooldown (in s)
+  min: 0
+  max: 1000
   baseValue: 1
-  value: 0
+  value: 1000

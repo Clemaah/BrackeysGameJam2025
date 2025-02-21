@@ -23,7 +23,6 @@ public class WishesManager : MonoBehaviour
         for (int i = 0; i < numberOfWishes; i++)
         {
             int wishId = Random.Range(0, unselectedWishes.Count);
-            Debug.Log(wishId);
             selectedWishes[i] = unselectedWishes[wishId];
             unselectedWishes.RemoveAt(wishId);
         }

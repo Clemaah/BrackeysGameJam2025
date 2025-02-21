@@ -12,9 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefc6bbff5bb3eb49bebbff89ea9d655, type: 3}
   m_Name: SuperSpeed
   m_EditorClassIdentifier: 
-  wish: 
-  genieCommentary: 
+  wish: ...to be faster than light.
+  genieCommentary: Blazingly fast we go.
   modifiers:
   - statRef: {fileID: 11400000, guid: d7ad82eb2df6dcc46a8e2cc881440406, type: 2}
-    bonus: 10
-    multiplier: 1
+    bonus: 0
+    multiplier: 2.5
+  - statRef: {fileID: 11400000, guid: ed5a694135ee831489b37660030ea845, type: 2}
+    bonus: 0
+    multiplier: 3
+  - statRef: {fileID: 11400000, guid: 59cfad40ef7cbcc41a473c54d9cd8d3a, type: 2}
+    bonus: 0
+    multiplier: 1.2
+  - statRef: {fileID: 11400000, guid: 25ab4c2c76043fd4b89f7a93c0d34e21, type: 2}
+    bonus: 0
+    multiplier: 0.5

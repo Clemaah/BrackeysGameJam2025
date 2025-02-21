@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: CharacterHealth
   m_EditorClassIdentifier: 
   description: Character health
-  baseValue: 6
-  value: 6
+  min: 0
+  max: 1000
+  baseValue: 100
+  value: 110
