@@ -14,11 +14,11 @@ public class Bat : Enemy
 
         if (relativeTargetPosition.magnitude < 12.0f)
         {
-            TryDash(relativeTargetPosition.normalized);
+            TryDash(relativeTargetPosition.X0Z().normalized);
         }
             
         transform.forward = relativeTargetPosition;
-        characterController.Move(relativeTargetPosition.normalized * (math.remap(8.0f, 12.0f, -0.125f, 1.0f, relativeTargetPosition.magnitude) * speed.Get() * Time.deltaTime));
+        characterController.Move(relativeTargetPosition.X0Z().normalized * (math.remap(8.0f, 12.0f, -0.125f, 1.0f, relativeTargetPosition.magnitude) * speed.Get() * Time.deltaTime));
     }
 
     protected override void DashStart()
