@@ -35,7 +35,6 @@ public class MainCharacter : Character
         bool carController = controller.Get() > 0.5;
         _isShooting = Input.GetMouseButton(0);
         
-        
         Vector2 inputs = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if (!carController)
             inputs = Quaternion.Euler(0, 0, -Camera.main.transform.rotation.eulerAngles.y) * inputs;

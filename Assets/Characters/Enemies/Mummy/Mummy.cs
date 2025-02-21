@@ -34,15 +34,16 @@ public class Mummy : Enemy
     private IEnumerator SpawnMeteor()
     {
         yield return new WaitForSeconds(0.5f);
-        _currentMeteor = Instantiate(meteor, target.transform.position + target.characterController.velocity * 0.25f + Vector3.up * 4.0f, Quaternion.LookRotation(Vector3.down));
-        yield return Tween.To(0.25f, Vector3.zero, Vector3.one,
+        _currentMeteor = Instantiate(meteor, target.transform.position + target.characterController.velocity * 0.25f, Quaternion.identity);
+        yield return Tween.To(0.5f, Vector3.zero, Vector3.one * 2.0f,
             v => _currentMeteor.transform.localScale = v,
             easeType: Tween.EaseType.EaseOutCubic);
-        yield return Tween.To(0.5f, _currentMeteor.transform.position, _currentMeteor.transform.position + Vector3.down * 5.0f,
-            t => _currentMeteor.transform.position = t,
-            easeType: Tween.EaseType.EaseInCubic);
+        yield return new WaitForSeconds(0.125f);
+        //yield return Tween.To(0.5f, _currentMeteor.transform.position, _currentMeteor.transform.position + Vector3.down * 5.0f,
+        //    t => _currentMeteor.transform.position = t,
+        //    easeType: Tween.EaseType.EaseInCubic);
         _currentMeteor.GetComponent<Damager>().enabled = true;
-        yield return null;
+        yield return new WaitForSeconds(0.125f);
         Destroy(_currentMeteor);
         yield return null;
     }

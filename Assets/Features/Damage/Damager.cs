@@ -27,6 +27,7 @@ public class Damager : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         if (!applyDamageOnStay) return;
+        if (!enabled) return;
         if (Time.time >= _nextDamage)
         {
             _nextDamage = Time.time + stayDamageInterval;
