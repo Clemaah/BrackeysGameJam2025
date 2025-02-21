@@ -755,7 +755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948799ceaf606b14cbdaab24390f6cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraPosition: {x: 0, y: 18, z: 5}
+  cameraPosition: {x: 0, y: 19, z: 5}
   cameraRotation: {x: 0.6087614, y: 0, z: 0, w: 0.7933533}
   levelsConfigs:
   - mapSize: {x: 3, y: 3}

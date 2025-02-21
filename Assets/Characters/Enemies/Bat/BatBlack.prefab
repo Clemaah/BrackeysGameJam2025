@@ -916,7 +916,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 122118283520026524, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: damage.value
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 122118283520026524, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: knockBackType
@@ -934,6 +934,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: cb4f62613ef63e0448dc2e8ceededf97, type: 2}
+    - target: {fileID: 2737775249792661991, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
+      propertyPath: m_Radius
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2737775249792661991, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3408622534029679705, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.5

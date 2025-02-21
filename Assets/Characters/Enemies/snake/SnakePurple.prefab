@@ -249,7 +249,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7e6f18d5febdeca4d91891dcef089e52, type: 2}
+  - {fileID: 2100000, guid: 52f48655b4f129b408ca3e98ec705207, type: 2}
   - {fileID: 2100000, guid: 6edc225718fd5dd4883c71867589a54d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -406,11 +406,11 @@ MonoBehaviour:
     stat: {fileID: 0}
   accuracy:
     type: 0
-    value: 5
+    value: 25
     stat: {fileID: 0}
   projectileCount:
     type: 0
-    value: 1
+    value: 3
     stat: {fileID: 0}
   recoil:
     type: 0
@@ -615,7 +615,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 122118283520026524, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: damage.value
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 122118283520026524, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: knockback.value
@@ -629,6 +629,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: a67fde2f7b5a123438365110fcf16014, type: 2}
+    - target: {fileID: 2737775249792661991, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3408622534029679705, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.22
@@ -663,7 +667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4052972136235883723, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: m_Name
-      value: Snake
+      value: SnakePurple
       objectReference: {fileID: 0}
     - target: {fileID: 4208599833675267683, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -709,9 +713,17 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4972048873079445386, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8096709403176930831, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8096709403176930831, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: maxHealth.value
-      value: 48
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8096709403176930831, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: _damageParticles
@@ -779,7 +791,7 @@ MonoBehaviour:
     stat: {fileID: 0}
   dashCooldown:
     type: 2
-    value: 2
+    value: 3
     stat: {fileID: 11400000, guid: 25ab4c2c76043fd4b89f7a93c0d34e21, type: 2}
   target: {fileID: 0}
   detectionRadius: 24
