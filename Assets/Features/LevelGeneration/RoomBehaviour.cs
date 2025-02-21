@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEditor.VersionControl.Asset;
+using static UnityEngine.InputSystem.Controls.AxisControl;
 
 public class RoomBehaviour : MonoBehaviour
 {
     public GameObject[] walls;
     public GameObject[] doors;
+    public GameObject[] doorsBlockers;
     public GameObject[] mapElements;
     public GameObject[] mapEnemies;
+    public GameObject lamp;
+    public GameObject[] weapons;
 
     List<bool[]> elementsZones = new List<bool[]>{
         new bool[] {true, false, false, false, false, false, false, false, false},
@@ -37,6 +42,10 @@ public class RoomBehaviour : MonoBehaviour
         new bool[] {true, truez, true, false, true, true, true, true, true},
 
         new bool[] {true, true, true, false, true, true, true, true, true}*/};
+
+    bool roomOpened = false;
+    int roomType = -1;
+
     int CountEmptySpaces(bool[] spaces)
     {
         int count = 0;
@@ -46,14 +55,37 @@ public class RoomBehaviour : MonoBehaviour
         return count;
     }
 
+    void Update()
+    {
+        if (roomOpened) return;
+
+        if ((roomType == 0 && CountEnemies() == 0) ||
+            (roomType == 1 && (lamp.gameObject.IsDestroyed())))
+        {
+            OpenRoom();
+            roomOpened = true;
+        }
+    }
+
     public void BuildRoom(bool[] status, int maxDifficulty)
     {
+        if (transform.name.Contains("MobRoom")) roomType = 0;
+        if (transform.name.Contains("EntranceRoom")) roomType = 1;
+        if (transform.name.Contains("ExitRoom")) roomType = 2;
+        if (transform.name.Contains("HealRoom")) roomType = 3;
+        if (transform.name.Contains("WishRoom")) roomType = 4;
+        if (transform.name.Contains("BossRoom")) roomType = 5;
+        if (transform.name.Contains("WeaponRoom")) roomType = 6;
+
         int[] doorsIndex = { 1, 7, 5, 3 };
         bool[] map = { false, false, false, false, false, false, false, false, false };
 
         for (int i = 0; i < status.Length; i++) {
             doors[i].SetActive(status[i]);
             walls[i].SetActive(!status[i]);
+
+            if (roomType == 0 || roomType == 1) doorsBlockers[i].SetActive(status[i]);
+            else doorsBlockers[i].SetActive(false);
 
             if (status[i]) map[doorsIndex[i]] = true;
         }
@@ -148,73 +180,23 @@ public class RoomBehaviour : MonoBehaviour
             }
         }
     }
-}
-    /*
-    void SetupCross() {
-        foreach (GameObject angleWall in angleWalls) {
-            int random;
-            if (angleWall.name == "NorthWest" || angleWall.name == "NorthEast") {
-                random = Random.Range(0, 4);
 
-                if (random == 0)
-                {
-                    angleWall.transform.GetChild(0).gameObject.SetActive(true);
-                    angleWall.transform.GetChild(1).gameObject.SetActive(false);
-                    angleWall.transform.GetChild(2).gameObject.SetActive(false);
-                    angleWall.transform.GetChild(3).gameObject.SetActive(false);
-                }
+    public void OpenRoom()
+    {
+        for (int i = 0; i < doorsBlockers.Length; i++) {
+           doorsBlockers[i].SetActive(false);
+        }
+    }
 
-                else if (random == 1)
-                {
-                    angleWall.transform.GetChild(0).gameObject.SetActive(false);
-                    angleWall.transform.GetChild(1).gameObject.SetActive(true);
-                    angleWall.transform.GetChild(2).gameObject.SetActive(false);
-                    angleWall.transform.GetChild(3).gameObject.SetActive(false);
-                }
-
-                else if (random == 2)
-                {
-                    angleWall.transform.GetChild(0).gameObject.SetActive(false);
-                    angleWall.transform.GetChild(1).gameObject.SetActive(true);
-                    angleWall.transform.GetChild(2).gameObject.SetActive(true);
-                    angleWall.transform.GetChild(3).gameObject.SetActive(false);
-                }
-
-                else if (random == 3)
-                {
-                    angleWall.transform.GetChild(0).gameObject.SetActive(false);
-                    angleWall.transform.GetChild(1).gameObject.SetActive(true);
-                    angleWall.transform.GetChild(2).gameObject.SetActive(false);
-                    angleWall.transform.GetChild(3).gameObject.SetActive(true);
-                }
-            }
-
-            else
-            {
-                random = Random.Range(0, 3);
-
-                if (random == 0)
-                {
-                    angleWall.transform.GetChild(0).gameObject.SetActive(true);
-                    angleWall.transform.GetChild(1).gameObject.SetActive(false);
-                    angleWall.transform.GetChild(2).gameObject.SetActive(false);
-                }
-
-                else if (random == 1)
-                {
-                    angleWall.transform.GetChild(0).gameObject.SetActive(false);
-                    angleWall.transform.GetChild(1).gameObject.SetActive(true);
-                    angleWall.transform.GetChild(2).gameObject.SetActive(false);
-                }
-
-                else if (random == 2)
-                {
-                    angleWall.transform.GetChild(0).gameObject.SetActive(false);
-                    angleWall.transform.GetChild(1).gameObject.SetActive(true);
-                    angleWall.transform.GetChild(2).gameObject.SetActive(true);
+    int CountEnemies() {
+        int count = 0;
+        foreach (GameObject mapEnemy in mapEnemies) {
+            for (int i = 0; i < mapEnemy.transform.childCount; i++) {
+                if (mapEnemy.transform.GetChild(i).gameObject.activeInHierarchy && !mapEnemy.transform.GetChild(i).gameObject.IsDestroyed()) {
+                    count++;
                 }
             }
         }
+        return count;
     }
 }
-    */

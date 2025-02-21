@@ -1005,15 +1005,15 @@ PrefabInstance:
     - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
       propertyPath: '_allWishes.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 619fc059c7c73374da752c3eb80da83d, type: 2}
+      objectReference: {fileID: 11400000, guid: de3487b87f3d98449a7ac4852bed2c3a, type: 2}
     - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
       propertyPath: '_allWishes.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: 767c0ae2a8ac7b8449ad867d9031dad9, type: 2}
+      objectReference: {fileID: 11400000, guid: 4fce875d4b6c24248b3dd24c57cd73e1, type: 2}
     - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
       propertyPath: '_allWishes.Array.data[2]'
       value: 
-      objectReference: {fileID: 11400000, guid: 619fc059c7c73374da752c3eb80da83d, type: 2}
+      objectReference: {fileID: 11400000, guid: 64e6c34742605c14b8fa5ae09dbf3636, type: 2}
     - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
       propertyPath: '_allWishes.Array.data[3]'
       value: 
