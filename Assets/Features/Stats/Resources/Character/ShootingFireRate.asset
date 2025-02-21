@@ -15,5 +15,5 @@ MonoBehaviour:
   description: Fire Rate (projectile/s)
   min: 0
   max: 100
-  baseValue: 3
-  value: 3
+  baseValue: 2.5
+  value: 2.5

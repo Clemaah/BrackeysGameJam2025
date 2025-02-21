@@ -12,11 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddb71c52d6ff394eb512234c9d4e674, type: 3}
   m_Name: Precise
   m_EditorClassIdentifier: 
-  weapon: 
   modifiers:
   - statRef: {fileID: 11400000, guid: 95c3e8ffaa24dc247a295eaa4e204280, type: 2}
     operation: 0
-    value: 100
+    value: 50
   - statRef: {fileID: 11400000, guid: 90a3d38c32ef82c4b97d7152fe4dcce8, type: 2}
     operation: 0
     value: 0
+  - statRef: {fileID: 11400000, guid: 64000aec49016cb4789fb2f4efe8bd32, type: 2}
+    operation: 0
+    value: 0.8
+  - statRef: {fileID: 11400000, guid: 1eafe67589f941b4391bc351207e8c96, type: 2}
+    operation: 0
+    value: 20

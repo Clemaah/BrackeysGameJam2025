@@ -15,5 +15,5 @@ MonoBehaviour:
   description: Character's dash cooldown (in s)
   min: 0
   max: 1000
-  baseValue: 0.8
-  value: 0.8
+  baseValue: 1
+  value: 1
