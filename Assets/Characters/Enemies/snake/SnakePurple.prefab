@@ -793,6 +793,7 @@ MonoBehaviour:
     type: 2
     value: 3
     stat: {fileID: 11400000, guid: 25ab4c2c76043fd4b89f7a93c0d34e21, type: 2}
+  dashCooldownVariation: 0.2
   target: {fileID: 0}
   detectionRadius: 24
   projectileLauncher: {fileID: 654058062060627733}
