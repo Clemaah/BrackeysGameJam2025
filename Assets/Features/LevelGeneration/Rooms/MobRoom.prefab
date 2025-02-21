@@ -128,6 +128,8 @@ MonoBehaviour:
   - {fileID: 668895697582163909}
   - {fileID: 716050331231050050}
   - {fileID: 8451063536065078686}
+  lamp: {fileID: 0}
+  weapons: []
 --- !u!1001 &1292270104111765224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -964,6 +966,14 @@ PrefabInstance:
     - target: {fileID: 5381774497645018182, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
       propertyPath: m_Name
       value: Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 8592241288229235996, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 8592241288229235996, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
