@@ -19,6 +19,11 @@ public class StatSO : ScriptableObject
     public void Reset()
     {
         value = baseValue;
+        ResetEvent();
+    }
+
+    public void ResetEvent()
+    {
         OnValueChanged = null;
     }
 
