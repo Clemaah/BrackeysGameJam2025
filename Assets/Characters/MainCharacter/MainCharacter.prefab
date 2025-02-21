@@ -1122,7 +1122,7 @@ MonoBehaviour:
     value: 0.8
     stat: {fileID: 11400000, guid: da40cab0d99e9164497e8637bf3757c3, type: 2}
   controller:
-    type: 0
+    type: 1
     value: 0
-    stat: {fileID: 0}
+    stat: {fileID: 11400000, guid: 954e2959238465b40b8ee26db91519dd, type: 2}
   projectileLauncher: {fileID: 8832291201348459258}

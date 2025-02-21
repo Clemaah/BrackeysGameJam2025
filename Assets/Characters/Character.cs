@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class Character : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class Character : MonoBehaviour
     public FloatValue dashForce;
     public FloatValue dashDuration;
     public FloatValue dashCooldown;
+    public float dashCooldownVariation;
     private float _nextDash;
     
     protected bool IsDashing;
@@ -35,7 +37,7 @@ public class Character : MonoBehaviour
     public bool TryDash(Vector3 direction)
     {
         if (Time.time < _nextDash) return false;
-        _nextDash = Time.time + dashCooldown.Get();
+        _nextDash = Time.time + dashCooldown.Get() * Random.Range(1.0f - dashCooldownVariation, 1.0f + dashCooldownVariation);
         StartCoroutine(Dash(direction, dashForce.Get(), dashDuration.Get()));
         return true;
     }

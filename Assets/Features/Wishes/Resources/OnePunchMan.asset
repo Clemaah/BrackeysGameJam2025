@@ -26,7 +26,7 @@ MonoBehaviour:
     value: 0
   - statRef: {fileID: 11400000, guid: 9da5064c721199746845cf782cecd6c2, type: 2}
     operation: 0
-    value: 0
+    value: 1000
   objectsToSpawn: []
   onWishApplied:
     m_PersistentCalls:

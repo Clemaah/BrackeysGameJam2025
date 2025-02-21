@@ -12691,6 +12691,7 @@ MonoBehaviour:
     type: 2
     value: 4
     stat: {fileID: 11400000, guid: 25ab4c2c76043fd4b89f7a93c0d34e21, type: 2}
+  dashCooldownVariation: 0.2
   target: {fileID: 0}
   detectionRadius: 24
   meteor: {fileID: 67379153135357420, guid: 57df9154723d11f488957019268fd94b, type: 3}
