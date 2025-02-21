@@ -842,6 +842,7 @@ MonoBehaviour:
       maxEntrances: 2
       maxNbRooms: 1
       probability: 0.5
+  startRoom: {fileID: 5381774497645018182, guid: a2ffb6ed085bbc444b5dcea1a458824e, type: 3}
   bossRoom: {fileID: 5381774497645018182, guid: c8ea8e135dcf5c745a230d6814a47f9f, type: 3}
 --- !u!4 &777759369
 Transform:
