@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public float CurrentLevel { get; private set; } = 1;
     public bool Paused { get; private set; } = false;
 
+    private StatSO[] _stats;
+
     private void Awake()
     {
         if (Instance == null)
@@ -32,6 +34,7 @@ public class GameManager : MonoBehaviour
     {
         UIManager = gameObject.GetComponent<UIManager>();
         WishesManager = gameObject.GetComponent<WishesManager>();
+        _stats = Resources.LoadAll<StatSO>("");
     }
 
     public void RegisterMainCharacter(MainCharacter mainCharacter)
@@ -43,6 +46,10 @@ public class GameManager : MonoBehaviour
     public void NextLevel()
     {
         CurrentLevel++;
+        foreach (var stat in _stats)
+        {
+            stat.ResetEvent();
+        }
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -54,8 +61,7 @@ public class GameManager : MonoBehaviour
 
     public void Reset()
     {
-        StatSO[] stats = Resources.LoadAll<StatSO>("");
-        foreach (var stat in stats)
+        foreach (var stat in _stats)
         {
             stat.Reset();
         }
