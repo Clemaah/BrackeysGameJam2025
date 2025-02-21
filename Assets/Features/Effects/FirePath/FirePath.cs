@@ -28,6 +28,7 @@ public class FirePath : MonoBehaviour
     {
         Vector3 targetPosition = _target.transform.position;
         Vector3 speed = targetPosition - _lastPosition;
+        _lastPosition = targetPosition;
         if (speed.magnitude > 5.0f) return; // early out on teleport
         _left += speed.magnitude;
         while (_left >= 0.0f)
@@ -37,7 +38,6 @@ public class FirePath : MonoBehaviour
             
             StartCoroutine(SpawnFire(p));
         }
-        _lastPosition = targetPosition;
 
         if (Time.time - _lastSpawn > maxTimeInterval)
             StartCoroutine(SpawnFire(targetPosition));
