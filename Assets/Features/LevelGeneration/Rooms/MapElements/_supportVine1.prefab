@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8102494579374442291}
   - component: {fileID: 3866481303099074304}
   - component: {fileID: 529402952712524585}
+  - component: {fileID: 4377077038436757062}
   m_Layer: 0
   m_Name: _supportVine1
   m_TagString: Untagged
@@ -86,3 +87,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4377077038436757062
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4737034015820000522}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.040485483, y: 0.0043096025, z: 0.052913282}
+  m_Center: {x: -0.000053422526, y: 0.0010468462, z: -0.001936262}

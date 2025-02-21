@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3101017353575752594}
   - component: {fileID: 4948494245359212014}
   - component: {fileID: 2337285281147681784}
+  - component: {fileID: -6678021792592443567}
   m_Layer: 0
   m_Name: _vine02
   m_TagString: Untagged
@@ -87,3 +88,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-6678021792592443567
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5556427457497397367}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.020520192, y: 0.0062077246, z: 0.049761057}
+  m_Center: {x: 0.0017278572, y: 0.0014178755, z: 0.002590683}
