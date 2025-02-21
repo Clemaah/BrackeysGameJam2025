@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cefc6bbff5bb3eb49bebbff89ea9d655, type: 3}
+  m_Name: _SuperStrenght
+  m_EditorClassIdentifier: 
+  wish: BE SUPER STRONG
+  genieCommentary: Blast all your ennemies away
+  modifiers:
+  - statRef: {fileID: 11400000, guid: 9a3767f9cdb56624996aa5638f771464, type: 2}
+    bonus: 35
+    multiplier: 1
+  - statRef: {fileID: 11400000, guid: f18144528b4857349bcbb84d0cb384cf, type: 2}
+    bonus: 35
+    multiplier: 1
+  - statRef: {fileID: 11400000, guid: 69669869756308c4ca00de70f8f14f9e, type: 2}
+    bonus: 0
+    multiplier: 2
+  - statRef: {fileID: 11400000, guid: d7ad82eb2df6dcc46a8e2cc881440406, type: 2}
+    bonus: 0
+    multiplier: 0.3
+  - statRef: {fileID: 11400000, guid: 90a3d38c32ef82c4b97d7152fe4dcce8, type: 2}
+    bonus: 35
+    multiplier: 1
+  objectsToSpawn: []
+  onWishApplied:
+    m_PersistentCalls:
+      m_Calls: []
