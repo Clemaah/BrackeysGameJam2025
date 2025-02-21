@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: Rapid
   m_EditorClassIdentifier: 
   weapon: 
-  modifiers: []
+  modifiers:
+  - statRef: {fileID: 11400000, guid: 64000aec49016cb4789fb2f4efe8bd32, type: 2}
+    operation: 0
+    value: 10

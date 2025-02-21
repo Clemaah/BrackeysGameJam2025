@@ -10,22 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cefc6bbff5bb3eb49bebbff89ea9d655, type: 3}
-  m_Name: _Midas
+  m_Name: OnePunchMan 1
   m_EditorClassIdentifier: 
-  wish: 'BE RESISTANT
-
-'
-  genieCommentary: Your skin will be as strong as gold
+  wish: KILL WITH A SINGLE PUNCH (test)
+  genieCommentary: Only need your fists to obliterate your ennemies
   modifiers:
+  - statRef: {fileID: 11400000, guid: 201b8309983198e4c90bcd769ffc149d, type: 2}
+    operation: 0
+    value: 3
+  - statRef: {fileID: 11400000, guid: 1eafe67589f941b4391bc351207e8c96, type: 2}
+    operation: 0
+    value: 200
   - statRef: {fileID: 11400000, guid: 9da5064c721199746845cf782cecd6c2, type: 2}
     operation: 0
     value: 0
-  - statRef: {fileID: 11400000, guid: 90b49b8f0588d9b44aa79e068791cb0a, type: 2}
-    operation: 0
-    value: 150
-  - statRef: {fileID: 11400000, guid: d7ad82eb2df6dcc46a8e2cc881440406, type: 2}
-    operation: 1
-    value: 0.8
   objectsToSpawn: []
   onWishApplied:
     m_PersistentCalls:
