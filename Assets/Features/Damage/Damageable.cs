@@ -24,6 +24,10 @@ public class Damageable : MonoBehaviour
     private void Awake()
     {
         maxHealth.stat.OnValueChanged += ChangeHealthBy;
+
+        if (health.type == FloatValue.FloatValueType.Stat) return;
+        
+        health.Set(maxHealth.Get());
     }
 
 #if UNITY_EDITOR
