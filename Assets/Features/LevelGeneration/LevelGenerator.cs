@@ -47,6 +47,7 @@ public class LevelGenerator : MonoBehaviour
 
     // Level settings :
     public LevelConfig[] levelsConfigs;
+    public GameObject startRoom;
     public GameObject bossRoom;
 
 
@@ -57,15 +58,19 @@ public class LevelGenerator : MonoBehaviour
     Vector2 roomOffset;
     
     void Start() {
-        if (GameManager.Instance.CurrentLevel <= levelsConfigs.Length)
+        int currentLevel = GameManager.Instance.CurrentLevel;
+        
+        if (currentLevel == 0)
+            DisplayStartRoom();
+        
+        else if (currentLevel >= levelsConfigs.Length)
+            DisplayBossRoom();
+        
+        else
         {
             currentLevelConfig = levelsConfigs[(int)GameManager.Instance.CurrentLevel - 1];
             roomOffset = new Vector2(56, 44);
             GenerateMaze();
-        }
-
-        else {
-            DisplayBossRoom();
         }
     }
 
@@ -115,6 +120,14 @@ public class LevelGenerator : MonoBehaviour
         }
 
         return false;
+    }
+    void DisplayStartRoom() {
+        var room = Instantiate(startRoom, new Vector3(0, 0, 0), Quaternion.identity, transform).GetComponent<RoomBehaviour>();
+
+        Vector3 playerPosition = new Vector3(0, 0, 0 * roomOffset.y);
+        cameraPosition += new Vector3(roomOffset.x, 0, roomOffset.y - 10);
+        GameManager.Instance.TeleportCharacterTo(playerPosition, cameraPosition);
+        Camera.main.transform.rotation = cameraRotation;
     }
     void DisplayBossRoom() {
         var room = Instantiate(bossRoom, new Vector3(0, 0, 0), Quaternion.identity, transform).GetComponent<RoomBehaviour>();

@@ -10,9 +10,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     public static UIManager UIManager { get; private set; }
     public static WishesManager WishesManager { get; private set; }
-    
     public static MainCharacter MainCharacter { get; private set; }
-    public float CurrentLevel { get; private set; } = 1;
+    public int CurrentLevel { get; private set; }
     public bool Paused { get; private set; } = false;
 
     private StatSO[] _stats;
@@ -61,7 +60,7 @@ public class GameManager : MonoBehaviour
 
     public void Reset()
     {
-        CurrentLevel = 1;
+        CurrentLevel = 0;
         WishesManager.Reset();
         foreach (var stat in _stats)
         {

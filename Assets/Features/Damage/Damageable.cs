@@ -55,7 +55,7 @@ public class Damageable : MonoBehaviour
         float healthChange = updatedHealth - health.Get();
         health.Set(updatedHealth);
         
-        if (Mathf.Abs(healthChange) < 0.001f) return;
+        if (Mathf.Abs(healthChange) < 0.0001f) return;
         onHealthChanged.Invoke(healthChange);
         
         if (updatedHealth > 0) return;
