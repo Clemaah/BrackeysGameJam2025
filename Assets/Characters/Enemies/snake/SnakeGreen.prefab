@@ -615,7 +615,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 122118283520026524, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: damage.value
-      value: 30
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 122118283520026524, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: knockback.value
@@ -629,6 +629,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: a67fde2f7b5a123438365110fcf16014, type: 2}
+    - target: {fileID: 2737775249792661991, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3408622534029679705, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.22
@@ -663,7 +667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4052972136235883723, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: m_Name
-      value: Snake
+      value: SnakeGreen
       objectReference: {fileID: 0}
     - target: {fileID: 4208599833675267683, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -709,9 +713,17 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4972048873079445386, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8096709403176930831, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8096709403176930831, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: maxHealth.value
-      value: 48
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8096709403176930831, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: _damageParticles
