@@ -49,14 +49,12 @@ public class Damageable : MonoBehaviour
         if (spawnParticles) SpawnDamageParticles(direction);
 
         onHealthChanged.Invoke(-damageTaken);
-        if (health <= 0)
-        {
-            onDeath.Invoke();
-            if (destroyOnDeath)
-            {
-                Destroy(gameObject);
-            }
-        }
+        if (health > 0) return;
+            
+        onDeath.Invoke();
+        
+        if (destroyOnDeath)
+            Destroy(gameObject);
     }
 
     private void SpawnDamageParticles(Quaternion direction) {

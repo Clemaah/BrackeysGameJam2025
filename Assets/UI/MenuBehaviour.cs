@@ -20,9 +20,9 @@ public class MenuBehaviour : MonoBehaviour
 
     public void StartGame()
     {
-        GameManager.Instance.ResetStats();
         OpenMenu("None");
         SceneManager.LoadScene("DevMaps");
+        GameManager.Instance.Reset();
     }
     
     public void QuitGame()

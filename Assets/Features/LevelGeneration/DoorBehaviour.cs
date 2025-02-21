@@ -12,26 +12,26 @@ public class DoorBehaviour : MonoBehaviour
         int offsetCameraNs = 44;
         int offsetCameraEw = 56;
         
-        Vector3 playerPosition = MainCharacter.Instance.transform.position;
-        Vector3 cameraPosition = Camera.main.transform.position;
+        Vector3 playerPositionOffset = Vector3.zero;
+        Vector3 cameraPositionOffset = Vector3.zero;;
         
         if(gameObject.name == "NorthDoorWall"){
-            playerPosition += new Vector3(0, 0, offsetPlayer);
-            cameraPosition += new Vector3(0, 0, offsetCameraNs);
+            playerPositionOffset = new Vector3(0, 0, offsetPlayer);
+            cameraPositionOffset = new Vector3(0, 0, offsetCameraNs);
         }
         else if(gameObject.name == "SouthDoorWall"){
-            playerPosition -= new Vector3(0, 0, offsetPlayer);
-            cameraPosition -= new Vector3(0, 0, offsetCameraNs);
+            playerPositionOffset = new Vector3(0, 0, -offsetPlayer);
+            cameraPositionOffset = new Vector3(0, 0, -offsetCameraNs);
         }
         else if(gameObject.name == "EastDoorWall"){
-            playerPosition += new Vector3(offsetPlayer, 0, 0);
-            cameraPosition += new Vector3(offsetCameraEw, 0, 0);
+            playerPositionOffset = new Vector3(offsetPlayer, 0, 0);
+            cameraPositionOffset = new Vector3(offsetCameraEw, 0, 0);
         }
         else if(gameObject.name == "WestDoorWall"){
-            playerPosition -= new Vector3(offsetPlayer, 0, 0);
-            cameraPosition -= new Vector3(offsetCameraEw, 0, 0);
+            playerPositionOffset = new Vector3(-offsetPlayer, 0, 0);
+            cameraPositionOffset = new Vector3(-offsetCameraEw, 0, 0);
         }
         
-        MainCharacter.Instance.TeleportTo(playerPosition, cameraPosition);
+        GameManager.Instance.TeleportCharacterBy(playerPositionOffset, cameraPositionOffset);
     }
 }

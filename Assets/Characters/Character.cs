@@ -25,7 +25,7 @@ public class Character : MonoBehaviour
         Animator = GetComponentInChildren<Animator>();
     }
 
-    private void Start()
+    protected void Start()
     {
         scale.stat.OnValueChanged += () => StartCoroutine(Tween.To(0.5f, transform.localScale, Vector3.one * scale.Get(), v => transform.localScale = v, easeType: Tween.EaseType.EaseOutBack));
     }

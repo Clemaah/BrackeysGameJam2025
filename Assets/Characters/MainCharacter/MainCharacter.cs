@@ -5,35 +5,25 @@ using UnityEngine;
 
 public class MainCharacter : Character
 {
-    public static MainCharacter Instance { get; private set; }
-
     public FloatValue speedMultiplierWhileShooting;
     public FloatValue controller;
     
     public ProjectileLauncher projectileLauncher;
 
     private bool _isShooting;
-    
-    protected new void Awake()
+
+    private new void Awake()
     {
         base.Awake();
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-        
+        GameManager.Instance?.RegisterMainCharacter(this);
     }
-
     void Update()
     {
         if (GameManager.Instance)
         {
-            if (GameManager.UIManager.currentMenu != MenuType.WishesSelection && Input.GetKeyDown(KeyCode.Escape))
+            if (GameManager.UIManager.currentMenu != MenuType.WishesSelection 
+                && GameManager.UIManager.currentMenu != MenuType.GameOver 
+                && Input.GetKeyDown(KeyCode.Escape))
             {
                 GameManager.UIManager.OpenMenu(GameManager.Instance.Paused ? MenuType.None : MenuType.Pause);
                 return;

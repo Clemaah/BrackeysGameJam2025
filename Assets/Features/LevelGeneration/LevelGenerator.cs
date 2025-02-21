@@ -121,7 +121,7 @@ public class LevelGenerator : MonoBehaviour
 
         Vector3 playerPosition = new Vector3(0, 0, 0 * roomOffset.y);
         cameraPosition += new Vector3(roomOffset.x, 0, roomOffset.y - 10);
-        MainCharacter.Instance.TeleportTo(playerPosition, cameraPosition);
+        GameManager.Instance.TeleportCharacterTo(playerPosition, cameraPosition);
         Camera.main.transform.rotation = cameraRotation;
     }
 
@@ -179,7 +179,7 @@ public class LevelGenerator : MonoBehaviour
 
         Vector3 playerPosition = new Vector3(entranceCoordinates.x * roomOffset.x, 0.5f, -entranceCoordinates.y * roomOffset.y);
         cameraPosition += new Vector3(entranceCoordinates.x * roomOffset.x, 0, -entranceCoordinates.y * roomOffset.y - 10);
-        MainCharacter.Instance.TeleportTo(playerPosition, cameraPosition);
+        GameManager.Instance.TeleportCharacterTo(playerPosition, cameraPosition);
         Camera.main.transform.rotation = cameraRotation;
 
         var entranceRoom = Instantiate(currentLevelConfig.rooms[1].room, new Vector3(entranceCoordinates.x * roomOffset.x, 0, -entranceCoordinates.y * roomOffset.y), Quaternion.identity, transform).GetComponent<RoomBehaviour>();
