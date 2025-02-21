@@ -23,7 +23,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] private MenuPair[] prefabMenuList;
     
     private List<MenuPair> _menuList;
-    
     public MenuType currentMenu { get; private set; }
     private MenuType _lastMenu = MenuType.None;
 

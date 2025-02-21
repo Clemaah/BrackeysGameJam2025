@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddb71c52d6ff394eb512234c9d4e674, type: 3}
   m_Name: Precise
   m_EditorClassIdentifier: 
-  weapon: 
   modifiers:
   - statRef: {fileID: 11400000, guid: 95c3e8ffaa24dc247a295eaa4e204280, type: 2}
     operation: 0
