@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: beige 1
+  m_Name: raisin
   m_Shader: {fileID: -6465566751694194690, guid: 89dec19efa73b564bb33dc9074578229, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -62,10 +62,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_634f1eb5ca714905a4c548d4d9d4ddcd_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 5b543c359ad885147819b5641246deca, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -127,16 +123,15 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     - _intensity: 0.7
-    - _scale: 34
-    - _tiling: 19.96
+    - _tiling: 4
     m_Colors:
-    - _BaseColor: {r: 0.764151, g: 0.6236984, b: 0.4793966, a: 1}
-    - _Color: {r: 0.8867924, g: 0.64544004, b: 0.3973834, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.514151, g: 1, b: 0.5846609, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &2461606396906017039
+--- !u!114 &3906621062450933525
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

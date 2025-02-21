@@ -141,7 +141,7 @@ Material:
     - _ZWrite: 1
     - _intensity: 0.7
     - _scale: 34
-    - _tiling: 4
+    - _tiling: 181.19
     m_Colors:
     - _BaseColor: {r: 0.26717696, g: 0.7169812, b: 0.37778452, a: 1}
     - _Color: {r: 0.26717693, g: 0.7169812, b: 0.3777845, a: 1}
