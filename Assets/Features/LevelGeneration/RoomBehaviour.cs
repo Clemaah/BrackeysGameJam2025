@@ -7,6 +7,7 @@ public class RoomBehaviour : MonoBehaviour
 {
     public GameObject[] walls;
     public GameObject[] doors;
+    public GameObject[] doorsBlockers;
     public GameObject[] mapElements;
     public GameObject[] mapEnemies;
 
@@ -53,6 +54,7 @@ public class RoomBehaviour : MonoBehaviour
 
         for (int i = 0; i < status.Length; i++) {
             doors[i].SetActive(status[i]);
+            doorsBlockers[i].SetActive(status[i]);
             walls[i].SetActive(!status[i]);
 
             if (status[i]) map[doorsIndex[i]] = true;
