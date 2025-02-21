@@ -56,6 +56,7 @@ MonoBehaviour:
   - {fileID: 7742591724440309899}
   - {fileID: 0}
   - {fileID: 0}
+  doorsBlockers: []
   mapElements:
   - {fileID: 0}
   - {fileID: 0}
@@ -137,6 +138,9 @@ PrefabInstance:
     - {fileID: 3123636612577352917, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
     - {fileID: 1257260716253174325, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
     - {fileID: 907307895247657114, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
+    - {fileID: 9113426066724071745, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
+    - {fileID: 5291360942347738600, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
+    - {fileID: 5037779866587872556, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
@@ -350,6 +354,9 @@ PrefabInstance:
     - {fileID: 907307895247657114, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
     - {fileID: 6730402210746063148, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
     - {fileID: 5609450289365766470, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
+    - {fileID: 9113426066724071745, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
+    - {fileID: 5291360942347738600, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
+    - {fileID: 8308213362630172141, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
