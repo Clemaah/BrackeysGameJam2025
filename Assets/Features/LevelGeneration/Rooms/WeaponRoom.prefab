@@ -58,6 +58,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  doorsBlockers:
+  - {fileID: 1141642348490341974}
   mapElements: []
   mapEnemies: []
 --- !u!1001 &2780044889486471339
@@ -306,9 +308,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1511732974478726878, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5381774497645018182, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
       propertyPath: m_Name
       value: Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 6341543655398988495, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8789343518624950040, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
@@ -317,6 +327,9 @@ PrefabInstance:
     - {fileID: 3123636612577352917, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
     - {fileID: 1257260716253174325, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
     - {fileID: 907307895247657114, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
+    - {fileID: 5037779866587872556, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
+    - {fileID: 5291360942347738600, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
+    - {fileID: 9113426066724071745, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3863288120568151128, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
@@ -331,6 +344,11 @@ GameObject:
 --- !u!1 &475688783683618105 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8791771733891688066, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
+  m_PrefabInstance: {fileID: 8978868834546394043}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1141642348490341974 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8308213362630172141, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
   m_PrefabInstance: {fileID: 8978868834546394043}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &3549853500620763901 stripped
