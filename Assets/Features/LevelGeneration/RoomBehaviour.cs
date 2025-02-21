@@ -139,7 +139,7 @@ public class RoomBehaviour : MonoBehaviour
 
                     if (!map[randomPosition] && !enemiesPositions.Contains(randomPosition))
                     {
-                        int randomEnemy = Random.Range(0, 3);
+                        int randomEnemy = Random.Range(0, mapEnemies[randomPosition].transform.childCount);
                         mapEnemies[randomPosition].transform.GetChild(randomEnemy).gameObject.SetActive(true);
                         enemiesPositions.Add(randomPosition);
                         nbEnemies--;
