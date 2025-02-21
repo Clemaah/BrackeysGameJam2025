@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-[CreateAssetMenu(fileName = "StatSO", menuName = "Scriptable Objects/Stat")]
+[CreateAssetMenu(fileName = "StatSO", menuName = "Stat", order = 1)]
 public class StatSO : ScriptableObject
 {
     [TextArea]
@@ -35,10 +35,21 @@ public class StatSO : ScriptableObject
         Reset();
     }
 
-    public void ChangeValue(float bonus, float multiplier)
+    public void ChangeValue(ModifierOperation operation, float modifierValue)
     {
         float initialValue = value;
-        value = (value + bonus) * multiplier;
+        switch (operation)
+        {
+            case ModifierOperation.Set:
+                value = modifierValue;
+                break;
+            case ModifierOperation.Mult:
+                value *= modifierValue;
+                break;
+            case ModifierOperation.Add:
+                value += modifierValue;
+                break;
+        }
         value = Mathf.Clamp(value, min, max);
         float diff = value - initialValue;
         
