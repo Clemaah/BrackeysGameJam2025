@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cefc6bbff5bb3eb49bebbff89ea9d655, type: 3}
+  m_Name: FirePath
+  m_EditorClassIdentifier: 
+  wish: ...to burn them all.
+  genieCommentary: Hell is at your feet.
+  modifiers: []
+  objectsToSpawn:
+  - {fileID: 5919655363075330863, guid: 3ace3c83388f5c54f8e1f2e28ab2105b, type: 3}
+  onWishApplied:
+    m_PersistentCalls:
+      m_Calls: []
