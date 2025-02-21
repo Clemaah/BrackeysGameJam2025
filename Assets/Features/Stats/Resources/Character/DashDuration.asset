@@ -15,5 +15,5 @@ MonoBehaviour:
   description: The duration of a dash (in s)
   min: 0
   max: 100
-  baseValue: 0.125
-  value: 0.125
+  baseValue: 0.1
+  value: 0.1
