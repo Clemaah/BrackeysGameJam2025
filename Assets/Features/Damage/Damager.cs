@@ -14,8 +14,27 @@ public class Damager : MonoBehaviour
     public KnockBackType knockBackType;
     
     public bool destroyOnDamage = true;
+    public bool applyDamageOnStay = false;
+    public float stayDamageInterval = 0.5f;
+    private float _nextDamage;
 
     private void OnTriggerEnter(Collider other)
+    {
+        if (!applyDamageOnStay)
+            ApplyDamage(other);
+    }
+    
+    private void OnTriggerStay(Collider other)
+    {
+        if (!applyDamageOnStay) return;
+        if (Time.time >= _nextDamage)
+        {
+            _nextDamage = Time.time + stayDamageInterval;
+            ApplyDamage(other);
+        }
+    }
+
+    private void ApplyDamage(Collider other)
     {
         Damageable damageable = other.GetComponent<Damageable>();
         if (damageable == null) return;
