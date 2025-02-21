@@ -60,10 +60,9 @@ public class RoomBehaviour : MonoBehaviour
 
         if (mapElements.Length > 0) {
             foreach (GameObject mapElement in mapElements) {
-                for (int i = 1; i < mapElement.transform.childCount; i++) {
+                for (int i = 0; i < mapElement.transform.childCount; i++) {
                     mapElement.transform.GetChild(i).gameObject.SetActive(false);
                 }
-                mapElement.transform.GetChild(0).gameObject.SetActive(true);
             }
 
             int rows = elementsZones.Count;
