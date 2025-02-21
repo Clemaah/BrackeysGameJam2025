@@ -36,4 +36,9 @@ public class WishesManager : MonoBehaviour
         _currentWishes.Add(wish);
         _remainingWishes.Remove(wish);
     }
+
+    public void Reset()
+    {
+        _remainingWishes = _allWishes;
+    }
 }

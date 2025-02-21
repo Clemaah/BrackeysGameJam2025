@@ -47,15 +47,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage:
-    type: 0
+    type: 2
     value: 40
-    stat: {fileID: 0}
+    stat: {fileID: 11400000, guid: 7efc78f47b07b394ebf11ad392f55965, type: 2}
   knockback:
     type: 0
     value: 12
     stat: {fileID: 0}
   knockBackType: 1
   destroyOnDamage: 0
+  applyDamageOnStay: 0
+  stayDamageInterval: 0.5
 --- !u!135 &3556853398008134193
 SphereCollider:
   m_ObjectHideFlags: 0

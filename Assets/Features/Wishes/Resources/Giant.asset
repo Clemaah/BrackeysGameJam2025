@@ -36,3 +36,6 @@ MonoBehaviour:
   - statRef: {fileID: 11400000, guid: 45794d9bd9611224f880093257fb27bd, type: 2}
     bonus: 0
     multiplier: 0
+  - statRef: {fileID: 11400000, guid: ea57cd153f8594342a7474a5b06331af, type: 2}
+    bonus: 0
+    multiplier: 0

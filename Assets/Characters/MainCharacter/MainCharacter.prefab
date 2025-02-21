@@ -412,6 +412,8 @@ MonoBehaviour:
     stat: {fileID: 11400000, guid: 3a1c7c891c3ee754eb237d6585a2fb47, type: 2}
   knockBackType: 0
   destroyOnDamage: 1
+  applyDamageOnStay: 0
+  stayDamageInterval: 0.5
 --- !u!135 &1031614519814704823
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1097,5 +1099,5 @@ MonoBehaviour:
   speedMultiplierWhileShooting:
     type: 1
     value: 0.8
-    stat: {fileID: 11400000, guid: 3a1c7c891c3ee754eb237d6585a2fb47, type: 2}
+    stat: {fileID: 11400000, guid: da40cab0d99e9164497e8637bf3757c3, type: 2}
   projectileLauncher: {fileID: 8832291201348459258}

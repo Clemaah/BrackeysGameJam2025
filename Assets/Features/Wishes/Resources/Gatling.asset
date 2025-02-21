@@ -15,7 +15,7 @@ MonoBehaviour:
   wish: ...to shoot like a gatling.
   genieCommentary: Maybe some struggle to use it.
   modifiers:
-  - statRef: {fileID: 11400000, guid: 3a1c7c891c3ee754eb237d6585a2fb47, type: 2}
+  - statRef: {fileID: 11400000, guid: da40cab0d99e9164497e8637bf3757c3, type: 2}
     bonus: 0
     multiplier: 0.1
   - statRef: {fileID: 11400000, guid: 90a3d38c32ef82c4b97d7152fe4dcce8, type: 2}

@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -39,5 +41,16 @@ public class GameManager : MonoBehaviour
     {
         Paused = paused;
         Time.timeScale = paused ? 0 : 1;
+    }
+
+    public void ResetStats()
+    {
+        StatSO[] stats = Resources.LoadAll<StatSO>("");
+        foreach (var stat in stats)
+        {
+            stat.Reset();
+        }
+
+        WishesManager.Reset();
     }
 }

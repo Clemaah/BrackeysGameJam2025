@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.Events;
 
 [System.Serializable]
 public struct StatModifier {
@@ -20,6 +22,8 @@ public class WishSO : ScriptableObject
     [TextArea]
     public string genieCommentary;
     public StatModifier[] modifiers;
+    public GameObject[] objectsToSpawn;
+    public UnityEvent onWishApplied;
 
     public void Apply()
     {
@@ -27,7 +31,19 @@ public class WishSO : ScriptableObject
         {
             modifier.statRef.ChangeValue(modifier.bonus, modifier.multiplier);
         }
+        
+        onWishApplied?.Invoke();
+        Spawn();
     }
+
+    private void Spawn()
+    {
+        foreach (GameObject prefab in objectsToSpawn)
+        {
+            Instantiate(prefab);
+        }
+    }
+    
 }
 
 
