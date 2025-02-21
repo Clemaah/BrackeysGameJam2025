@@ -649,7 +649,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: b88cde13545870b4dbb8c54127997365, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 7a80249d623d3424c9e09f99b416ccce, type: 2}
+      objectReference: {fileID: 2100000, guid: 6ab860f81457592499dd0bed5ba25fff, type: 2}
     - target: {fileID: 919132149155446097, guid: b88cde13545870b4dbb8c54127997365, type: 3}
       propertyPath: m_Name
       value: stoneBrickPile
@@ -1295,7 +1295,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 06aaee25981b2a8429215b54409dc45b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 7a80249d623d3424c9e09f99b416ccce, type: 2}
+      objectReference: {fileID: 2100000, guid: 6ab860f81457592499dd0bed5ba25fff, type: 2}
     - target: {fileID: 919132149155446097, guid: 06aaee25981b2a8429215b54409dc45b, type: 3}
       propertyPath: m_Name
       value: stoneBrick
@@ -1413,7 +1413,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 06aaee25981b2a8429215b54409dc45b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 7a80249d623d3424c9e09f99b416ccce, type: 2}
+      objectReference: {fileID: 2100000, guid: 6ab860f81457592499dd0bed5ba25fff, type: 2}
     - target: {fileID: 919132149155446097, guid: 06aaee25981b2a8429215b54409dc45b, type: 3}
       propertyPath: m_Name
       value: stoneBrick (2)
@@ -1531,7 +1531,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 06aaee25981b2a8429215b54409dc45b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 7a80249d623d3424c9e09f99b416ccce, type: 2}
+      objectReference: {fileID: 2100000, guid: 6ab860f81457592499dd0bed5ba25fff, type: 2}
     - target: {fileID: 919132149155446097, guid: 06aaee25981b2a8429215b54409dc45b, type: 3}
       propertyPath: m_Name
       value: stoneBrick (1)

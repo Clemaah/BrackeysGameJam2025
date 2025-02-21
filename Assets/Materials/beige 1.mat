@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: beige
+  m_Name: beige 1
   m_Shader: {fileID: -6465566751694194690, guid: 89dec19efa73b564bb33dc9074578229, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -128,7 +128,7 @@ Material:
     - _ZWrite: 1
     - _intensity: 0.7
     - _scale: 34
-    - _tiling: 4
+    - _tiling: 19.96
     m_Colors:
     - _BaseColor: {r: 0.764151, g: 0.6236984, b: 0.4793966, a: 1}
     - _Color: {r: 0.764151, g: 0.6236984, b: 0.47939652, a: 1}
