@@ -15,5 +15,5 @@ MonoBehaviour:
   description: projectile range (in m)
   min: 0
   max: 100
-  baseValue: 24
-  value: 24
+  baseValue: 25
+  value: 25

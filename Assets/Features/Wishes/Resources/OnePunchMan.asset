@@ -12,21 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefc6bbff5bb3eb49bebbff89ea9d655, type: 3}
   m_Name: OnePunchMan
   m_EditorClassIdentifier: 
-  wish: ...make life disappear in a wink.
-  genieCommentary: Life is fragile
+  wish: KILL WITH A SINGLE PUNCH
+  genieCommentary: Only need your fists to obliterate your ennemies
   modifiers:
-  - statRef: {fileID: 11400000, guid: 7efc78f47b07b394ebf11ad392f55965, type: 2}
-    bonus: 10000
-    multiplier: 1
-  - statRef: {fileID: 11400000, guid: 1eafe67589f941b4391bc351207e8c96, type: 2}
-    bonus: 10000
-    multiplier: 1
-  - statRef: {fileID: 11400000, guid: afd28f6eb4dde504eb3e305f513dd283, type: 2}
-    bonus: 10000
-    multiplier: 1
+  - statRef: {fileID: 11400000, guid: 4454ec8c5ee976e46a3258390cbd9042, type: 2}
+    operation: 0
+    value: 200
   - statRef: {fileID: 11400000, guid: ea57cd153f8594342a7474a5b06331af, type: 2}
-    bonus: 10000
-    multiplier: 1
+    operation: 0
+    value: 0
+  - statRef: {fileID: 11400000, guid: 64000aec49016cb4789fb2f4efe8bd32, type: 2}
+    operation: 0
+    value: 0
+  - statRef: {fileID: 11400000, guid: 9da5064c721199746845cf782cecd6c2, type: 2}
+    operation: 0
+    value: 0
   objectsToSpawn: []
   onWishApplied:
     m_PersistentCalls:
