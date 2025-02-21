@@ -3,7 +3,6 @@ using UnityEditor;
 
 [System.Serializable]
 public struct StatModifier {
-
     public StatSO statRef;
     
     [Tooltip("Bonus modifier")]

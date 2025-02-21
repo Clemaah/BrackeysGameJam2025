@@ -615,7 +615,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 122118283520026524, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: damage.value
-      value: 5
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 122118283520026524, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
+      propertyPath: knockback.value
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2470128689710398569, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: speed.value
@@ -774,9 +778,9 @@ MonoBehaviour:
     value: 0.5
     stat: {fileID: 0}
   dashCooldown:
-    type: 0
+    type: 2
     value: 2
-    stat: {fileID: 0}
+    stat: {fileID: 11400000, guid: 25ab4c2c76043fd4b89f7a93c0d34e21, type: 2}
   target: {fileID: 0}
   detectionRadius: 24
   projectileLauncher: {fileID: 654058062060627733}

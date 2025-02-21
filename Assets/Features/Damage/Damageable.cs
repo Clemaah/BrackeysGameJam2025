@@ -9,6 +9,7 @@ public class Damageable : MonoBehaviour
     [HideInInspector]
     public float health;
     public FloatValue maxHealth;
+    public FloatValue armor;
     
     public FloatValue healthChange;
     
@@ -29,7 +30,7 @@ public class Damageable : MonoBehaviour
 
     private void Update()
     {
-        if (Time.time >= _nextHealthChange)
+        if (healthChange.Get() > 0 && Time.time >= _nextHealthChange)
         {
             _nextHealthChange = Time.time + 1.0f;
             Quaternion nullQuaternion = new Quaternion();
@@ -40,7 +41,7 @@ public class Damageable : MonoBehaviour
     public void TakeDamage(float damage, bool spawnParticles, Quaternion direction)
     {
         float preDamageHealth = health;
-        health -= damage;
+        health -= damage * (1 - armor.Get());
         health = Mathf.Clamp(health, 0.0f, maxHealth.Get());
         float damageTaken = preDamageHealth - health;
         if (Mathf.Abs(damageTaken) < 0.001f) return;

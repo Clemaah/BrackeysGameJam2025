@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: DashDuration
   m_EditorClassIdentifier: 
   description: The duration of a dash (in s)
+  min: 0
+  max: 100
   baseValue: 0.125
   value: 0.125

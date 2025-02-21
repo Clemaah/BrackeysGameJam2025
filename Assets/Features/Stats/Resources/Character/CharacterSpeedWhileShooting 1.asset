@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 219faae0057d74a4f8d990ac7a45fa3f, type: 3}
-  m_Name: ShootFireRate
+  m_Name: CharacterSpeedWhileShooting 1
   m_EditorClassIdentifier: 
-  description: Fire Rate (projectile/s)
-  baseValue: 3
-  value: 3
+  description: Character speed multiplier while shooting
+  baseValue: 0.8
+  value: 0.8

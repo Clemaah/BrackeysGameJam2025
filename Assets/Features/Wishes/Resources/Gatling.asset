@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cefc6bbff5bb3eb49bebbff89ea9d655, type: 3}
+  m_Name: Gatling
+  m_EditorClassIdentifier: 
+  wish: ...to shoot like a gatling.
+  genieCommentary: Maybe some struggle to use it.
+  modifiers:
+  - statRef: {fileID: 11400000, guid: 3a1c7c891c3ee754eb237d6585a2fb47, type: 2}
+    bonus: 0
+    multiplier: 0.1
+  - statRef: {fileID: 11400000, guid: 90a3d38c32ef82c4b97d7152fe4dcce8, type: 2}
+    bonus: 70
+    multiplier: 1
+  - statRef: {fileID: 11400000, guid: 64000aec49016cb4789fb2f4efe8bd32, type: 2}
+    bonus: 0
+    multiplier: 10
+  - statRef: {fileID: 11400000, guid: 1eafe67589f941b4391bc351207e8c96, type: 2}
+    bonus: 0
+    multiplier: 0.1
+  - statRef: {fileID: 11400000, guid: 69669869756308c4ca00de70f8f14f9e, type: 2}
+    bonus: 0
+    multiplier: 0.5
+  - statRef: {fileID: 11400000, guid: 9a3767f9cdb56624996aa5638f771464, type: 2}
+    bonus: -2
+    multiplier: 0

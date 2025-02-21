@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 219faae0057d74a4f8d990ac7a45fa3f, type: 3}
-  m_Name: CharacterHealth
+  m_Name: EnemyKnockback
   m_EditorClassIdentifier: 
-  description: Character health
+  description: Enemy cooldown multiplier for their respective ability
   min: 0
-  max: 1000
-  baseValue: 100
-  value: 110
+  max: 100
+  baseValue: 1
+  value: 1

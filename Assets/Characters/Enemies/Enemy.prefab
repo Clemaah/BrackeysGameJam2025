@@ -67,13 +67,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage:
-    type: 0
+    type: 2
     value: 3
-    stat: {fileID: 0}
+    stat: {fileID: 11400000, guid: ea57cd153f8594342a7474a5b06331af, type: 2}
   knockback:
-    type: 0
-    value: 0
-    stat: {fileID: 0}
+    type: 2
+    value: 1
+    stat: {fileID: 11400000, guid: 8f60aa1fc4b115644b8475db234fc6a4, type: 2}
   knockBackType: 0
   destroyOnDamage: 0
 --- !u!1001 &2783717178797473989
@@ -144,6 +144,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: ed89d478c79ccb34daab012397b0bdb6, type: 2}
+    - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      propertyPath: armor.stat
+      value: 
+      objectReference: {fileID: 11400000, guid: cc978dd4e59286b4c881508a98c5e103, type: 2}
+    - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      propertyPath: armor.type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
       propertyPath: destroyOnDeath
       value: 1
@@ -236,9 +244,9 @@ MonoBehaviour:
     value: 0.5
     stat: {fileID: 0}
   dashCooldown:
-    type: 0
+    type: 2
     value: 4
-    stat: {fileID: 0}
+    stat: {fileID: 11400000, guid: 25ab4c2c76043fd4b89f7a93c0d34e21, type: 2}
   target: {fileID: 0}
   detectionRadius: 24
 --- !u!4 &4208599833675267683 stripped
