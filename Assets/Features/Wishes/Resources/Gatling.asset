@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefc6bbff5bb3eb49bebbff89ea9d655, type: 3}
   m_Name: Gatling
   m_EditorClassIdentifier: 
-  wish: ...to shoot like a gatling.
+  wish: ...shoot like a gatling.
   genieCommentary: Maybe some struggle to use it.
   modifiers:
   - statRef: {fileID: 11400000, guid: da40cab0d99e9164497e8637bf3757c3, type: 2}
@@ -33,3 +33,7 @@ MonoBehaviour:
   - statRef: {fileID: 11400000, guid: 9a3767f9cdb56624996aa5638f771464, type: 2}
     bonus: -2
     multiplier: 0
+  objectsToSpawn: []
+  onWishApplied:
+    m_PersistentCalls:
+      m_Calls: []

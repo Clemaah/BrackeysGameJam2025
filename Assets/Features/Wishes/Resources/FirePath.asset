@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefc6bbff5bb3eb49bebbff89ea9d655, type: 3}
   m_Name: FirePath
   m_EditorClassIdentifier: 
-  wish: ...to burn them all.
+  wish: ...burn them all.
   genieCommentary: Hell is at your feet.
   modifiers: []
   objectsToSpawn:

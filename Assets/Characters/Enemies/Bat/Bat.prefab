@@ -982,6 +982,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4972048873079445386, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8096709403176930831, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: _damageParticles
       value: 

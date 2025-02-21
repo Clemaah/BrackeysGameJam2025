@@ -12,7 +12,7 @@ public class MainCharacter : Character
 
     private bool _isShooting;
 
-    private new void Awake()
+    protected new void Awake()
     {
         base.Awake();
         GameManager.Instance?.RegisterMainCharacter(this);

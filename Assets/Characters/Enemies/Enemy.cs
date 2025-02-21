@@ -8,9 +8,8 @@ public class Enemy : Character
     
     public float detectionRadius = 24.0f;
 
-    protected new void Start()
+    protected void Start()
     {
-        base.Start();
         target = FindFirstObjectByType<MainCharacter>();
     }
     

@@ -10,14 +10,13 @@ public class Damageable : MonoBehaviour
     public float health;
     public FloatValue maxHealth;
     public FloatValue armor;
-    
-    public FloatValue healthChange;
+    public FloatValue healthRegen;
     
     public bool destroyOnDeath = false;
     
     public UnityEvent<float> onHealthChanged;
     public UnityEvent onDeath;
-
+    
     [SerializeField] public ParticleSystem damageParticles;
 
     private ParticleSystem _damageParticlesInstance;
@@ -26,29 +25,28 @@ public class Damageable : MonoBehaviour
     private void Awake()
     {
         health = maxHealth.Get();
+        
+        maxHealth.stat.OnValueChanged += ChangeHealthBy;
     }
 
     private void Update()
     {
-        if (healthChange.Get() > 0 && Time.time >= _nextHealthChange)
-        {
-            _nextHealthChange = Time.time + 1.0f;
-            Quaternion nullQuaternion = new Quaternion();
-            TakeDamage(-healthChange.Get(), false, nullQuaternion);
-        }
+        if (healthRegen.Get() == 0) return;
+        ChangeHealthBy(healthRegen.Get() * Time.deltaTime);
     }
 
-    public void TakeDamage(float damage, bool spawnParticles, Quaternion direction)
+    public void ChangeHealthBy(float amount)
     {
-        float preDamageHealth = health;
-        health -= damage * (1 - armor.Get());
+        float initialHealth = health;
+        health += (amount > 0) ? amount : amount * (1 - armor.Get());
+        
+        
         health = Mathf.Clamp(health, 0.0f, maxHealth.Get());
-        float damageTaken = preDamageHealth - health;
-        if (Mathf.Abs(damageTaken) < 0.001f) return;
-
-        if (spawnParticles) SpawnDamageParticles(direction);
-
-        onHealthChanged.Invoke(-damageTaken);
+        float healthChange = health - initialHealth;
+        
+        if (Mathf.Abs(healthChange) < 0.001f) return;
+        onHealthChanged.Invoke(healthChange);
+        
         if (health > 0) return;
             
         onDeath.Invoke();
@@ -57,7 +55,7 @@ public class Damageable : MonoBehaviour
             Destroy(gameObject);
     }
 
-    private void SpawnDamageParticles(Quaternion direction) {
+    public void SpawnDamageParticles(Quaternion direction) {
         _damageParticlesInstance = Instantiate(damageParticles, transform.position - transform.forward, direction);
     }
 }

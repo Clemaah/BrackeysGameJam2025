@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefc6bbff5bb3eb49bebbff89ea9d655, type: 3}
   m_Name: Giant
   m_EditorClassIdentifier: 
-  wish: ...to crush my ennemies.
+  wish: ...crush my ennemies.
   genieCommentary: Bad idea to eat the mega mush.
   modifiers:
   - statRef: {fileID: 11400000, guid: 804fbbf81087acb41879905f8cdd03f2, type: 2}
@@ -39,3 +39,7 @@ MonoBehaviour:
   - statRef: {fileID: 11400000, guid: ea57cd153f8594342a7474a5b06331af, type: 2}
     bonus: 0
     multiplier: 0
+  objectsToSpawn: []
+  onWishApplied:
+    m_PersistentCalls:
+      m_Calls: []

@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     public void RegisterMainCharacter(MainCharacter mainCharacter)
     {
         MainCharacter = mainCharacter;
-        mainCharacter.GetComponent<Damageable>().onDeath.AddListener(() => { UIManager.OpenMenu(MenuType.GameOver); });
+        MainCharacter.GetComponent<Damageable>().onDeath.AddListener(() => { UIManager.OpenMenu(MenuType.GameOver); });
     }
 
     public void NextLevel()

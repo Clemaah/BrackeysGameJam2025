@@ -38,7 +38,8 @@ public class Damager : MonoBehaviour
     {
         Damageable damageable = other.GetComponent<Damageable>();
         if (damageable == null) return;
-        damageable.TakeDamage(damage.Get(), true, Quaternion.LookRotation(transform.forward));
+        damageable.ChangeHealthBy(-damage.Get());
+        damageable.SpawnDamageParticles(Quaternion.LookRotation(transform.forward));
         if (destroyOnDamage) Destroy(gameObject);
 
         // knock-back

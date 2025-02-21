@@ -1029,6 +1029,7 @@ PrefabInstance:
     - {fileID: 7653229620170483480, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
     - {fileID: 1751658449355800795, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
     - {fileID: 886946651170695484, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+    - {fileID: 7761096085295388597, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2073401055711542950, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
       insertIndex: -1
@@ -1100,4 +1101,8 @@ MonoBehaviour:
     type: 1
     value: 0.8
     stat: {fileID: 11400000, guid: da40cab0d99e9164497e8637bf3757c3, type: 2}
+  controller:
+    type: 0
+    value: 0
+    stat: {fileID: 0}
   projectileLauncher: {fileID: 8832291201348459258}

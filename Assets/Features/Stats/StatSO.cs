@@ -8,7 +8,7 @@ public class StatSO : ScriptableObject
     [TextArea]
     public string description;
     
-    public event Action OnValueChanged;
+    public event Action<float> OnValueChanged;
     [Header("Range")]
     public float min;
     public float max = 100;
@@ -19,6 +19,7 @@ public class StatSO : ScriptableObject
     public void Reset()
     {
         value = baseValue;
+        OnValueChanged = null;
     }
 
     private void OnValidate()
@@ -31,9 +32,12 @@ public class StatSO : ScriptableObject
 
     public void ChangeValue(float bonus, float multiplier)
     {
+        float initialValue = value;
         value = (value + bonus) * multiplier;
         value = Mathf.Clamp(value, min, max);
-        OnValueChanged?.Invoke();
+        float diff = value - initialValue;
+        
+        OnValueChanged?.Invoke(diff);
     }
 }
 

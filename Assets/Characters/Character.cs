@@ -23,11 +23,13 @@ public class Character : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         Animator = GetComponentInChildren<Animator>();
-    }
-
-    protected void Start()
-    {
-        scale.stat.OnValueChanged += () => StartCoroutine(Tween.To(0.5f, transform.localScale, Vector3.one * scale.Get(), v => transform.localScale = v, easeType: Tween.EaseType.EaseOutBack));
+        transform.localScale = Vector3.one * scale.Get();
+        scale.stat.OnValueChanged += _ => StartCoroutine(
+            Tween.To(0.5f, 
+                transform.localScale, 
+                Vector3.one * scale.Get(), 
+                v => transform.localScale = v, easeType: Tween.EaseType.EaseOutBack)
+            );
     }
 
     public bool TryDash(Vector3 direction)

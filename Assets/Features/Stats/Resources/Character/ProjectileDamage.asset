@@ -13,5 +13,10 @@ MonoBehaviour:
   m_Name: ProjectileDamage
   m_EditorClassIdentifier: 
   description: Projectile damage
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  min: 0
+  max: 1000
   baseValue: 10
   value: 10
