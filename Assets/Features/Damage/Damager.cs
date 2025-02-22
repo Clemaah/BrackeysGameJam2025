@@ -15,18 +15,24 @@ public class Damager : MonoBehaviour
     
     public bool destroyOnDamage = true;
     public bool destroyOnNonDamageable = false;
+    public GameObject objectToSpawnOnNonDamage;
     public bool applyDamageOnStay = false;
     public float stayDamageInterval = 0.5f;
     private float _nextDamage;
+    
+    private bool _pendingDestroy = false;
+    
 
     private void OnTriggerEnter(Collider other)
     {
+        if (_pendingDestroy) return;
         if (!applyDamageOnStay)
             ApplyDamage(other);
     }
     
     private void OnTriggerStay(Collider other)
     {
+        if (_pendingDestroy) return;
         if (!applyDamageOnStay) return;
         if (!enabled) return;
         if (Time.time >= _nextDamage)
@@ -42,7 +48,12 @@ public class Damager : MonoBehaviour
         if (damageable == null)
         {
             if (destroyOnNonDamageable)
+            {
+                if (objectToSpawnOnNonDamage)
+                    Instantiate(objectToSpawnOnNonDamage, transform.position, transform.rotation);
+                _pendingDestroy = true;
                 Destroy(gameObject);
+            }
             return;
         }
         damageable.ChangeHealthBy(-damage.Get(), Quaternion.LookRotation(transform.forward));

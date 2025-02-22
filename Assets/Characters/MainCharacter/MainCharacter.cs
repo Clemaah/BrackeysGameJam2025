@@ -12,6 +12,8 @@ public class MainCharacter : Character
 
     private bool _wantsToShoot;
 
+    public GameObject dashFX;
+
     protected new void Awake()
     {
         base.Awake();
@@ -73,5 +75,11 @@ public class MainCharacter : Character
         transform.position = playerPosition;
         Camera.main.transform.position = cameraPosition;
         characterController.enabled = true;
+    }
+
+    protected override void DashStart()
+    {
+        base.DashStart();
+        Instantiate(dashFX, transform.position, Quaternion.LookRotation(characterController.velocity.X0Z()), transform);
     }
 }
