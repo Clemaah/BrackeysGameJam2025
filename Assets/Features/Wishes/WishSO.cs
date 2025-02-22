@@ -38,7 +38,7 @@ public class WishSO : ScriptableObject
         Spawn();
     }
 
-    private void Spawn()
+    public void Spawn()
     {
         foreach (GameObject prefab in objectsToSpawn)
         {

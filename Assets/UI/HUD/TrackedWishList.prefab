@@ -75,4 +75,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389bdd87d8a8ece448f1f3f3732f6940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrackedWishItem: {fileID: 7515005051545969976, guid: 0ff91702b61a877448fddfbf3a84999e, type: 3}
+  TrackedWishItem: {fileID: 7515005051545969976, guid: eff67f99b0bc21c418db43a50a424b6e, type: 3}
