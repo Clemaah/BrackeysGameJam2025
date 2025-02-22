@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class MainCharacter : Character
 {
+    public BoolSO canShoot;
     public FloatValue speedMultiplierWhileShooting;
     public BoolSO isACar;
     public ProjectileLauncher projectileLauncher;

@@ -12678,6 +12678,7 @@ MonoBehaviour:
     type: 2
     value: 1
     stat: {fileID: 11400000, guid: 3a92301d0363d844f9d2aad4bfdf3132, type: 2}
+  canDash: {fileID: 11400000, guid: 686288e573d7abc41829002cba4066c7, type: 2}
   dashDelay: 0
   dashForce:
     type: 0

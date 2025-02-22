@@ -9,7 +9,7 @@ public class SkinnedMesh : MonoBehaviour
     
     void Start()
     {
-        _mesh = GetComponent<SkinnedMeshRenderer>();
+        _mesh = gameObject.GetComponent<SkinnedMeshRenderer>();
         _mesh.enabled = isVisible.value;
         material.OnValueChanged += ChangeMaterial;
         isVisible.OnValueChanged += newValue => _mesh.enabled = newValue;

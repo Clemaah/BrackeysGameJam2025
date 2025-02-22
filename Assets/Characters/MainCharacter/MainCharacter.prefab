@@ -360,29 +360,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee02b0ee03257b45a5279d618e2d6cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterController: {fileID: 0}
-  speed:
-    type: 0
-    value: 0
-    stat: {fileID: 0}
-  scale:
-    type: 0
-    value: 0
-    stat: {fileID: 0}
-  dashDelay: 0
-  dashForce:
-    type: 0
-    value: 0
-    stat: {fileID: 0}
-  dashDuration:
-    type: 0
-    value: 0
-    stat: {fileID: 0}
-  dashCooldown:
-    type: 0
-    value: 0
-    stat: {fileID: 0}
-  dashCooldownVariation: 0
 --- !u!114 &7569108588548857529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1424,6 +1401,7 @@ MonoBehaviour:
     value: 1
     stat: {fileID: 11400000, guid: 9da5064c721199746845cf782cecd6c2, type: 2}
   dashCooldownVariation: 0
+  canShoot: {fileID: 0}
   speedMultiplierWhileShooting:
     type: 1
     value: 0.8
@@ -1541,7 +1519,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1841069915878709161, guid: 032334bad89aeec4d9cf066eb516b396, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2601762161613530766, guid: 032334bad89aeec4d9cf066eb516b396, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6393466134602152447, guid: 032334bad89aeec4d9cf066eb516b396, type: 3}
       propertyPath: m_LocalPosition.x

@@ -13,7 +13,7 @@ public class Mesh : MonoBehaviour
     
     void Start()
     {
-        _mesh = GetComponent<MeshRenderer>();
+        _mesh = gameObject.GetComponent<MeshRenderer>();
         _mesh.enabled = isVisible.value;
         material.OnValueChanged += ChangeMaterial;
         isVisible.OnValueChanged += newValue => _mesh.enabled = newValue;

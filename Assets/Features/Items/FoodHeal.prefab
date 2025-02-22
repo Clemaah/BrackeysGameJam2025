@@ -121,10 +121,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7ab77a638359ee4aa18182130ea5d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mesh: {fileID: 3605645254561782502}
+  isVisible: {fileID: 11400000, guid: e61fe4bb29a5d5f4d889933a75ffdc69, type: 2}
+  material: {fileID: 11400000, guid: 76d041e0f2d593b479fa3a748a30af25, type: 2}
   materialID: 0
   changeAllMaterials: 1
-  material: {fileID: 11400000, guid: 76d041e0f2d593b479fa3a748a30af25, type: 2}
 --- !u!135 &5829644601963123362
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -146,8 +146,3 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.013
   m_Center: {x: 9.313226e-10, y: 0, z: 0.0032615827}
---- !u!23 &3605645254561782502 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 607ce465ca1d07a4fa6a9c8d1a83d8fb, type: 3}
-  m_PrefabInstance: {fileID: 2722503905762657890}
-  m_PrefabAsset: {fileID: 0}
