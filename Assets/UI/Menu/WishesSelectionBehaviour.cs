@@ -20,9 +20,6 @@ public class WishesSelectionUI : MonoBehaviour
             
             WishSO currentWish = wishes[i];
             wishesItems[i].UpdateWish(currentWish);
-            wishesItems[i].GetComponent<Button>().onClick.RemoveAllListeners();
-            wishesItems[i].GetComponent<Button>().onClick.AddListener(() => GameManager.WishesManager.SelectWish(currentWish));
-            wishesItems[i].GetComponent<Button>().onClick.AddListener(() => GameManager.UIManager.OpenMenu(MenuType.None));
         }
     }
 }
