@@ -119,6 +119,75 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &66086387
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e559c6a4ab067fa409913d67c1ce6c14, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6339418
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e559c6a4ab067fa409913d67c1ce6c14, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6339418
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e559c6a4ab067fa409913d67c1ce6c14, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6339418
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e559c6a4ab067fa409913d67c1ce6c14, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.0464
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e559c6a4ab067fa409913d67c1ce6c14, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.477
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e559c6a4ab067fa409913d67c1ce6c14, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.4355
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e559c6a4ab067fa409913d67c1ce6c14, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9951264
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e559c6a4ab067fa409913d67c1ce6c14, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e559c6a4ab067fa409913d67c1ce6c14, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.09860731
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e559c6a4ab067fa409913d67c1ce6c14, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e559c6a4ab067fa409913d67c1ce6c14, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e559c6a4ab067fa409913d67c1ce6c14, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 11.318
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e559c6a4ab067fa409913d67c1ce6c14, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e559c6a4ab067fa409913d67c1ce6c14, type: 3}
+      propertyPath: m_Name
+      value: Zahir_squeletalMesh_02
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e559c6a4ab067fa409913d67c1ce6c14, type: 3}
 --- !u!1001 &147401349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1195,3 +1264,4 @@ SceneRoots:
   - {fileID: 300014832}
   - {fileID: 777759369}
   - {fileID: 229514971}
+  - {fileID: 66086387}
