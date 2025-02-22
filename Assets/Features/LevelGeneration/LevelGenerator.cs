@@ -49,7 +49,8 @@ public class LevelGenerator : MonoBehaviour
     public LevelConfig[] levelsConfigs;
     public GameObject startRoom;
     public GameObject bossRoom;
-
+    public Light sun;
+    public Vector3[] sunRotations;
 
     // Not in inspector :
     LevelConfig currentLevelConfig;
@@ -59,7 +60,8 @@ public class LevelGenerator : MonoBehaviour
     
     void Start() {
         int currentLevel = GameManager.Instance.CurrentLevel;
-        
+        sun.transform.rotation = Quaternion.Euler(sunRotations[currentLevel]);
+
         if (currentLevel == 0)
             DisplayStartRoom();
         
