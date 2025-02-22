@@ -402,7 +402,7 @@ MonoBehaviour:
   projectile: {fileID: 4918667775969441015, guid: 87a3349f55a49fc459bfe9b905aed590, type: 3}
   fireRate:
     type: 0
-    value: 1
+    value: 0.5
     stat: {fileID: 0}
   accuracy:
     type: 0
