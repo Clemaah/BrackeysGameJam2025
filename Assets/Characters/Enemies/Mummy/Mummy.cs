@@ -9,6 +9,12 @@ public class Mummy : Enemy
     public GameObject meteor;
     
     private GameObject _currentMeteor;
+
+    public float prediction = 0.25f;
+    public float delay = 0.5f;
+    public float growingDuration = 0.5f;
+    public float radius = 2.0f;
+    public float delayBeforeDamage = 0.125f;
     
     private void FixedUpdate()
     {
@@ -33,15 +39,12 @@ public class Mummy : Enemy
 
     private IEnumerator SpawnMeteor()
     {
-        yield return new WaitForSeconds(0.5f);
-        _currentMeteor = Instantiate(meteor, target.transform.position + target.characterController.velocity * 0.25f, Quaternion.identity);
-        yield return Tween.To(0.5f, Vector3.zero, Vector3.one * 2.0f,
+        yield return new WaitForSeconds(delay);
+        _currentMeteor = Instantiate(meteor, target.transform.position + target.characterController.velocity * prediction, Quaternion.identity);
+        yield return Tween.To(growingDuration, Vector3.zero, Vector3.one * radius,
             v => _currentMeteor.transform.localScale = v,
             easeType: Tween.EaseType.EaseOutCubic);
-        yield return new WaitForSeconds(0.125f);
-        //yield return Tween.To(0.5f, _currentMeteor.transform.position, _currentMeteor.transform.position + Vector3.down * 5.0f,
-        //    t => _currentMeteor.transform.position = t,
-        //    easeType: Tween.EaseType.EaseInCubic);
+        yield return new WaitForSeconds(delayBeforeDamage);
         _currentMeteor.GetComponent<Damager>().enabled = true;
         yield return new WaitForSeconds(0.125f);
         Destroy(_currentMeteor);

@@ -5738,7 +5738,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a5546888da3ffea429a29477c9f3956d, type: 2}
+  - {fileID: 2100000, guid: 678f8c044ab77204dabc22db02154fe4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12576,7 +12576,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4052972136235883723, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: m_Name
-      value: Mummy
+      value: Mummy 1
       objectReference: {fileID: 0}
     - target: {fileID: 4208599833675267683, guid: a59ee175ec4973748b1d9b94976020b1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12689,9 +12689,9 @@ MonoBehaviour:
     stat: {fileID: 0}
   dashCooldown:
     type: 2
-    value: 3.5
+    value: 4.5
     stat: {fileID: 11400000, guid: 25ab4c2c76043fd4b89f7a93c0d34e21, type: 2}
   dashCooldownVariation: 0.3
   target: {fileID: 0}
   detectionRadius: 24
-  meteor: {fileID: 67379153135357420, guid: 57df9154723d11f488957019268fd94b, type: 3}
+  meteor: {fileID: 67379153135357420, guid: 87ee1dddeca35954ea03c483f880385f, type: 3}
