@@ -83,6 +83,9 @@ MonoBehaviour:
     stat: {fileID: 0}
   knockBackType: 0
   destroyOnDamage: 1
+  destroyOnNonDamageable: 1
+  applyDamageOnStay: 0
+  stayDamageInterval: 0.5
 --- !u!135 &2048630887430250967
 SphereCollider:
   m_ObjectHideFlags: 0

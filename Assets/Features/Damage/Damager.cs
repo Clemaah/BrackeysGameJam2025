@@ -14,6 +14,7 @@ public class Damager : MonoBehaviour
     public KnockBackType knockBackType;
     
     public bool destroyOnDamage = true;
+    public bool destroyOnNonDamageable = false;
     public bool applyDamageOnStay = false;
     public float stayDamageInterval = 0.5f;
     private float _nextDamage;
@@ -38,7 +39,12 @@ public class Damager : MonoBehaviour
     private void ApplyDamage(Collider other)
     {
         Damageable damageable = other.GetComponent<Damageable>();
-        if (damageable == null) return;
+        if (damageable == null)
+        {
+            if (destroyOnNonDamageable)
+                Destroy(gameObject);
+            return;
+        }
         damageable.ChangeHealthBy(-damage.Get());
         damageable.SpawnDamageParticles(Quaternion.LookRotation(transform.forward));
         if (destroyOnDamage) Destroy(gameObject);
