@@ -10,16 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cefc6bbff5bb3eb49bebbff89ea9d655, type: 3}
-  m_Name: _Invisible
+  m_Name: Invisible
   m_EditorClassIdentifier: 
   wish: BE INVISIBLE
   genieCommentary: No one can see you
-  modifiers:
+  stats:
   - statRef: {fileID: 11400000, guid: 68b791abd0ab19b47b0cd28172a4d393, type: 2}
     operation: 0
     value: 8
-  objectsToSpawn:
-  - {fileID: 8230901228029556221, guid: 3d2b0ac88a6fd2e4fb31084353b3fdd2, type: 3}
+  bools:
+  - boolRef: {fileID: 11400000, guid: 0e9a11c483c354a45af5c9b907f80ea8, type: 2}
+    value: 0
+  - boolRef: {fileID: 11400000, guid: 0756fad0fd7d29c459a8e49b9618442a, type: 2}
+    value: 0
+  - boolRef: {fileID: 11400000, guid: 398ce6ab5b4178d46927fc03477efa52, type: 2}
+    value: 0
+  - boolRef: {fileID: 11400000, guid: 2930d3ceba14e6a4f94a432258bb80ed, type: 2}
+    value: 0
+  materials: []
   onWishApplied:
     m_PersistentCalls:
       m_Calls: []

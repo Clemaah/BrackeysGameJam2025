@@ -191,6 +191,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 6498571919807872337, guid: 24fbaac8ad69d74429dc9612e2d32221, type: 3}
+      propertyPath: isACar
+      value: 
+      objectReference: {fileID: 11400000, guid: 9850bf2fe680bf34396293706397ccb3, type: 2}
     - target: {fileID: 9101691965169396995, guid: 24fbaac8ad69d74429dc9612e2d32221, type: 3}
       propertyPath: health.type
       value: 1

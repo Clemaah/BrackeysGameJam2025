@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: IsWeaponVisible
   m_EditorClassIdentifier: 
   description: 
-  baseValue: 1
-  value: 1
+  baseValue: 0
+  value: 0

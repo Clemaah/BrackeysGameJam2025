@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 219faae0057d74a4f8d990ac7a45fa3f, type: 3}
-  m_Name: EnemyKnockback
+  m_Script: {fileID: 11500000, guid: f9374de1d0e944b1bc01ec861411d855, type: 3}
+  m_Name: CanCharacterDash
   m_EditorClassIdentifier: 
-  description: Enemy cooldown multiplier for their respective ability
-  min: 0
-  max: 100
-  baseValue: 1.5
-  value: 1.5
+  description: 
+  baseValue: 1
+  value: 1

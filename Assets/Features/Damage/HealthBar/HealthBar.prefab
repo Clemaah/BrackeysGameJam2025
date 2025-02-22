@@ -112,5 +112,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99151a558f6897d4c849781f75da12a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isActivated: {fileID: 0}
+  isActivated: {fileID: 11400000, guid: 0e9a11c483c354a45af5c9b907f80ea8, type: 2}
   inverse: 0
