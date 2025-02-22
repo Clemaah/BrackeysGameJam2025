@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 using static UnityEditor.VersionControl.Asset;
 using static UnityEngine.InputSystem.Controls.AxisControl;
 
@@ -184,7 +185,8 @@ public class RoomBehaviour : MonoBehaviour
     public void OpenRoom()
     {
         for (int i = 0; i < doorsBlockers.Length; i++) {
-           doorsBlockers[i].SetActive(false);
+            //doorsBlockers[i].SetActive(false);
+            //StartCoroutine(Tween.To(0.5f, doorsBlockers[i].gameObject.transform.position, doorsBlockers[i].gameObject.transform.position - Vector3.up * 10, v => doorsBlockers[i].gameObject.transform.position = v, easeType: Tween.EaseType.EaseOutBack));
         }
     }
 

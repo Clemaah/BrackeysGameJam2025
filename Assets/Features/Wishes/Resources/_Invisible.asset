@@ -15,7 +15,8 @@ MonoBehaviour:
   wish: BE INVISIBLE
   genieCommentary: No one can see you
   modifiers: []
-  objectsToSpawn: []
+  objectsToSpawn:
+  - {fileID: 8230901228029556221, guid: 3d2b0ac88a6fd2e4fb31084353b3fdd2, type: 3}
   onWishApplied:
     m_PersistentCalls:
       m_Calls: []

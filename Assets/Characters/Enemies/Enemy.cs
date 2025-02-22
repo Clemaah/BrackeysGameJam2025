@@ -6,7 +6,7 @@ public class Enemy : Character
 {
     public Character target;
     
-    public float detectionRadius = 24.0f;
+    public FloatValue detectionRadius;
 
     protected void Start()
     {
