@@ -12718,4 +12718,4 @@ MonoBehaviour:
   delay: 0.5
   growingDuration: 1
   radius: 2
-  delayBeforeDamage: 0.125
+  delayBeforeDamage: 0
