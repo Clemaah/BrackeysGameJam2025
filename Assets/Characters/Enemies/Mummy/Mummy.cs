@@ -21,7 +21,7 @@ public class Mummy : Enemy
         if (IsDashing) return;
         if (!target) return;
         Vector3 relativeTargetPosition = target.transform.position - transform.position;
-        if (relativeTargetPosition.magnitude > detectionRadius) return;
+        if (relativeTargetPosition.magnitude > detectionRadius.Get()) return;
 
         TryDash(Vector3.zero);
         

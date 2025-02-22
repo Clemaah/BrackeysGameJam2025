@@ -402,7 +402,7 @@ MonoBehaviour:
   projectile: {fileID: 4918667775969441015, guid: 87a3349f55a49fc459bfe9b905aed590, type: 3}
   fireRate:
     type: 0
-    value: 1
+    value: 0.5
     stat: {fileID: 0}
   accuracy:
     type: 0
@@ -791,11 +791,14 @@ MonoBehaviour:
     stat: {fileID: 0}
   dashCooldown:
     type: 2
-    value: 0.75
+    value: 0.6
     stat: {fileID: 11400000, guid: 25ab4c2c76043fd4b89f7a93c0d34e21, type: 2}
-  dashCooldownVariation: 0.2
+  dashCooldownVariation: 0.1
   target: {fileID: 0}
-  detectionRadius: 24
+  detectionRadius:
+    type: 1
+    value: 0
+    stat: {fileID: 11400000, guid: 68b791abd0ab19b47b0cd28172a4d393, type: 2}
   projectileLauncher: {fileID: 654058062060627733}
 --- !u!4 &1607944460633722014 stripped
 Transform:
