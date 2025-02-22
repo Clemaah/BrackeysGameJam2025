@@ -26,7 +26,7 @@ public class Damageable : MonoBehaviour
 
     private void Awake()
     {
-        maxHealth.stat.OnValueChanged += ChangeHealthBy;
+        maxHealth.stat.OnValueChanged += f => ChangeHealthBy(f);
 
         if (health.type == FloatValue.FloatValueType.Stat) return;
         
@@ -45,16 +45,15 @@ public class Damageable : MonoBehaviour
     private void Update()
     {
         if (healthRegen.Get() == 0) return;
-        ChangeHealthBy(healthRegen.Get() * Time.deltaTime);
+        ChangeHealthBy(healthRegen.Get() * Time.deltaTime, false);
     }
 
-    public void ChangeHealthBy(float amount)
+    public void ChangeHealthBy(float amount, bool triggerInvulnerability = true)
     {
         if (_isInvulnerable) return;
 
         float updatedHealth = health.Get();
         updatedHealth += (amount > 0) ? amount : amount * (1 - armor.Get());
-        
         
         updatedHealth = Mathf.Clamp(updatedHealth, 0.0f, maxHealth.Get());
         float healthChange = updatedHealth - health.Get();
@@ -62,12 +61,12 @@ public class Damageable : MonoBehaviour
         
         if (Mathf.Abs(healthChange) < 0.0001f) return;
         onHealthChanged.Invoke(healthChange);
-
-        if (invulCooldown > 0) StartCoroutine(BecomeInvulnerable());
-        if (updatedHealth > 0) return;
-            
-        onDeath.Invoke();
         
+        if (triggerInvulnerability && healthChange < 0.0f && invulCooldown > 0) StartCoroutine(BecomeInvulnerable());
+        
+        // Death
+        if (updatedHealth > 0) return;
+        onDeath.Invoke();
         if (destroyOnDeath)
             Destroy(gameObject);
     }
@@ -79,9 +78,7 @@ public class Damageable : MonoBehaviour
     public IEnumerator BecomeInvulnerable()
     {
         _isInvulnerable = true; 
-        Debug.Log(gameObject.name + " est invulnérable !");
-        yield return new WaitForSeconds((float) invulCooldown); 
+        yield return new WaitForSeconds(invulCooldown); 
         _isInvulnerable = false; 
-        Debug.Log(gameObject.name +  " n'est plus invulnérable.");
     }
 }
