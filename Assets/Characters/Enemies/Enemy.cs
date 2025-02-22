@@ -12,5 +12,4 @@ public class Enemy : Character
     {
         target = FindFirstObjectByType<MainCharacter>();
     }
-    
 }

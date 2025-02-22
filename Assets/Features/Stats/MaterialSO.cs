@@ -14,7 +14,6 @@ public class MaterialSO : ScriptableObject
     public void Reset()
     {
         value = null;
-        ResetEvent();
     }
 
     private void OnValidate()

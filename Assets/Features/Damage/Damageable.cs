@@ -42,7 +42,7 @@ public class Damageable : MonoBehaviour
             _originalMaterials[i] = _renderers[i].material;
         }
 
-        maxHealth.stat.OnValueChanged += f => ChangeHealthBy(f);
+        maxHealth.stat.OnValueChanged += f => ChangeHealthBy(f, Quaternion.identity);
 
         if (health.type == FloatValue.FloatValueType.Stat) return;
 
@@ -61,10 +61,10 @@ public class Damageable : MonoBehaviour
     private void Update()
     {
         if (healthRegen.Get() == 0) return;
-        ChangeHealthBy(healthRegen.Get() * Time.deltaTime, false);
+        ChangeHealthBy(healthRegen.Get() * Time.deltaTime, Quaternion.identity, false);
     }
 
-    public void ChangeHealthBy(float amount, bool triggerInvulnerability = true)
+    public void ChangeHealthBy(float amount, Quaternion direction, bool triggerInvulnerability = true)
     {
         if (_isInvulnerable) return;
         float updatedHealth = health.Get();
@@ -79,6 +79,7 @@ public class Damageable : MonoBehaviour
 
         if (healthChange < 0.0f)
         {
+            SpawnDamageParticles(direction);
             StartCoroutine(ChangeTexture());
             if (triggerInvulnerability && invulCooldown > 0) StartCoroutine(BecomeInvulnerable());
 

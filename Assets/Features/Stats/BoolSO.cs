@@ -16,7 +16,6 @@ public class BoolSO : ScriptableObject
     public void Reset()
     {
         value = baseValue;
-        ResetEvent();
     }
 
     public void ResetEvent()

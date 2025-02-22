@@ -360,6 +360,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee02b0ee03257b45a5279d618e2d6cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scale:
+    type: 1
+    value: 0
+    stat: {fileID: 11400000, guid: c2b014f8fd3f9a942933e6d5359ae0de, type: 2}
+  weaponMesh: {fileID: 0}
 --- !u!114 &7569108588548857529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -586,11 +591,11 @@ MonoBehaviour:
     type: 1
     value: 0
     stat: {fileID: 11400000, guid: 3a1c7c891c3ee754eb237d6585a2fb47, type: 2}
-  knockBackType: 0
-  destroyOnDamage: 1
+  knockBackType: 1
+  destroyOnDamage: 0
   destroyOnNonDamageable: 0
-  applyDamageOnStay: 0
-  stayDamageInterval: 0.5
+  applyDamageOnStay: 1
+  stayDamageInterval: 0.3
 --- !u!135 &1031614519814704823
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -604,7 +609,7 @@ SphereCollider:
     m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -1180,15 +1185,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2073401055711542950, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2073401055711542950, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2073401055711542950, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2073401055711542950, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1277,6 +1282,22 @@ PrefabInstance:
     - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
       propertyPath: cooldownInvulnerability
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenMenuByString
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: GameOver
       objectReference: {fileID: 0}
     - target: {fileID: 7179164541507884879, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
       propertyPath: m_Center.y
@@ -1401,7 +1422,7 @@ MonoBehaviour:
     value: 1
     stat: {fileID: 11400000, guid: 9da5064c721199746845cf782cecd6c2, type: 2}
   dashCooldownVariation: 0
-  canShoot: {fileID: 0}
+  canShoot: {fileID: 11400000, guid: f7a6532bfeb52004e95ae922a746e755, type: 2}
   speedMultiplierWhileShooting:
     type: 1
     value: 0.8

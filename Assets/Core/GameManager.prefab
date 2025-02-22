@@ -47,6 +47,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992c508195a026f40ab7ee07bea0d4cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeScale:
+    type: 1
+    value: 0
+    stat: {fileID: 11400000, guid: d334a4c3935328345a7e42dab7589fd0, type: 2}
 --- !u!114 &7233516460837193556
 MonoBehaviour:
   m_ObjectHideFlags: 0

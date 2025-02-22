@@ -70,6 +70,9 @@ public class Character : MonoBehaviour
 
     public void Push(Vector3 direction, float force)
     {
+        var vector3 = transform.position;
+        vector3.y = 0;
+        transform.position = vector3;
         StartCoroutine(Tween.To(Mathf.Log(force * 0.0625f + 1.0f), direction, Vector3.zero, 
             v => characterController.Move(v * (force * Time.deltaTime)), easeType: Tween.EaseType.EaseOutCubic));
     }

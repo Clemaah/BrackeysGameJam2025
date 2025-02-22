@@ -10,7 +10,7 @@ public class MainCharacter : Character
     public BoolSO isACar;
     public ProjectileLauncher projectileLauncher;
 
-    private bool _isShooting;
+    private bool _wantsToShoot;
 
     protected new void Awake()
     {
@@ -32,7 +32,7 @@ public class MainCharacter : Character
             if (GameManager.Instance.Paused) return;
         }
 
-        _isShooting = Input.GetMouseButton(0);
+        _wantsToShoot = Input.GetMouseButton(0);
         
         Vector2 inputs = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if (!isACar.value)
@@ -57,11 +57,11 @@ public class MainCharacter : Character
         if (IsDashing) return;
         
         if (isACar.value)
-            characterController.Move(transform.forward * (inputs.y * (_isShooting ? speedMultiplierWhileShooting.Get() : 1.0f) * speed.Get() * Time.deltaTime));
+            characterController.Move(transform.forward * (inputs.y * (_wantsToShoot ? speedMultiplierWhileShooting.Get() : 1.0f) * speed.Get() * Time.deltaTime));
         else
-            characterController.Move(inputs.X0Y().normalized * ((_isShooting ? speedMultiplierWhileShooting.Get() : 1.0f) * speed.Get() * Time.deltaTime));
+            characterController.Move(inputs.X0Y().normalized * ((_wantsToShoot ? speedMultiplierWhileShooting.Get() : 1.0f) * speed.Get() * Time.deltaTime));
         
-        if (_isShooting)
+        if (_wantsToShoot && canShoot.value)
         {
             projectileLauncher.TryFire();
         }

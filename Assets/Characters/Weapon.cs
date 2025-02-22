@@ -6,18 +6,17 @@ using Random = UnityEngine.Random;
 
 public class Weapon : MonoBehaviour
 {
-
-    protected void Awake()
+    public FloatValue scale;
+    public GameObject weaponMesh;
+    
+    protected void Start()
     {
-        /*
-        characterController = GetComponent<CharacterController>();
-        Animator = GetComponentInChildren<Animator>();
-        transform.localScale = Vector3.one * scale.Get();
+        weaponMesh.transform.localScale = Vector3.one;
         scale.stat.OnValueChanged += _ => StartCoroutine(
             Tween.To(0.5f, 
-                transform.localScale, 
+                weaponMesh.transform.localScale, 
                 Vector3.one * scale.Get(), 
-                v => transform.localScale = v, easeType: Tween.EaseType.EaseOutBack)
-            );*/
+                v => weaponMesh.transform.localScale = v, easeType: Tween.EaseType.EaseOutBack)
+            );
     }
 }

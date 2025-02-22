@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wish: HAVE A STRONGER WEAPON
   genieCommentary: Who doesn't like heavy weapons ?
-  modifiers:
+  stats:
   - statRef: {fileID: 11400000, guid: da40cab0d99e9164497e8637bf3757c3, type: 2}
     operation: 0
     value: 0.1
@@ -33,7 +33,11 @@ MonoBehaviour:
   - statRef: {fileID: 11400000, guid: d7ad82eb2df6dcc46a8e2cc881440406, type: 2}
     operation: 1
     value: 0.8
-  objectsToSpawn: []
+  - statRef: {fileID: 11400000, guid: c2b014f8fd3f9a942933e6d5359ae0de, type: 2}
+    operation: 2
+    value: 0.8
+  bools: []
+  materials: []
   onWishApplied:
     m_PersistentCalls:
       m_Calls: []

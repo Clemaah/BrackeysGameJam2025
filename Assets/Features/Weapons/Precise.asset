@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddb71c52d6ff394eb512234c9d4e674, type: 3}
   m_Name: Precise
   m_EditorClassIdentifier: 
-  modifiers:
+  stats:
   - statRef: {fileID: 11400000, guid: 95c3e8ffaa24dc247a295eaa4e204280, type: 2}
     operation: 0
     value: 50
@@ -25,3 +25,9 @@ MonoBehaviour:
   - statRef: {fileID: 11400000, guid: 1eafe67589f941b4391bc351207e8c96, type: 2}
     operation: 0
     value: 20
+  bools:
+  - boolRef: {fileID: 11400000, guid: 398ce6ab5b4178d46927fc03477efa52, type: 2}
+    value: 1
+  - boolRef: {fileID: 11400000, guid: f7a6532bfeb52004e95ae922a746e755, type: 2}
+    value: 1
+  materials: []

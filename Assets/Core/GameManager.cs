@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public int CurrentLevel { get; private set; }
     public bool Paused { get; private set; } = false;
 
+    public FloatValue timeScale;
+
     private StatSO[] _stats;
     private BoolSO[] _bools;
     private MaterialSO[] _materials;
@@ -38,6 +40,9 @@ public class GameManager : MonoBehaviour
         _stats = Resources.LoadAll<StatSO>("");
         _bools = Resources.LoadAll<BoolSO>("");
         _materials = Resources.LoadAll<MaterialSO>("");
+        
+        Time.timeScale = timeScale.Get();
+        timeScale.stat.OnValueChanged += newValue => Time.timeScale = newValue;
     }
 
     public void RegisterMainCharacter(MainCharacter mainCharacter)
@@ -49,6 +54,26 @@ public class GameManager : MonoBehaviour
     public void NextLevel()
     {
         CurrentLevel++;
+        ResetEvents();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void PauseGame(bool paused)
+    {
+        Paused = paused;
+        Time.timeScale = paused ? 0 : timeScale.Get();
+    }
+
+    public void Reset()
+    {
+        CurrentLevel = 0;
+        WishesManager.Reset();
+        ResetEvents();
+        ResetStats();
+    }
+
+    private void ResetEvents()
+    {
         foreach (var statRef in _stats)
             statRef.ResetEvent();
         foreach (var boolRef in _bools)
@@ -57,28 +82,17 @@ public class GameManager : MonoBehaviour
             materialRef.ResetEvent();
         
         WishesManager.ResetEvent();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    public void PauseGame(bool paused)
-    {
-        Paused = paused;
-        Time.timeScale = paused ? 0 : 1;
-    }
-
-    public void Reset()
-    {
-        CurrentLevel = 0;
-        WishesManager.Reset();
-        ResetStats();
+        timeScale.stat.OnValueChanged += newValue => Time.timeScale = newValue;
     }
 
     public void ResetStats()
     {
-        foreach (var stat in _stats)
-        {
-            stat.Reset();
-        }
+        foreach (var statRef in _stats)
+            statRef.Reset();
+        foreach (var boolRef in _bools)
+            boolRef.Reset();
+        foreach (var materialRef in _materials)
+            materialRef.Reset();
     }
 
     public void TeleportCharacterBy(Vector3 characterOffset, Vector3 cameraOffset)

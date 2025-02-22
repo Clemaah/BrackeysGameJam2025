@@ -18,7 +18,7 @@ public class FoodHeal : MonoBehaviour
         if (!other.CompareTag("Player") || !canBePickedUp.value) return;
 
         Damageable playerDamageable = other.GetComponent<Damageable>();
-        playerDamageable.ChangeHealthBy(healAmount.Get());
+        playerDamageable.ChangeHealthBy(healAmount.Get(), Quaternion.identity);
         Destroy(gameObject);
     }
 }
