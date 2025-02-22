@@ -18,7 +18,8 @@ MonoBehaviour:
   - statRef: {fileID: 11400000, guid: 954e2959238465b40b8ee26db91519dd, type: 2}
     operation: 0
     value: 1
-  objectsToSpawn: []
+  objectsToSpawn:
+  - {fileID: 1841069915878709161, guid: 032334bad89aeec4d9cf066eb516b396, type: 3}
   onWishApplied:
     m_PersistentCalls:
       m_Calls: []
