@@ -46,7 +46,7 @@ public class WishesManager : MonoBehaviour
     public void RemoveWish(WishSO wish)
     {
         OnWishRemoved?.Invoke(wish);
-        // Desapply wish.Apply();
+        // Disapply wish.Apply();
         _remainingWishes.Add(wish);
         currentWishes.Remove(wish);
     }
@@ -54,12 +54,20 @@ public class WishesManager : MonoBehaviour
     public void Reset()
     {
         _remainingWishes = new List<WishSO>(_allWishes);
+        currentWishes = new List<WishSO>();
         ResetEvent();
     }
-
     public void ResetEvent()
     {
         OnWishAdded = null;
         OnWishRemoved = null;
+    }
+
+    public void LevelReset()
+    {
+        foreach (var wish in currentWishes)
+        {
+            wish.Spawn();
+        }
     }
 }

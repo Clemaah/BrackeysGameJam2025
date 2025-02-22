@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
         }
         WishesManager.ResetEvent();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.sceneLoaded += (scene, loadMode) => { WishesManager.LevelReset(); };
     }
 
     public void PauseGame(bool paused)

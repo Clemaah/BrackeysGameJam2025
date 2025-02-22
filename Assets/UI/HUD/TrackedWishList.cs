@@ -1,13 +1,16 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class TrackedWishList : MonoBehaviour
 {
     [SerializeField] private GameObject TrackedWishItem;
+    private List<GameObject> _wishList;
     
     private void Start()
     {
+        _wishList = new List<GameObject>();
         GameManager.WishesManager.OnWishAdded += AddWishItem;
         foreach (var wish in GameManager.WishesManager.currentWishes)
         {
@@ -17,7 +20,8 @@ public class TrackedWishList : MonoBehaviour
     
     private void AddWishItem(WishSO wishData)
     {
-        Instantiate(TrackedWishItem, transform);
-        //TrackedWishItem.GetComponent<TrackedWishItem>().Initialize(wishData);
+        GameObject wish = Instantiate(TrackedWishItem, transform);
+        wish.GetComponent<TrackedWishItem>().Initialize(wishData);
+        _wishList.Add(wish);
     }
 }
