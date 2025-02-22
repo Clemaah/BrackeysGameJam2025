@@ -889,7 +889,7 @@ MonoBehaviour:
     stat: {fileID: 0}
   dashCooldown:
     type: 2
-    value: 0.6
+    value: 0.9
     stat: {fileID: 11400000, guid: 25ab4c2c76043fd4b89f7a93c0d34e21, type: 2}
   dashCooldownVariation: 0.1
   target: {fileID: 0}

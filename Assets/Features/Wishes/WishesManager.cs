@@ -62,12 +62,4 @@ public class WishesManager : MonoBehaviour
         OnWishAdded = null;
         OnWishRemoved = null;
     }
-
-    public void LevelReset()
-    {
-        foreach (var wish in currentWishes)
-        {
-            wish.Spawn();
-        }
-    }
 }

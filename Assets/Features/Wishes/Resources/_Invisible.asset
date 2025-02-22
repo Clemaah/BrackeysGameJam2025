@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wish: BE INVISIBLE
   genieCommentary: No one can see you
-  modifiers: []
+  modifiers:
+  - statRef: {fileID: 11400000, guid: 68b791abd0ab19b47b0cd28172a4d393, type: 2}
+    operation: 0
+    value: 8
   objectsToSpawn:
   - {fileID: 8230901228029556221, guid: 3d2b0ac88a6fd2e4fb31084353b3fdd2, type: 3}
   onWishApplied:
