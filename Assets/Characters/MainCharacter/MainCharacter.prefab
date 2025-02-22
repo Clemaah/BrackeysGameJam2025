@@ -412,6 +412,7 @@ MonoBehaviour:
     stat: {fileID: 11400000, guid: 3a1c7c891c3ee754eb237d6585a2fb47, type: 2}
   knockBackType: 0
   destroyOnDamage: 1
+  destroyOnNonDamageable: 0
   applyDamageOnStay: 0
   stayDamageInterval: 0.5
 --- !u!135 &1031614519814704823
@@ -1000,6 +1001,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      propertyPath: invulCooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
       propertyPath: maxHealth.stat
       value: 
       objectReference: {fileID: 11400000, guid: 90b49b8f0588d9b44aa79e068791cb0a, type: 2}
@@ -1025,6 +1030,10 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 1a6dd3d7097f9014bb308cdbd8e1d0ea, type: 2}
     - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
       propertyPath: healthChange.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      propertyPath: cooldownInvulnerability
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7179164541507884879, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
@@ -1117,6 +1126,7 @@ MonoBehaviour:
     type: 1
     value: 1
     stat: {fileID: 11400000, guid: 9da5064c721199746845cf782cecd6c2, type: 2}
+  dashCooldownVariation: 0
   speedMultiplierWhileShooting:
     type: 1
     value: 0.8
