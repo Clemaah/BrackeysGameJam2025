@@ -60,8 +60,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  doorsBlockers:
-  - {fileID: 150189207122692268}
+  doorsGates:
+  - {fileID: 2046982958527554126}
   mapElements: []
   mapEnemies: []
   lamp: {fileID: 0}
@@ -458,17 +458,15 @@ PrefabInstance:
     - {fileID: 2295040877258536838, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
     - {fileID: 708449802561167921, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
     - {fileID: 7746209384830378197, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
+    - {fileID: 1579322840964433912, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
+    - {fileID: 1729513126912162607, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
+    - {fileID: 1586743661450892202, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3863288120568151128, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9126870227994763220}
   m_SourcePrefab: {fileID: 100100000, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
---- !u!1 &150189207122692268 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9119452707966675735, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
-  m_PrefabInstance: {fileID: 8978868834546394043}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &228963879789890329 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9202587751771482274, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
@@ -477,6 +475,11 @@ GameObject:
 --- !u!1 &475688783683618105 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8791771733891688066, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
+  m_PrefabInstance: {fileID: 8978868834546394043}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2046982958527554126 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6985929121207845365, guid: 79febaa0b612c6245bf4818698c2c17f, type: 3}
   m_PrefabInstance: {fileID: 8978868834546394043}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &3549853500620763901 stripped

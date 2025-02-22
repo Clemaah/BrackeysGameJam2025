@@ -10,7 +10,7 @@ public class RoomBehaviour : MonoBehaviour
 {
     public GameObject[] walls;
     public GameObject[] doors;
-    public GameObject[] doorsBlockers;
+    public GameObject[] doorsGates;
     public GameObject[] mapElements;
     public GameObject[] mapEnemies;
     public GameObject lamp;
@@ -85,8 +85,8 @@ public class RoomBehaviour : MonoBehaviour
             doors[i].SetActive(status[i]);
             walls[i].SetActive(!status[i]);
 
-            if (roomType == 0 || roomType == 1) doorsBlockers[i].SetActive(status[i]);
-            else doorsBlockers[i].SetActive(false);
+            if (roomType == 0 || roomType == 1) doorsGates[i].SetActive(status[i]);
+            else doorsGates[i].SetActive(false);
 
             if (status[i]) map[doorsIndex[i]] = true;
         }
@@ -184,11 +184,11 @@ public class RoomBehaviour : MonoBehaviour
 
     public void OpenRoom()
     {
-        if (doorsBlockers.Length == 0) return;
-        StartCoroutine(Tween.To(1.0f, doorsBlockers[0].gameObject.transform.position.y, doorsBlockers[0].gameObject.transform.position.y - 3.75f, 
+        if (doorsGates.Length == 0) return;
+        StartCoroutine(Tween.To(1.0f, doorsGates[0].gameObject.transform.position.y, 0.8f, 
             height =>
             {
-                foreach (GameObject t in doorsBlockers)
+                foreach (GameObject t in doorsGates)
                 {
                     Vector3 vector3 = t.gameObject.transform.position;
                     vector3.y = height;
