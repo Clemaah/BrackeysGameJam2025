@@ -26,6 +26,7 @@ public class Damager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (_pendingDestroy) return;
+        if (other.isTrigger) return;
         if (!applyDamageOnStay)
             ApplyDamage(other);
     }
@@ -34,6 +35,7 @@ public class Damager : MonoBehaviour
     {
         if (_pendingDestroy) return;
         if (!applyDamageOnStay) return;
+        if (other.isTrigger) return;
         if (!enabled) return;
         if (Time.time >= _nextDamage)
         {
