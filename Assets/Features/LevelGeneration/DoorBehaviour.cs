@@ -7,7 +7,10 @@ public class DoorBehaviour : MonoBehaviour
     private void OnTriggerEnter (Collider other)
     {
         if (!other.CompareTag("Player")) return;
-        
+
+        Damageable playerDamageable = other.GetComponent<Damageable>();
+        StartCoroutine(playerDamageable.BecomeInvulnerable());
+
         int offsetPlayer = 28;
         int offsetCameraNs = 44;
         int offsetCameraEw = 56;
