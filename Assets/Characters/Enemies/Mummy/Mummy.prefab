@@ -12695,3 +12695,8 @@ MonoBehaviour:
   target: {fileID: 0}
   detectionRadius: 24
   meteor: {fileID: 67379153135357420, guid: 57df9154723d11f488957019268fd94b, type: 3}
+  prediction: 0.25
+  delay: 0.5
+  growingDuration: 1
+  radius: 2
+  delayBeforeDamage: 0.125
