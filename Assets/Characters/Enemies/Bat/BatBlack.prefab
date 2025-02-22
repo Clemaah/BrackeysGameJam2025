@@ -1059,4 +1059,7 @@ MonoBehaviour:
     stat: {fileID: 11400000, guid: 25ab4c2c76043fd4b89f7a93c0d34e21, type: 2}
   dashCooldownVariation: 0.2
   target: {fileID: 0}
-  detectionRadius: 16
+  detectionRadius:
+    type: 1
+    value: 0
+    stat: {fileID: 11400000, guid: 68b791abd0ab19b47b0cd28172a4d393, type: 2}
