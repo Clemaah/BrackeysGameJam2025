@@ -21,9 +21,6 @@ MonoBehaviour:
   - statRef: {fileID: 11400000, guid: ea57cd153f8594342a7474a5b06331af, type: 2}
     operation: 0
     value: 0
-  - statRef: {fileID: 11400000, guid: 9da5064c721199746845cf782cecd6c2, type: 2}
-    operation: 0
-    value: 1000
   - statRef: {fileID: 11400000, guid: 3a1c7c891c3ee754eb237d6585a2fb47, type: 2}
     operation: 0
     value: 30
@@ -32,9 +29,9 @@ MonoBehaviour:
     value: 0
   - boolRef: {fileID: 11400000, guid: 398ce6ab5b4178d46927fc03477efa52, type: 2}
     value: 0
-  materials:
-  - materialRef: {fileID: 11400000, guid: d9cec6a8f457737499aa3fd91c266839, type: 2}
-    value: {fileID: 0}
+  - boolRef: {fileID: 11400000, guid: c730eeaf7d48b254faaaa8ad258b088d, type: 2}
+    value: 0
+  materials: []
   onWishApplied:
     m_PersistentCalls:
       m_Calls: []

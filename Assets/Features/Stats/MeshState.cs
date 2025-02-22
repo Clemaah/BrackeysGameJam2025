@@ -1,19 +1,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeshMaterialState : MonoBehaviour
+[RequireComponent(typeof(MeshRenderer))]
+public class Mesh : MonoBehaviour
 {
-    [Header("Mesh Informations")]
-    public MeshRenderer mesh;
+    public BoolSO isVisible;
+    public MaterialSO material;
     public int materialID;
     public bool changeAllMaterials;
     
-    [Header("Current Material")]
-    public MaterialSO material;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private MeshRenderer _mesh;
+    
     void Start()
     {
+        _mesh = GetComponent<MeshRenderer>();
+        _mesh.enabled = isVisible.value;
         material.OnValueChanged += ChangeMaterial;
+        isVisible.OnValueChanged += newValue => _mesh.enabled = newValue;
         
         ChangeMaterial(material.value);
     }
@@ -23,7 +26,7 @@ public class MeshMaterialState : MonoBehaviour
         if (!material.value) return;
         
         List<Material> newMaterials = new List<Material>();
-        mesh.GetMaterials(newMaterials);
+        _mesh.GetMaterials(newMaterials);
         
         if (changeAllMaterials)
         {
@@ -38,6 +41,6 @@ public class MeshMaterialState : MonoBehaviour
                 newMaterials[i] = material.value;
             }
         }
-        mesh.SetMaterials(newMaterials);
+        _mesh.SetMaterials(newMaterials);
     }
 }

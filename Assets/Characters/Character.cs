@@ -12,6 +12,7 @@ public class Character : MonoBehaviour
     public FloatValue speed;
     public FloatValue scale;
 
+    public BoolSO canDash;
     public float dashDelay;
     public FloatValue dashForce;
     public FloatValue dashDuration;
@@ -36,7 +37,7 @@ public class Character : MonoBehaviour
 
     public bool TryDash(Vector3 direction)
     {
-        if (Time.time < _nextDash) return false;
+        if (Time.time < _nextDash || !canDash.value) return false;
         _nextDash = Time.time + dashCooldown.Get() * Random.Range(1.0f - dashCooldownVariation, 1.0f + dashCooldownVariation);
         StartCoroutine(Dash(direction, dashForce.Get(), dashDuration.Get()));
         return true;
