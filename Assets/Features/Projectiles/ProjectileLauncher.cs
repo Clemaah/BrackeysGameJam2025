@@ -1,7 +1,11 @@
+using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class ProjectileLauncher : MonoBehaviour
 {
+    private AudioSource _audioSource;
+    
     public Projectile projectile;
     
     public FloatValue fireRate;
@@ -10,6 +14,11 @@ public class ProjectileLauncher : MonoBehaviour
     public FloatValue projectileCount;
     
     public FloatValue recoil;
+    
+    private void Awake()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
 
     public bool TryFire()
     {
@@ -20,6 +29,13 @@ public class ProjectileLauncher : MonoBehaviour
         {
             float angle = (i - (n - 1) * 0.5f + Random.Range(-0.5f, 0.5f)) * accuracy.Get();
             Instantiate(projectile, transform.position, transform.rotation * Quaternion.Euler(Vector3.up * angle));
+        }
+
+        if (_audioSource)
+        {
+            _audioSource.pitch = Random.Range(0.8f, 1.2f);
+            _audioSource.volume = 0.5f + n * 0.1f;
+            _audioSource.Play();
         }
         
         // knock-back

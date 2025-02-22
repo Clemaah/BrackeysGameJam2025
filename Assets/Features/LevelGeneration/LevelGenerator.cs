@@ -124,7 +124,7 @@ public class LevelGenerator : MonoBehaviour
     void DisplayStartRoom()
     {
         RoomBehaviour startRoomBehaviour = startRoom.GetComponent<RoomBehaviour>();
-        startRoomBehaviour.doorsBlockers[0].SetActive(false);
+        startRoomBehaviour.doorsGates[0].SetActive(false);
         var room = Instantiate(startRoom, new Vector3(0, 0, 0), Quaternion.identity, transform).GetComponent<RoomBehaviour>();
 
         Vector3 playerPosition = new Vector3(0, 0, 0 * roomOffset.y);

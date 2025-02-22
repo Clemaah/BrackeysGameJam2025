@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3433376708605273457}
   - component: {fileID: 2024659904239505862}
   - component: {fileID: 3379779319895372834}
+  - component: {fileID: 888285986375432650}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -133,6 +134,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &888285986375432650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796770077588048690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb4fa3d684338d24a98d129cafc568fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: 2b8d1cd421867524487f04402448ef4a, type: 3}
 --- !u!1 &1966946394515163904
 GameObject:
   m_ObjectHideFlags: 0
