@@ -63,7 +63,7 @@ public class LevelGenerator : MonoBehaviour
         if (currentLevel == 0)
             DisplayStartRoom();
         
-        else if (currentLevel >= levelsConfigs.Length)
+        else if (currentLevel > levelsConfigs.Length)
             DisplayBossRoom();
         
         else
