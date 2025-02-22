@@ -82,6 +82,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 607ce465ca1d07a4fa6a9c8d1a83d8fb, type: 3}
       insertIndex: -1
       addedObject: {fileID: -4452858606107065017}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 607ce465ca1d07a4fa6a9c8d1a83d8fb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4545880436044463478}
   m_SourcePrefab: {fileID: 100100000, guid: 607ce465ca1d07a4fa6a9c8d1a83d8fb, type: 3}
 --- !u!1 &2956946519432231731 stripped
 GameObject:
@@ -100,7 +103,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5603921d05926f940a0d7499181edf53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healAmount: 0
+  healAmount:
+    type: 1
+    value: 0
+    stat: {fileID: 11400000, guid: 54b6f3fbd285f25478a2009dbe31c929, type: 2}
+  canBePickedUp: {fileID: 11400000, guid: 9dcfa4521a9b06945af2403dcbd1d276, type: 2}
 --- !u!65 &-4452858606107065017
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -122,3 +129,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.021706251, y: 0.021706255, z: 0.015911026}
   m_Center: {x: 9.313226e-10, y: 0, z: 0.0032615827}
+--- !u!114 &4545880436044463478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2956946519432231731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ab77a638359ee4aa18182130ea5d7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 3605645254561782502}
+  materialID: 0
+  changeAllMaterials: 1
+  material: {fileID: 11400000, guid: 76d041e0f2d593b479fa3a748a30af25, type: 2}
+--- !u!23 &3605645254561782502 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 607ce465ca1d07a4fa6a9c8d1a83d8fb, type: 3}
+  m_PrefabInstance: {fileID: 2722503905762657890}
+  m_PrefabAsset: {fileID: 0}

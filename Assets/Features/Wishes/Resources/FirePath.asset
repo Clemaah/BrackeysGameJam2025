@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wish: BURN THEM ALL
   genieCommentary: Leave nothing but ashes in your path
-  modifiers: []
-  objectsToSpawn:
-  - {fileID: 5919655363075330863, guid: 3ace3c83388f5c54f8e1f2e28ab2105b, type: 3}
+  stats: []
+  bools:
+  - boolRef: {fileID: 11400000, guid: 8c9eac42081da5d42a31201766ec098f, type: 2}
+    value: 1
+  materials: []
   onWishApplied:
     m_PersistentCalls:
       m_Calls: []

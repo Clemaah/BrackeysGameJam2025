@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public bool Paused { get; private set; } = false;
 
     private StatSO[] _stats;
+    private BoolSO[] _bools;
+    private MaterialSO[] _materials;
 
     private void Awake()
     {
@@ -34,6 +36,8 @@ public class GameManager : MonoBehaviour
         UIManager = gameObject.GetComponent<UIManager>();
         WishesManager = gameObject.GetComponent<WishesManager>();
         _stats = Resources.LoadAll<StatSO>("");
+        _bools = Resources.LoadAll<BoolSO>("");
+        _materials = Resources.LoadAll<MaterialSO>("");
     }
 
     public void RegisterMainCharacter(MainCharacter mainCharacter)
@@ -45,13 +49,15 @@ public class GameManager : MonoBehaviour
     public void NextLevel()
     {
         CurrentLevel++;
-        foreach (var stat in _stats)
-        {
-            stat.ResetEvent();
-        }
+        foreach (var statRef in _stats)
+            statRef.ResetEvent();
+        foreach (var boolRef in _bools)
+            boolRef.ResetEvent();
+        foreach (var materialRef in _materials)
+            materialRef.ResetEvent();
+        
         WishesManager.ResetEvent();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        SceneManager.sceneLoaded += (scene, loadMode) => { WishesManager.LevelReset(); };
     }
 
     public void PauseGame(bool paused)
