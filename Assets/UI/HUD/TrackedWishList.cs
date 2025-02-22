@@ -18,6 +18,6 @@ public class TrackedWishList : MonoBehaviour
     private void AddWishItem(WishSO wishData)
     {
         Instantiate(TrackedWishItem, transform);
-        TrackedWishItem.GetComponent<TrackedWishItem>().Initialize(wishData);
+        //TrackedWishItem.GetComponent<TrackedWishItem>().Initialize(wishData);
     }
 }
