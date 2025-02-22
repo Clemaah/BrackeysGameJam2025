@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 729737847628166898}
   - component: {fileID: 8622196163473569499}
   - component: {fileID: 2842658623407212318}
+  - component: {fileID: 6024054861708313788}
   m_Layer: 0
   m_Name: FirePath
   m_TagString: Untagged
@@ -55,6 +56,7 @@ MonoBehaviour:
     stat: {fileID: 0}
   knockBackType: 1
   destroyOnDamage: 0
+  destroyOnNonDamageable: 0
   applyDamageOnStay: 1
   stayDamageInterval: 0.5
 --- !u!114 &2842658623407212318
@@ -74,3 +76,16 @@ MonoBehaviour:
   duration: 3
   radius: 1.5
   vfx: {fileID: 6379075449989966959, guid: 0fc8ca35b95c43545b4db91c0d0c5477, type: 3}
+--- !u!114 &6024054861708313788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5919655363075330863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99151a558f6897d4c849781f75da12a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActivated: {fileID: 11400000, guid: 8c9eac42081da5d42a31201766ec098f, type: 2}
