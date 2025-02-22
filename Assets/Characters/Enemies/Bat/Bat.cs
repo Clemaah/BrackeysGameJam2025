@@ -10,7 +10,7 @@ public class Bat : Enemy
         if (IsDashing) return;
         if (!target) return;
         Vector3 relativeTargetPosition = target.transform.position - transform.position;
-        if (relativeTargetPosition.magnitude > detectionRadius) return;
+        if (relativeTargetPosition.magnitude > detectionRadius.Get()) return;
 
         if (relativeTargetPosition.magnitude < 12.0f)
         {
