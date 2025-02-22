@@ -4,36 +4,48 @@ using UnityEngine.Events;
 using static UnityEngine.GraphicsBuffer;
 using System.Collections;
 using Random = UnityEngine.Random;
+using UnityEngine.UIElements;
+using TreeEditor;
 
 public class Damageable : MonoBehaviour
 {
     private AudioSource _audioSource;
-    
+
     public FloatValue health;
     public FloatValue maxHealth;
     public FloatValue armor;
     public FloatValue healthRegen;
     public float invulCooldown = 0;
-    
+
     public bool destroyOnDeath = false;
-    
+
     public UnityEvent<float> onHealthChanged;
     public UnityEvent onDeath;
-    
+
+    public Material redMaterial;
+
     [SerializeField] public ParticleSystem damageParticles;
 
     private ParticleSystem _damageParticlesInstance;
     private float _nextHealthChange;
     private bool _isInvulnerable = false;
+    private SkinnedMeshRenderer[] _renderers;
+    private Material[] _originalMaterials;
+
 
     private void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
-        
+        _renderers = GetComponentsInChildren<SkinnedMeshRenderer>();
+        _originalMaterials = new Material[_renderers.Length];
+        for (int i = 0; i < _renderers.Length; i++) {
+            _originalMaterials[i] = _renderers[i].material;
+        }
+
         maxHealth.stat.OnValueChanged += f => ChangeHealthBy(f);
 
         if (health.type == FloatValue.FloatValueType.Stat) return;
-        
+
         health.Set(maxHealth.Get());
     }
 
@@ -41,11 +53,11 @@ public class Damageable : MonoBehaviour
     private void OnValidate()
     {
         if (Application.isEditor) return;
-        
+
         health.Set(maxHealth.Get());
     }
 #endif
-    
+
     private void Update()
     {
         if (healthRegen.Get() == 0) return;
@@ -55,21 +67,21 @@ public class Damageable : MonoBehaviour
     public void ChangeHealthBy(float amount, bool triggerInvulnerability = true)
     {
         if (_isInvulnerable) return;
-
         float updatedHealth = health.Get();
         updatedHealth += (amount > 0) ? amount : amount * (1 - armor.Get());
-        
+
         updatedHealth = Mathf.Clamp(updatedHealth, 0.0f, maxHealth.Get());
         float healthChange = updatedHealth - health.Get();
         health.Set(updatedHealth);
-        
+
         if (Mathf.Abs(healthChange) < 0.0001f) return;
         onHealthChanged.Invoke(healthChange);
 
         if (healthChange < 0.0f)
         {
+            StartCoroutine(ChangeTexture());
             if (triggerInvulnerability && invulCooldown > 0) StartCoroutine(BecomeInvulnerable());
-            
+
             if (_audioSource)
             {
                 _audioSource.pitch = Random.Range(0.8f, 1.2f);
@@ -77,7 +89,7 @@ public class Damageable : MonoBehaviour
                 _audioSource.Play();
             }
         }
-        
+
         // Death
         if (updatedHealth > 0) return;
         onDeath.Invoke();
@@ -85,14 +97,25 @@ public class Damageable : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public void SpawnDamageParticles(Quaternion direction) {
+    public void SpawnDamageParticles(Quaternion direction)
+    {
         _damageParticlesInstance = Instantiate(damageParticles, transform.position - transform.forward, direction);
     }
 
     public IEnumerator BecomeInvulnerable()
     {
-        _isInvulnerable = true; 
-        yield return new WaitForSeconds(invulCooldown); 
-        _isInvulnerable = false; 
+        _isInvulnerable = true;
+        yield return new WaitForSeconds(invulCooldown);
+        _isInvulnerable = false;
+    }
+
+    private IEnumerator ChangeTexture() {
+        for (int i = 0; i < _renderers.Length; i++) {
+            _renderers[i].material = redMaterial;
+        }
+        yield return new WaitForSeconds(0.1f);
+        for (int i = 0; i < _renderers.Length; i++) {
+            _renderers[i].material = _originalMaterials[i];
+        }
     }
 }
