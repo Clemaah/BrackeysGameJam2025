@@ -10,6 +10,6 @@ public class TrackedWishItem : MonoBehaviour
     public void Initialize(WishSO wish)
     {
         _wish = wish;
-        wishText.text = wish.name;
+        wishText.text = _wish.name;
     }
 }

@@ -3,10 +3,12 @@ using UnityEngine;
 using UnityEngine.Events;
 using static UnityEngine.GraphicsBuffer;
 using System.Collections;
+using Random = UnityEngine.Random;
 
 public class Damageable : MonoBehaviour
 {
-
+    private AudioSource _audioSource;
+    
     public FloatValue health;
     public FloatValue maxHealth;
     public FloatValue armor;
@@ -26,6 +28,8 @@ public class Damageable : MonoBehaviour
 
     private void Awake()
     {
+        _audioSource = GetComponent<AudioSource>();
+        
         maxHealth.stat.OnValueChanged += f => ChangeHealthBy(f);
 
         if (health.type == FloatValue.FloatValueType.Stat) return;
@@ -61,8 +65,18 @@ public class Damageable : MonoBehaviour
         
         if (Mathf.Abs(healthChange) < 0.0001f) return;
         onHealthChanged.Invoke(healthChange);
-        
-        if (triggerInvulnerability && healthChange < 0.0f && invulCooldown > 0) StartCoroutine(BecomeInvulnerable());
+
+        if (healthChange < 0.0f)
+        {
+            if (triggerInvulnerability && invulCooldown > 0) StartCoroutine(BecomeInvulnerable());
+            
+            if (_audioSource)
+            {
+                _audioSource.pitch = Random.Range(0.8f, 1.2f);
+                _audioSource.volume = 0.25f - healthChange * 0.04f;
+                _audioSource.Play();
+            }
+        }
         
         // Death
         if (updatedHealth > 0) return;

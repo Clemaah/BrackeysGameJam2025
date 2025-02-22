@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class WishItemUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI wishText;
-    [SerializeField] private TextMeshProUGUI  genieCommentaryText;
+    [SerializeField] private TextMeshProUGUI genieCommentaryText;
     public WishSO wish;
     
     public void UpdateWish(WishSO newWish)

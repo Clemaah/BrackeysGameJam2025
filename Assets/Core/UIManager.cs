@@ -56,6 +56,7 @@ public class UIManager : MonoBehaviour
                 
             case MenuType.MainMenu:
                 SceneManager.LoadScene("Menu");
+                GameManager.Instance.Reset();
                 GetMenu(menuToDisplay).SetActive(true);
                 break;
                 
