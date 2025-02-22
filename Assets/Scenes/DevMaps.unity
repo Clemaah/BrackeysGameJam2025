@@ -871,11 +871,11 @@ MonoBehaviour:
   bossRoom: {fileID: 5381774497645018182, guid: c8ea8e135dcf5c745a230d6814a47f9f, type: 3}
   sun: {fileID: 410087040}
   sunRotations:
-  - {x: 25, y: -30, z: 0}
-  - {x: 50, y: -30, z: 0}
-  - {x: 75, y: -30, z: 0}
-  - {x: 100, y: -30, z: 0}
-  - {x: 125, y: -30, z: 0}
+  - {x: 25, y: -24, z: 0}
+  - {x: 50, y: -28, z: 0}
+  - {x: 75, y: -32, z: 0}
+  - {x: 100, y: -36, z: 0}
+  - {x: 125, y: -40, z: 0}
 --- !u!4 &777759369
 Transform:
   m_ObjectHideFlags: 0

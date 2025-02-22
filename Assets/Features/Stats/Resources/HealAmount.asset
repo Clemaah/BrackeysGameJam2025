@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: HealAmount
   m_EditorClassIdentifier: 
   description: The amount of life regen by pickin a heal
-  baseValue: 3
-  value: 3
+  min: 0
+  max: 100
+  baseValue: 30
+  value: 30
