@@ -568,6 +568,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mummy
       objectReference: {fileID: 0}
+    - target: {fileID: 1443525832357146166, guid: 9d96799412d84924f8e099e62463683b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1607944460633722014, guid: 9d96799412d84924f8e099e62463683b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.699554
@@ -624,6 +628,10 @@ PrefabInstance:
     - target: {fileID: 1443525832357146166, guid: 1d36866ca7911d8479c66c391a514172, type: 3}
       propertyPath: m_Name
       value: Mummy Green
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443525832357146166, guid: 1d36866ca7911d8479c66c391a514172, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1607944460633722014, guid: 1d36866ca7911d8479c66c391a514172, type: 3}
       propertyPath: m_LocalPosition.x
@@ -742,6 +750,10 @@ PrefabInstance:
     - target: {fileID: 1443525832357146166, guid: 8eca5dc6543281f4cb92b6c519e0e675, type: 3}
       propertyPath: m_Name
       value: Mummy Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443525832357146166, guid: 8eca5dc6543281f4cb92b6c519e0e675, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1607944460633722014, guid: 8eca5dc6543281f4cb92b6c519e0e675, type: 3}
       propertyPath: m_LocalPosition.x
