@@ -184,10 +184,18 @@ public class RoomBehaviour : MonoBehaviour
 
     public void OpenRoom()
     {
-        for (int i = 0; i < doorsBlockers.Length; i++) {
-            //doorsBlockers[i].SetActive(false);
-            //StartCoroutine(Tween.To(0.5f, doorsBlockers[i].gameObject.transform.position, doorsBlockers[i].gameObject.transform.position - Vector3.up * 10, v => doorsBlockers[i].gameObject.transform.position = v, easeType: Tween.EaseType.EaseOutBack));
-        }
+        if (doorsBlockers.Length == 0) return;
+        StartCoroutine(Tween.To(1.0f, doorsBlockers[0].gameObject.transform.position.y, doorsBlockers[0].gameObject.transform.position.y - 3.75f, 
+            height =>
+            {
+                foreach (GameObject t in doorsBlockers)
+                {
+                    Vector3 vector3 = t.gameObject.transform.position;
+                    vector3.y = height;
+                    t.gameObject.transform.position = vector3;
+                }
+            }
+            , easeType: Tween.EaseType.EaseOutCubic));
     }
 
     int CountEnemies() {
