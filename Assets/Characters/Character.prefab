@@ -112,6 +112,7 @@ MonoBehaviour:
     type: 0
     value: 0
     stat: {fileID: 0}
+  canDash: {fileID: 0}
   dashDelay: 0
   dashForce:
     type: 0
@@ -199,7 +200,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  redMaterial: {fileID: 2100000, guid: 941526c163b67d94fa6a0a273919591c, type: 2}
+  redMaterial: {fileID: 2100000, guid: 9a9d6df85c7a7954aba0020be1373ecd, type: 2}
   damageParticles: {fileID: 6909222436772635727, guid: 6e9113f7049b4d342acbcef711dde298, type: 3}
 --- !u!1 &4551623400493663217
 GameObject:
