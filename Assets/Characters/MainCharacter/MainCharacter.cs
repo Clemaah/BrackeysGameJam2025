@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class MainCharacter : Character
 {
-    public BoolSO canShoot;
     public FloatValue speedMultiplierWhileShooting;
+    public BoolSO canShoot;
+    public BoolSO areInputReversed;
+    public BoolSO isShootInversed;
     public BoolSO isACar;
     public ProjectileLauncher projectileLauncher;
 
@@ -38,6 +40,8 @@ public class MainCharacter : Character
         _wantsToShoot = Input.GetMouseButton(0);
         
         Vector2 inputs = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        if(areInputReversed.value) inputs *= -1;
+        
         if (!isACar.value)
             inputs = Quaternion.Euler(0, 0, -Camera.main.transform.rotation.eulerAngles.y) * inputs;
 
@@ -50,7 +54,9 @@ public class MainCharacter : Character
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Vector3 intersection = ray.origin + ray.direction * Mathf.Abs((ray.origin.y - projectileLauncher.transform.position.y) / ray.direction.y);
-            transform.forward = (intersection - transform.position).X0Z();
+
+            if(isShootInversed.value) transform.forward = (transform.position - intersection ).X0Z();
+            else transform.forward = (intersection - transform.position).X0Z();
         }
         else
         {

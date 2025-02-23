@@ -548,7 +548,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2256217351784238509}
   - component: {fileID: 3722489214170020673}
-  - component: {fileID: 1031614519814704823}
+  - component: {fileID: 6265425368021272789}
   m_Layer: 0
   m_Name: Damager
   m_TagString: Untagged
@@ -597,8 +597,8 @@ MonoBehaviour:
   objectToSpawnOnNonDamage: {fileID: 0}
   applyDamageOnStay: 1
   stayDamageInterval: 0.3
---- !u!135 &1031614519814704823
-SphereCollider:
+--- !u!136 &6265425368021272789
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -611,12 +611,14 @@ SphereCollider:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 128
-  m_LayerOverridePriority: 0
+  m_LayerOverridePriority: 1
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 2
   m_Radius: 0.6
+  m_Height: 2
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4350703266012480934
 GameObject:
@@ -1427,11 +1429,13 @@ MonoBehaviour:
     value: 1
     stat: {fileID: 11400000, guid: 9da5064c721199746845cf782cecd6c2, type: 2}
   dashCooldownVariation: 0
-  canShoot: {fileID: 11400000, guid: f7a6532bfeb52004e95ae922a746e755, type: 2}
   speedMultiplierWhileShooting:
     type: 1
     value: 0.8
     stat: {fileID: 11400000, guid: da40cab0d99e9164497e8637bf3757c3, type: 2}
+  canShoot: {fileID: 11400000, guid: f7a6532bfeb52004e95ae922a746e755, type: 2}
+  areInputReversed: {fileID: 11400000, guid: 6167390de1a90064bbd3b5c1d7f78899, type: 2}
+  isShootInversed: {fileID: 11400000, guid: ff8930d455c38b140acd0bab22722315, type: 2}
   isACar: {fileID: 11400000, guid: 9850bf2fe680bf34396293706397ccb3, type: 2}
   projectileLauncher: {fileID: 8832291201348459258}
   dashFX: {fileID: 2301310426650638312, guid: 245f34c0d4ebb3a419a8d622b7f1ef40, type: 3}
@@ -1546,7 +1550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1841069915878709161, guid: 032334bad89aeec4d9cf066eb516b396, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2601762161613530766, guid: 032334bad89aeec4d9cf066eb516b396, type: 3}
       propertyPath: m_Enabled

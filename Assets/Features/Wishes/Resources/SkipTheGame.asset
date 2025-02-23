@@ -15,5 +15,7 @@ MonoBehaviour:
   wish: To the boss
   genieCommentary: 
   stats: []
-  bools: []
+  bools:
+  - boolRef: {fileID: 11400000, guid: 6167390de1a90064bbd3b5c1d7f78899, type: 2}
+    value: 1
   materials: []

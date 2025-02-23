@@ -36,7 +36,7 @@ public class Damageable : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         _renderers = GetComponentsInChildren<SkinnedMeshRenderer>();
 
-        maxHealth.stat.OnValueChanged += f => ChangeHealthBy(f, Quaternion.identity);
+        if(maxHealth.stat) maxHealth.stat.OnValueChanged += f => ChangeHealthBy(f, Quaternion.identity);
 
         if (health.type == FloatValue.FloatValueType.Stat) return;
 
@@ -77,8 +77,12 @@ public class Damageable : MonoBehaviour
 
         if (healthChange < -0.1f)
         {
-            SpawnDamageParticles(direction);
-            StartCoroutine(ChangeTexture());
+            if (damageParticles)
+            {
+                if(direction != Quaternion.identity) SpawnDamageParticles(direction);
+                else SpawnDeathParticles();
+            }
+            if(redMaterial) StartCoroutine(ChangeTexture());
             if (triggerInvulnerability && invulCooldown > 0) StartCoroutine(BecomeInvulnerable());
 
             if (_audioSource)
@@ -91,7 +95,7 @@ public class Damageable : MonoBehaviour
 
         // Death
         if (updatedHealth > 0) return;
-        SpawnDeathParticles();
+        if (deathParticles) SpawnDeathParticles();
         onDeath.Invoke();
         if (destroyOnDeath)
             Destroy(gameObject);

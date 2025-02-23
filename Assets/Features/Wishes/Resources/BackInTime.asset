@@ -14,6 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wish: Back in time
   genieCommentary: 
-  stats: []
-  bools: []
+  stats:
+  - statRef: {fileID: 11400000, guid: d7ad82eb2df6dcc46a8e2cc881440406, type: 2}
+    operation: 1
+    value: 0.9
+  bools:
+  - boolRef: {fileID: 11400000, guid: 284e26e23f5a3724889b9b0c211c407c, type: 2}
+    value: 0
   materials: []
