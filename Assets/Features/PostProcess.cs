@@ -27,7 +27,7 @@ public class PostProcess : MonoBehaviour
 
     private void SetVisibility(bool value)
     {
-        _vignette.intensity.value = value ? 0.2f : 0.8f;
+        _vignette.intensity.value = value ? 0.2f : 0.7f;
         _vignette.smoothness.value = value ? 0.4f : 0.6f;
     }
     
