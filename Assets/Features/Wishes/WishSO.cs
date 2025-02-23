@@ -56,6 +56,7 @@ public class WishSO : ScriptableObject
 }
 
 
+#if UNITY_EDITOR
 // ModifierDrawer
 [CustomPropertyDrawer(typeof(StatModifier))]
 public class StatModifierDrawer : PropertyDrawer
@@ -134,3 +135,4 @@ public class MaterialModifierDrawer : PropertyDrawer
         EditorGUI.EndProperty();
     }
 }
+#endif

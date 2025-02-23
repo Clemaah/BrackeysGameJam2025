@@ -2,9 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
-using static UnityEditor.VersionControl.Asset;
-using static UnityEngine.InputSystem.Controls.AxisControl;
 
 public class RoomBehaviour : MonoBehaviour
 {
