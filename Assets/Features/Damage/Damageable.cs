@@ -1,11 +1,7 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
-using static UnityEngine.GraphicsBuffer;
 using System.Collections;
 using Random = UnityEngine.Random;
-using UnityEngine.UIElements;
-using TreeEditor;
 
 public class Damageable : MonoBehaviour
 {
@@ -31,16 +27,12 @@ public class Damageable : MonoBehaviour
     private bool _isInvulnerable = false;
     private SkinnedMeshRenderer[] _renderers;
     private Material[] _originalMaterials;
-
+    private float _lastTimeRegen;
 
     private void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
         _renderers = GetComponentsInChildren<SkinnedMeshRenderer>();
-        _originalMaterials = new Material[_renderers.Length];
-        for (int i = 0; i < _renderers.Length; i++) {
-            _originalMaterials[i] = _renderers[i].material;
-        }
 
         maxHealth.stat.OnValueChanged += f => ChangeHealthBy(f, Quaternion.identity);
 
@@ -61,7 +53,11 @@ public class Damageable : MonoBehaviour
     private void Update()
     {
         if (healthRegen.Get() == 0) return;
-        ChangeHealthBy(healthRegen.Get() * Time.deltaTime, Quaternion.identity, false);
+        
+        if (_lastTimeRegen > Time.time - 1) return;
+        
+        _lastTimeRegen = Time.time;
+        ChangeHealthBy(healthRegen.Get(), Quaternion.identity, false);
     }
 
     public void ChangeHealthBy(float amount, Quaternion direction, bool triggerInvulnerability = true)
@@ -111,7 +107,10 @@ public class Damageable : MonoBehaviour
     }
 
     private IEnumerator ChangeTexture() {
+        _originalMaterials = new Material[_renderers.Length];
+        
         for (int i = 0; i < _renderers.Length; i++) {
+            _originalMaterials[i] = _renderers[i].material;
             _renderers[i].material = redMaterial;
         }
         yield return new WaitForSeconds(0.1f);
