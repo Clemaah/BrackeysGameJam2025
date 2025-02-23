@@ -25,7 +25,6 @@ MonoBehaviour:
     operation: 0
     value: 1
   bools: []
-  materials: []
-  onWishApplied:
-    m_PersistentCalls:
-      m_Calls: []
+  materials:
+  - materialRef: {fileID: 11400000, guid: 0cf8064d8cd24fe468007ab23542dd56, type: 2}
+    value: {fileID: 2100000, guid: 68ecdaba7c5046e4aa927b862456478a, type: 2}

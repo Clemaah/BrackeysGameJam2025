@@ -63,14 +63,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98c81c90fbdefef409bf937b88af1611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMenu: 0
+  defaultMenu: 4
   prefabMenuList:
   - type: 4
     gameObject: {fileID: 1966946394515163904, guid: 76ebb05bb38d3c54ea6f3d9864f14895, type: 3}
   - type: 1
     gameObject: {fileID: 2371548813592820028, guid: 08250363a3616a541834c6d54986c013, type: 3}
-  - type: 5
-    gameObject: {fileID: 2371548813592820028, guid: c3b10c5d9b2538d4a82a9cb24102b635, type: 3}
   - type: 2
     gameObject: {fileID: 1966946394515163904, guid: 3cf5b46f71b9a0346804442909dc74f6, type: 3}
   - type: 3
@@ -106,6 +104,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4f7d8532b676ecf4492ec7e461d4f9bf, type: 2}
   - {fileID: 11400000, guid: 4561bbb23588d6a43ae42864aec0e82b, type: 2}
   - {fileID: 11400000, guid: b6f862fa2a1c72148a7dc4b596f79d5d, type: 2}
+  - {fileID: 11400000, guid: e48b2f3e5c234b24ab8c3fad0c948662, type: 2}
   currentWishes: []
   randomWish: {fileID: 11400000, guid: ff1ad00506fb573459cf56d8093c1b5d, type: 2}
   threeMoreWishes: {fileID: 11400000, guid: b6f862fa2a1c72148a7dc4b596f79d5d, type: 2}

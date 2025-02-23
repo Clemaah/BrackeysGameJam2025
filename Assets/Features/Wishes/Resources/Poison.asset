@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cefc6bbff5bb3eb49bebbff89ea9d655, type: 3}
+  m_Name: Poison
+  m_EditorClassIdentifier: 
+  wish: SPREAD A DISEASE
+  genieCommentary: Berk, it taste like garbage
+  stats:
+  - statRef: {fileID: 11400000, guid: 54b6f3fbd285f25478a2009dbe31c929, type: 2}
+    operation: 0
+    value: -20
+  - statRef: {fileID: 11400000, guid: 95c3e8ffaa24dc247a295eaa4e204280, type: 2}
+    operation: 1
+    value: 0.2
+  - statRef: {fileID: 11400000, guid: 64000aec49016cb4789fb2f4efe8bd32, type: 2}
+    operation: 1
+    value: 0.5
+  - statRef: {fileID: 11400000, guid: 201b8309983198e4c90bcd769ffc149d, type: 2}
+    operation: 1
+    value: 0.5
+  bools:
+  - boolRef: {fileID: 11400000, guid: 555ce8cc77d088a429579f1af0ba994c, type: 2}
+    value: 1
+  materials: []

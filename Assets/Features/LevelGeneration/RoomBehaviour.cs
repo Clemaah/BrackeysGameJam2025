@@ -74,7 +74,6 @@ public class RoomBehaviour : MonoBehaviour
         if (transform.name.Contains("WishRoom")) roomType = 4;
         if (transform.name.Contains("BossRoom")) roomType = 5;
         if (transform.name.Contains("WeaponRoom")) roomType = 6;
-        Debug.Log(roomType);
 
         int[] doorsIndex = { 1, 7, 5, 3 };
         bool[] map = { false, false, false, false, false, false, false, false, false };

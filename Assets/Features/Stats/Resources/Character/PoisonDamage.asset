@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 219faae0057d74a4f8d990ac7a45fa3f, type: 3}
-  m_Name: HealAmount
+  m_Name: PoisonDamage
   m_EditorClassIdentifier: 
-  description: The amount of life regen by pickin a heal
-  min: -100
-  max: 100
-  baseValue: 30
-  value: 30
+  description: 
+  min: 0
+  max: 1000
+  baseValue: 10
+  value: 10
