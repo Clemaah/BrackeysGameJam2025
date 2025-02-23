@@ -20,7 +20,7 @@ MonoBehaviour:
     value: -20
   - statRef: {fileID: 11400000, guid: 95c3e8ffaa24dc247a295eaa4e204280, type: 2}
     operation: 1
-    value: 0.2
+    value: 0.5
   - statRef: {fileID: 11400000, guid: 64000aec49016cb4789fb2f4efe8bd32, type: 2}
     operation: 1
     value: 0.5
