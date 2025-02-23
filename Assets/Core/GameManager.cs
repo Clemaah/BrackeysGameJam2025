@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
-        CurrentLevel=4;
+        CurrentLevel++;
         ResetEvents();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
