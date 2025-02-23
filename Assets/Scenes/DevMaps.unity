@@ -1160,54 +1160,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
-      propertyPath: _allWishes.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
-      propertyPath: '_allWishes.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: d730c637282c72146abc06aa1c787e02, type: 2}
-    - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
-      propertyPath: '_allWishes.Array.data[1]'
-      value: 
-      objectReference: {fileID: 11400000, guid: d2a9f72db247fbb43be75e8b2ad368c6, type: 2}
-    - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
-      propertyPath: '_allWishes.Array.data[2]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 1c7d4fb9a20b05641a7ea1ac9c4d0baf, type: 2}
-    - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
-      propertyPath: '_allWishes.Array.data[3]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 612c73d84c9850a428c0ae6540c739d9, type: 2}
-    - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
-      propertyPath: '_allWishes.Array.data[4]'
-      value: 
-      objectReference: {fileID: 11400000, guid: b6f862fa2a1c72148a7dc4b596f79d5d, type: 2}
-    - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
-      propertyPath: '_allWishes.Array.data[5]'
-      value: 
-      objectReference: {fileID: 11400000, guid: ff1ad00506fb573459cf56d8093c1b5d, type: 2}
-    - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
-      propertyPath: '_allWishes.Array.data[6]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 619fc059c7c73374da752c3eb80da83d, type: 2}
-    - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
-      propertyPath: '_allWishes.Array.data[7]'
-      value: 
-      objectReference: {fileID: 11400000, guid: de3487b87f3d98449a7ac4852bed2c3a, type: 2}
-    - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
-      propertyPath: '_allWishes.Array.data[8]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 4f7d8532b676ecf4492ec7e461d4f9bf, type: 2}
-    - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
-      propertyPath: '_allWishes.Array.data[9]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 4561bbb23588d6a43ae42864aec0e82b, type: 2}
-    - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
-      propertyPath: '_allWishes.Array.data[10]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 430ee46f499a7f247a81b2626e87c1f8, type: 2}
     - target: {fileID: 7233516460837193556, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
       propertyPath: prefabMenuList.Array.size
       value: 6
