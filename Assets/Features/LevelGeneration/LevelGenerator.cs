@@ -129,7 +129,7 @@ public class LevelGenerator : MonoBehaviour
         startRoomBehaviour.doorsGates[0].SetActive(true);
         var room = Instantiate(startRoom, new Vector3(0, 0, 0), Quaternion.identity, transform).GetComponent<RoomBehaviour>();
 
-        Vector3 playerPosition = new Vector3(0, 0, 0 * roomOffset.y);
+        Vector3 playerPosition = new Vector3(0, 0, 0 * roomOffset.y - 5);
         cameraPosition += new Vector3(roomOffset.x, 0, roomOffset.y - 10);
         GameManager.Instance.TeleportCharacterTo(playerPosition, cameraPosition);
         Camera.main.transform.rotation = cameraRotation;
@@ -137,7 +137,7 @@ public class LevelGenerator : MonoBehaviour
     void DisplayBossRoom() {
         var room = Instantiate(bossRoom, new Vector3(0, 0, 0), Quaternion.identity, transform).GetComponent<RoomBehaviour>();
 
-        Vector3 playerPosition = new Vector3(0, 0, 0 * roomOffset.y);
+        Vector3 playerPosition = new Vector3(0, 0, 0 * roomOffset.y - 5);
         cameraPosition += new Vector3(roomOffset.x, 0, roomOffset.y - 10);
         GameManager.Instance.TeleportCharacterTo(playerPosition, cameraPosition);
         Camera.main.transform.rotation = cameraRotation;
@@ -197,7 +197,7 @@ public class LevelGenerator : MonoBehaviour
         entranceCell.type = 1;
         entranceCell.coordinates = entranceCoordinates;
 
-        Vector3 playerPosition = new Vector3(entranceCoordinates.x * roomOffset.x, 0.5f, -entranceCoordinates.y * roomOffset.y);
+        Vector3 playerPosition = new Vector3(entranceCoordinates.x * roomOffset.x, 0.5f, -entranceCoordinates.y * roomOffset.y - 5);
         cameraPosition += new Vector3(entranceCoordinates.x * roomOffset.x, 0, -entranceCoordinates.y * roomOffset.y - 10);
         GameManager.Instance.TeleportCharacterTo(playerPosition, cameraPosition);
         Camera.main.transform.rotation = cameraRotation;
