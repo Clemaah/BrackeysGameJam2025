@@ -1078,24 +1078,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
       propertyPath: _allWishes.Array.size
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
       propertyPath: '_allWishes.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: b94e8e2c71bd4f54eb5730e6b99901d8, type: 2}
+      objectReference: {fileID: 11400000, guid: 4f7d8532b676ecf4492ec7e461d4f9bf, type: 2}
     - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
       propertyPath: '_allWishes.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: 3b23766e16c719649b0da29fef723626, type: 2}
+      objectReference: {fileID: 11400000, guid: 4561bbb23588d6a43ae42864aec0e82b, type: 2}
     - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
       propertyPath: '_allWishes.Array.data[2]'
       value: 
-      objectReference: {fileID: 11400000, guid: fb31f305dbfbc5746a05dc1107753542, type: 2}
+      objectReference: {fileID: 11400000, guid: b94e8e2c71bd4f54eb5730e6b99901d8, type: 2}
     - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
       propertyPath: '_allWishes.Array.data[3]'
       value: 
-      objectReference: {fileID: 11400000, guid: 430ee46f499a7f247a81b2626e87c1f8, type: 2}
+      objectReference: {fileID: 11400000, guid: 619fc059c7c73374da752c3eb80da83d, type: 2}
     - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
       propertyPath: '_allWishes.Array.data[4]'
       value: 
