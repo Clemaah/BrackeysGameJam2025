@@ -29,5 +29,5 @@ MonoBehaviour:
     value: 10
   bools:
   - boolRef: {fileID: 11400000, guid: 770841c9fe89bef45aa6275deb964914, type: 2}
-    value: 1
+    value: 0
   materials: []

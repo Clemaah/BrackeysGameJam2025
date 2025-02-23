@@ -18,8 +18,8 @@ public class PostProcess : MonoBehaviour
         _vignette.smoothness.overrideState = true;
         volume.profile.TryGet(out _colorAdjustments);
 
-        SetVisibility(visibility);
-        SetSaturation(saturation);
+        SetVisibility(visibility.value);
+        SetSaturation(saturation.value);
 
         visibility.OnValueChanged += SetVisibility;
         saturation.OnValueChanged += SetSaturation;
@@ -33,6 +33,6 @@ public class PostProcess : MonoBehaviour
     
     private void SetSaturation(bool value)
     {
-        _colorAdjustments.saturation.value = value ? 0.0f : -1.0f;
+        _colorAdjustments.saturation.value = value ? 0.0f : -100.0f;
     }
 }

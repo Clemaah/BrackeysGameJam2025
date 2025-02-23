@@ -19,6 +19,7 @@ public class FoodHeal : MonoBehaviour
 
         Damageable playerDamageable = other.GetComponent<Damageable>();
         playerDamageable.ChangeHealthBy(healAmount.Get(), Quaternion.identity);
+        AudioSource.PlayClipAtPoint(GetComponent<AudioSource>().clip, Camera.main.transform.position);
         Destroy(gameObject);
     }
 }
