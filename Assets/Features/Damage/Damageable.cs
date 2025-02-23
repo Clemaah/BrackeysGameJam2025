@@ -62,7 +62,7 @@ public class Damageable : MonoBehaviour
 
     public void ChangeHealthBy(float amount, Quaternion direction, bool triggerInvulnerability = true)
     {
-        if (_isInvulnerable) return;
+        if (_isInvulnerable && amount < 0) return;
         float updatedHealth = health.Get();
         updatedHealth += (amount > 0) ? amount : amount * (1 - armor.Get());
 
