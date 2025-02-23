@@ -29,6 +29,11 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            if (Instance.GetComponentInChildren<AudioSource>().clip != GetComponentInChildren<AudioSource>().clip)
+            {
+                Instance.GetComponentInChildren<AudioSource>().clip = GetComponentInChildren<AudioSource>().clip;
+                Instance.GetComponentInChildren<AudioSource>().Play();
+            }
             Destroy(gameObject);
         }
     }
