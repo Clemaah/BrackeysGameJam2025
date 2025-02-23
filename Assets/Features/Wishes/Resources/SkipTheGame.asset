@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefc6bbff5bb3eb49bebbff89ea9d655, type: 3}
   m_Name: SkipTheGame
   m_EditorClassIdentifier: 
-  wish: To the boss
-  genieCommentary: 
+  wish: END THIS FIGHT
+  genieCommentary: Let's rush to the boss...
   stats: []
   bools:
   - boolRef: {fileID: 11400000, guid: 6167390de1a90064bbd3b5c1d7f78899, type: 2}
