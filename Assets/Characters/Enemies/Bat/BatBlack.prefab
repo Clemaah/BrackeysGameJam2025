@@ -1056,7 +1056,7 @@ MonoBehaviour:
     stat: {fileID: 11400000, guid: edba2d20b25a19a4cb5b0f2f27bc3d8e, type: 2}
   dashCooldown:
     type: 2
-    value: 4
+    value: 3
     stat: {fileID: 11400000, guid: 25ab4c2c76043fd4b89f7a93c0d34e21, type: 2}
   dashCooldownVariation: 0.2
   target: {fileID: 0}
