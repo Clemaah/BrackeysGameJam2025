@@ -10,20 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cefc6bbff5bb3eb49bebbff89ea9d655, type: 3}
-  m_Name: Oneshot
+  m_Name: _SuperSlow
   m_EditorClassIdentifier: 
-  wish: END LIFE IN ONE STRIKE
-  genieCommentary: Life is so fragile
+  wish: HAVE SUPERHUMAN REFLEXES
+  genieCommentary: Like everything is slowed around you
   stats:
-  - statRef: {fileID: 11400000, guid: 1eafe67589f941b4391bc351207e8c96, type: 2}
+  - statRef: {fileID: 11400000, guid: d334a4c3935328345a7e42dab7589fd0, type: 2}
     operation: 0
-    value: 1000
-  - statRef: {fileID: 11400000, guid: afd28f6eb4dde504eb3e305f513dd283, type: 2}
+    value: 0.5
+  - statRef: {fileID: 11400000, guid: d334a4c3935328345a7e42dab7589fd0, type: 2}
     operation: 0
-    value: 1000
-  - statRef: {fileID: 11400000, guid: 90b49b8f0588d9b44aa79e068791cb0a, type: 2}
-    operation: 0
-    value: 1
+    value: 0.5
   bools: []
   materials: []
   onWishApplied:

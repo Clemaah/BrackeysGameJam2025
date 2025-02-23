@@ -19,6 +19,7 @@ public class MainCharacter : Character
         base.Awake();
         GameManager.Instance?.RegisterMainCharacter(this);
     }
+
     protected new void Update()
     {
         base.Update();
