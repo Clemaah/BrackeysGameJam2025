@@ -18,15 +18,12 @@ MonoBehaviour:
   - statRef: {fileID: 11400000, guid: 90a3d38c32ef82c4b97d7152fe4dcce8, type: 2}
     operation: 0
     value: 0
-  - statRef: {fileID: 11400000, guid: 64000aec49016cb4789fb2f4efe8bd32, type: 2}
-    operation: 1
-    value: 0.7
   - statRef: {fileID: 11400000, guid: 201b8309983198e4c90bcd769ffc149d, type: 2}
     operation: 2
     value: 10
   - statRef: {fileID: 11400000, guid: 95c3e8ffaa24dc247a295eaa4e204280, type: 2}
     operation: 1
-    value: 1.1
+    value: 1.2
   bools:
   - boolRef: {fileID: 11400000, guid: 770841c9fe89bef45aa6275deb964914, type: 2}
     value: 0
