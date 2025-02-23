@@ -106,7 +106,7 @@ MonoBehaviour:
   Collider: {fileID: 5829644601963123362}
   healAmount:
     type: 1
-    value: 0
+    value: 30
     stat: {fileID: 11400000, guid: 54b6f3fbd285f25478a2009dbe31c929, type: 2}
   canBePickedUp: {fileID: 11400000, guid: 9dcfa4521a9b06945af2403dcbd1d276, type: 2}
 --- !u!114 &4545880436044463478
