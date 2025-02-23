@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour
         foreach (var materialRef in _materials)
             materialRef.ResetEvent();
         
-        timeScale.stat.OnValueChanged += newValue => Time.timeScale = newValue;
+        timeScale.stat.OnValueChanged += change => timeScale.Get();
     }
 
     public void ResetStats()
@@ -99,6 +99,7 @@ public class GameManager : MonoBehaviour
             boolRef.Reset();
         foreach (var materialRef in _materials)
             materialRef.Reset();
+        Time.timeScale = timeScale.Get();
     }
 
     public void TeleportCharacterBy(Vector3 characterOffset, Vector3 cameraOffset)

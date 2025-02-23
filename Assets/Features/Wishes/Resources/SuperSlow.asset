@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cefc6bbff5bb3eb49bebbff89ea9d655, type: 3}
-  m_Name: _SuperSlow
+  m_Name: SuperSlow
   m_EditorClassIdentifier: 
   wish: HAVE SUPERHUMAN REFLEXES
   genieCommentary: Like everything is slowed around you
@@ -18,11 +18,7 @@ MonoBehaviour:
   - statRef: {fileID: 11400000, guid: d334a4c3935328345a7e42dab7589fd0, type: 2}
     operation: 0
     value: 0.5
-  - statRef: {fileID: 11400000, guid: d334a4c3935328345a7e42dab7589fd0, type: 2}
-    operation: 0
-    value: 0.5
-  bools: []
+  bools:
+  - boolRef: {fileID: 11400000, guid: ff8930d455c38b140acd0bab22722315, type: 2}
+    value: 1
   materials: []
-  onWishApplied:
-    m_PersistentCalls:
-      m_Calls: []
