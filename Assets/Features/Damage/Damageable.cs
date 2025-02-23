@@ -73,7 +73,7 @@ public class Damageable : MonoBehaviour
         if (Mathf.Abs(healthChange) < 0.0001f) return;
         onHealthChanged.Invoke(healthChange);
 
-        if (healthChange < 0.0f)
+        if (healthChange < -0.1f)
         {
             SpawnDamageParticles(direction);
             StartCoroutine(ChangeTexture());
