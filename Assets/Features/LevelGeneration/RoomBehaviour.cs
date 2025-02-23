@@ -59,8 +59,8 @@ public class RoomBehaviour : MonoBehaviour
     void Update()
     {
         if (roomOpened) return;
-
-        if ((roomType == 0 && CountEnemies() == 0) ||
+            
+        else if ((roomType == 0 && CountEnemies() == 0) ||
             (roomType == 1 && (lamp.gameObject.IsDestroyed())))
         {
             OpenRoom();
@@ -77,6 +77,7 @@ public class RoomBehaviour : MonoBehaviour
         if (transform.name.Contains("WishRoom")) roomType = 4;
         if (transform.name.Contains("BossRoom")) roomType = 5;
         if (transform.name.Contains("WeaponRoom")) roomType = 6;
+        Debug.Log(roomType);
 
         int[] doorsIndex = { 1, 7, 5, 3 };
         bool[] map = { false, false, false, false, false, false, false, false, false };
@@ -85,7 +86,7 @@ public class RoomBehaviour : MonoBehaviour
             doors[i].SetActive(status[i]);
             walls[i].SetActive(!status[i]);
 
-            if (roomType == 0 || roomType == 1) doorsGates[i].SetActive(status[i]);
+            if (roomType == 0 || roomType == 1 || roomType == 6) doorsGates[i].SetActive(status[i]);
             else doorsGates[i].SetActive(false);
 
             if (status[i]) map[doorsIndex[i]] = true;
