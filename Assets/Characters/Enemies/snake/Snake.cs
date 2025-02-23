@@ -19,7 +19,7 @@ public class Snake : Enemy
         TryDash(Vector3.zero);
         
         transform.forward = relativeTargetPosition;
-        characterController.Move(relativeTargetPosition.normalized * (math.remap(12.0f, 16.0f, -1.0f, 1.0f, relativeTargetPosition.magnitude) * speed.Get() * Time.deltaTime));
+        characterController.Move(relativeTargetPosition.normalized.X0Z() * (math.remap(12.0f, 16.0f, -1.0f, 1.0f, relativeTargetPosition.magnitude) * speed.Get() * Time.deltaTime));
     }
 
     protected override void DashStart()

@@ -26,7 +26,7 @@ public class Mummy : Enemy
         TryDash(Vector3.zero);
         
         transform.forward = relativeTargetPosition;
-        characterController.Move(relativeTargetPosition.normalized * (math.remap(4.0f, 8.0f, -0.125f, 1.0f, relativeTargetPosition.magnitude) * speed.Get() * Time.deltaTime));
+        characterController.Move(relativeTargetPosition.normalized.X0Z() * (math.remap(4.0f, 8.0f, -0.125f, 1.0f, relativeTargetPosition.magnitude) * speed.Get() * Time.deltaTime));
     }
 
     protected override void DashStart()
