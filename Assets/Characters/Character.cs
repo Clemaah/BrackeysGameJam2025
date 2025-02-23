@@ -38,7 +38,7 @@ public class Character : MonoBehaviour
     protected void LateUpdate()
     {
         Vector3 position = transform.position;
-        position.y = 0.55f;
+        position.y = 0.6f;
         transform.position = position;
     }
 

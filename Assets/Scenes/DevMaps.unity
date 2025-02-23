@@ -1167,11 +1167,11 @@ PrefabInstance:
     - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
       propertyPath: '_allWishes.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: d7b656b7c0a1ede4db7e7ca8f8b10164, type: 2}
+      objectReference: {fileID: 11400000, guid: d730c637282c72146abc06aa1c787e02, type: 2}
     - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
       propertyPath: '_allWishes.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: fb31f305dbfbc5746a05dc1107753542, type: 2}
+      objectReference: {fileID: 11400000, guid: d2a9f72db247fbb43be75e8b2ad368c6, type: 2}
     - target: {fileID: 6729066623072436334, guid: 615a55f297f6ad347ba5a98ecb8aba9b, type: 3}
       propertyPath: '_allWishes.Array.data[2]'
       value: 
