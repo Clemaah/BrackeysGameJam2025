@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1339386146317216815}
   - component: {fileID: 4174957830532625522}
   - component: {fileID: -1176645771220680518}
+  - component: {fileID: 388314762235412473}
   m_Layer: 0
   m_Name: BossRoom
   m_TagString: Untagged
@@ -117,6 +118,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &388314762235412473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5381774497645018182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8305e9e485ac15545b0057102688e58b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: {fileID: 7190178704958241979}
 --- !u!1001 &339945781343907090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -839,6 +853,11 @@ PrefabInstance:
 --- !u!4 &7030218527542025747 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1607944460633722014, guid: a822076ac7c4f694bb0bbaa6ad93c0dc, type: 3}
+  m_PrefabInstance: {fileID: 8629119500389864077}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7190178704958241979 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1443525832357146166, guid: a822076ac7c4f694bb0bbaa6ad93c0dc, type: 3}
   m_PrefabInstance: {fileID: 8629119500389864077}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8791477079363685054
