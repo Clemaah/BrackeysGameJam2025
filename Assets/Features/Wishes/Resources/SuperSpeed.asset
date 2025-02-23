@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wish: 'BE FASTER THAN  LIGHT
 
-
 '
   genieCommentary: Blazingly fast we go
   stats:
@@ -26,6 +25,3 @@ MonoBehaviour:
     value: 0
   bools: []
   materials: []
-  onWishApplied:
-    m_PersistentCalls:
-      m_Calls: []

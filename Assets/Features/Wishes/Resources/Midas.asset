@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefc6bbff5bb3eb49bebbff89ea9d655, type: 3}
   m_Name: Midas
   m_EditorClassIdentifier: 
-  wish: 'BE COVERED WITH GOLD
-
-'
+  wish: BE COVERED WITH GOLD
   genieCommentary: 'Tougher skin for a wealthier soul
 
 '

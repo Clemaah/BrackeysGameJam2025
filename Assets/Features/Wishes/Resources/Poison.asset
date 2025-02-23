@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Poison
   m_EditorClassIdentifier: 
   wish: SPREAD A DISEASE
-  genieCommentary: Berk, it taste like garbage
+  genieCommentary: Berk, it tastes like garbage
   stats:
   - statRef: {fileID: 11400000, guid: 54b6f3fbd285f25478a2009dbe31c929, type: 2}
     operation: 0
