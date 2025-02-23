@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
-        GoToLevel(4);
+        GoToLevel(CurrentLevel+1);
     }
 
     public void GoToLevel(int newLevel)
