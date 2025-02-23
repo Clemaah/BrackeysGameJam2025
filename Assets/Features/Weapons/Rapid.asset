@@ -21,4 +21,6 @@ MonoBehaviour:
     value: 1
   - boolRef: {fileID: 11400000, guid: f7a6532bfeb52004e95ae922a746e755, type: 2}
     value: 1
-  materials: []
+  materials:
+  - materialRef: {fileID: 11400000, guid: 1cf144e449465974dba2a9ac0487d3c1, type: 2}
+    value: {fileID: 2100000, guid: d39649841d9289348ab0b3dc4d083706, type: 2}
