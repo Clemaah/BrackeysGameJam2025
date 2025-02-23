@@ -39,12 +39,12 @@ public class Damager : MonoBehaviour
         if (!enabled) return;
         if (Time.time >= _nextDamage)
         {
-            _nextDamage = Time.time + stayDamageInterval;
-            ApplyDamage(other);
+            if(ApplyDamage(other))
+                _nextDamage = Time.time + stayDamageInterval;
         }
     }
 
-    private void ApplyDamage(Collider other)
+    private bool ApplyDamage(Collider other)
     {
         Damageable damageable = other.GetComponent<Damageable>();
         if (damageable == null)
@@ -56,15 +56,15 @@ public class Damager : MonoBehaviour
                 _pendingDestroy = true;
                 Destroy(gameObject);
             }
-            return;
+            return false;
         }
         damageable.ChangeHealthBy(-damage.Get(), Quaternion.LookRotation(transform.forward));
         if (destroyOnDamage) Destroy(gameObject);
 
         // knock-back
-        if (Mathf.Abs(knockback.Get()) < 0.01f) return;
+        if (Mathf.Abs(knockback.Get()) < 0.01f) return true;
         Character character = damageable.GetComponent<Character>();
-        if (character == null) return;
+        if (character == null) return true;
         switch (knockBackType)
         {
             case KnockBackType.ProjectileDirection:
@@ -74,5 +74,7 @@ public class Damager : MonoBehaviour
                 character.Push((character.transform.position - transform.position).X0Z().normalized, knockback.Get());
                 break;
         }
+
+        return true;
     }
 }

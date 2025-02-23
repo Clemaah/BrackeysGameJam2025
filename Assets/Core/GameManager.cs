@@ -53,9 +53,15 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
-        CurrentLevel++;
+        GoToLevel(CurrentLevel+1);
+    }
+
+    public void GoToLevel(int newLevel)
+    {
+        CurrentLevel = newLevel;
         ResetEvents();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        WishesManager.ResetEvent();
     }
 
     public void PauseGame(bool paused)
@@ -69,6 +75,7 @@ public class GameManager : MonoBehaviour
         CurrentLevel = 0;
         WishesManager.Reset();
         ResetEvents();
+        WishesManager.ResetEvent();
         ResetStats();
     }
 
@@ -81,7 +88,6 @@ public class GameManager : MonoBehaviour
         foreach (var materialRef in _materials)
             materialRef.ResetEvent();
         
-        WishesManager.ResetEvent();
         timeScale.stat.OnValueChanged += newValue => Time.timeScale = newValue;
     }
 

@@ -89,7 +89,7 @@ public class UIManager : MonoBehaviour
 }
 
 
-
+#if UNITY_EDITOR
 // ModifierDrawer
 [CustomPropertyDrawer(typeof(MenuPair))]
 public class MenuPairDrawer : PropertyDrawer
@@ -125,3 +125,4 @@ public class MenuPairDrawer : PropertyDrawer
         EditorGUI.EndProperty();
     }
 }
+#endif

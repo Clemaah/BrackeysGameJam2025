@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wish: CRUSH MY ENNEMIES
   genieCommentary: Stomp them all !
-  modifiers:
+  stats:
   - statRef: {fileID: 11400000, guid: 804fbbf81087acb41879905f8cdd03f2, type: 2}
     operation: 1
     value: 2
@@ -30,7 +30,8 @@ MonoBehaviour:
   - statRef: {fileID: 11400000, guid: ea57cd153f8594342a7474a5b06331af, type: 2}
     operation: 0
     value: 0
-  objectsToSpawn: []
-  onWishApplied:
-    m_PersistentCalls:
-      m_Calls: []
+  - statRef: {fileID: 11400000, guid: 8f60aa1fc4b115644b8475db234fc6a4, type: 2}
+    operation: 0
+    value: 0
+  bools: []
+  materials: []

@@ -89,8 +89,55 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cdad2c497c07f98439fd32f450a537b1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7900589037759794984}
   m_SourcePrefab: {fileID: 100100000, guid: cdad2c497c07f98439fd32f450a537b1, type: 3}
+--- !u!1 &544378594914682997 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cdad2c497c07f98439fd32f450a537b1, type: 3}
+  m_PrefabInstance: {fileID: 814989506007168292}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7900589037759794984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544378594914682997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c31548c23acfeb4db4a17bfc1232e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health:
+    type: 0
+    value: 1
+    stat: {fileID: 0}
+  maxHealth:
+    type: 0
+    value: 1
+    stat: {fileID: 0}
+  armor:
+    type: 0
+    value: 0
+    stat: {fileID: 0}
+  healthRegen:
+    type: 0
+    value: 0
+    stat: {fileID: 0}
+  invulCooldown: 0
+  destroyOnDeath: 1
+  onHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  redMaterial: {fileID: 0}
+  damageParticles: {fileID: 0}
+  deathParticles: {fileID: 6909222436772635727, guid: 8579e64590829914f8193bdb795b5ed8, type: 3}
 --- !u!4 &920376849392407247 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cdad2c497c07f98439fd32f450a537b1, type: 3}
@@ -151,13 +198,60 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e2be9f5218ad35046aff30829e569fef, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7195126220114420639}
   m_SourcePrefab: {fileID: 100100000, guid: e2be9f5218ad35046aff30829e569fef, type: 3}
 --- !u!4 &1449174470630209791 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e2be9f5218ad35046aff30829e569fef, type: 3}
   m_PrefabInstance: {fileID: 1411379295200681748}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2258361889564795461 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e2be9f5218ad35046aff30829e569fef, type: 3}
+  m_PrefabInstance: {fileID: 1411379295200681748}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7195126220114420639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2258361889564795461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c31548c23acfeb4db4a17bfc1232e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health:
+    type: 0
+    value: 1
+    stat: {fileID: 0}
+  maxHealth:
+    type: 0
+    value: 1
+    stat: {fileID: 0}
+  armor:
+    type: 0
+    value: 0
+    stat: {fileID: 0}
+  healthRegen:
+    type: 0
+    value: 0
+    stat: {fileID: 0}
+  invulCooldown: 0
+  destroyOnDeath: 1
+  onHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  redMaterial: {fileID: 0}
+  damageParticles: {fileID: 0}
+  deathParticles: {fileID: 6909222436772635727, guid: 8579e64590829914f8193bdb795b5ed8, type: 3}
 --- !u!1001 &8758852752295489757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -213,8 +307,55 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 98e19187aa2ec85409200bd6b452f3d8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7062853186916761767}
   m_SourcePrefab: {fileID: 100100000, guid: 98e19187aa2ec85409200bd6b452f3d8, type: 3}
+--- !u!1 &8452372467867667852 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 98e19187aa2ec85409200bd6b452f3d8, type: 3}
+  m_PrefabInstance: {fileID: 8758852752295489757}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7062853186916761767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8452372467867667852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c31548c23acfeb4db4a17bfc1232e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health:
+    type: 0
+    value: 1
+    stat: {fileID: 0}
+  maxHealth:
+    type: 0
+    value: 1
+    stat: {fileID: 0}
+  armor:
+    type: 0
+    value: 0
+    stat: {fileID: 0}
+  healthRegen:
+    type: 0
+    value: 0
+    stat: {fileID: 0}
+  invulCooldown: 0
+  destroyOnDeath: 1
+  onHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  redMaterial: {fileID: 0}
+  damageParticles: {fileID: 0}
+  deathParticles: {fileID: 6909222436772635727, guid: 8579e64590829914f8193bdb795b5ed8, type: 3}
 --- !u!4 &9081239639795898166 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 98e19187aa2ec85409200bd6b452f3d8, type: 3}

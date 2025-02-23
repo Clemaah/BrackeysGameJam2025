@@ -21,8 +21,10 @@ public class Damageable : MonoBehaviour
     public Material redMaterial;
 
     [SerializeField] public ParticleSystem damageParticles;
+    [SerializeField] public ParticleSystem deathParticles;
 
     private ParticleSystem _damageParticlesInstance;
+    private ParticleSystem _deathParticlesInstance;
     private float _nextHealthChange;
     private bool _isInvulnerable = false;
     private SkinnedMeshRenderer[] _renderers;
@@ -34,7 +36,7 @@ public class Damageable : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         _renderers = GetComponentsInChildren<SkinnedMeshRenderer>();
 
-        maxHealth.stat.OnValueChanged += f => ChangeHealthBy(f, Quaternion.identity);
+        if(maxHealth.stat) maxHealth.stat.OnValueChanged += f => ChangeHealthBy(f, Quaternion.identity);
 
         if (health.type == FloatValue.FloatValueType.Stat) return;
 
@@ -75,8 +77,12 @@ public class Damageable : MonoBehaviour
 
         if (healthChange < -0.1f)
         {
-            SpawnDamageParticles(direction);
-            StartCoroutine(ChangeTexture());
+            if (damageParticles)
+            {
+                if(direction != Quaternion.identity) SpawnDamageParticles(direction);
+                else SpawnDeathParticles();
+            }
+            if(redMaterial) StartCoroutine(ChangeTexture());
             if (triggerInvulnerability && invulCooldown > 0) StartCoroutine(BecomeInvulnerable());
 
             if (_audioSource)
@@ -89,6 +95,7 @@ public class Damageable : MonoBehaviour
 
         // Death
         if (updatedHealth > 0) return;
+        if (deathParticles) SpawnDeathParticles();
         onDeath.Invoke();
         if (destroyOnDeath)
             Destroy(gameObject);
@@ -97,6 +104,10 @@ public class Damageable : MonoBehaviour
     public void SpawnDamageParticles(Quaternion direction)
     {
         _damageParticlesInstance = Instantiate(damageParticles, transform.position - transform.forward, direction);
+    }
+    public void SpawnDeathParticles()
+    {
+        _deathParticlesInstance = Instantiate(deathParticles, transform.position, Quaternion.identity);
     }
 
     public IEnumerator BecomeInvulnerable()

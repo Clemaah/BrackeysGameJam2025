@@ -40,7 +40,7 @@ public class WishSO : ScriptableObject
     public MaterialModifier[] materials;
     
     [Header("Events")]
-    public UnityEvent onWishApplied;
+    public Action OnWishApplied;
 
     public void Apply()
     {
@@ -51,11 +51,12 @@ public class WishSO : ScriptableObject
         foreach (var modifier in materials)
             modifier.materialRef.ChangeValue(modifier.value);
         
-        onWishApplied?.Invoke();
+        OnWishApplied?.Invoke();
     }
 }
 
 
+#if UNITY_EDITOR
 // ModifierDrawer
 [CustomPropertyDrawer(typeof(StatModifier))]
 public class StatModifierDrawer : PropertyDrawer
@@ -134,3 +135,4 @@ public class MaterialModifierDrawer : PropertyDrawer
         EditorGUI.EndProperty();
     }
 }
+#endif
