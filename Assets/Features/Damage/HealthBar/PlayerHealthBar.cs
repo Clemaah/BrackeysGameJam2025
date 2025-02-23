@@ -27,6 +27,5 @@ public class PlayerHealthBar : MonoBehaviour
     private void UpdateMaxHealth()
     {
         _slider.maxValue = damageable.maxHealth.Get();
-        _slider.transform.localScale = new Vector3((damageable.maxHealth.Get() / damageable.maxHealth.stat.baseValue), 1, 1);
     }
 }
