@@ -171,6 +171,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 8832291201348459258, guid: 24fbaac8ad69d74429dc9612e2d32221, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 4918667775969441015, guid: 6fa241726b473c342aaf8ff7ee561843, type: 3}
     - target: {fileID: 9101691965169396995, guid: 24fbaac8ad69d74429dc9612e2d32221, type: 3}
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
