@@ -77,6 +77,7 @@ MonoBehaviour:
   knockBackType: 0
   destroyOnDamage: 0
   destroyOnNonDamageable: 0
+  objectToSpawnOnNonDamage: {fileID: 0}
   applyDamageOnStay: 0
   stayDamageInterval: 0.5
 --- !u!1001 &2783717178797473989
@@ -155,6 +156,10 @@ PrefabInstance:
       propertyPath: armor.type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
+      propertyPath: redMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 9a9d6df85c7a7954aba0020be1373ecd, type: 2}
     - target: {fileID: 6268036839015009994, guid: d3447ea875e30cf41a9a381a17222033, type: 3}
       propertyPath: destroyOnDeath
       value: 1
