@@ -13,9 +13,13 @@ MonoBehaviour:
   m_Name: SkipTheGame
   m_EditorClassIdentifier: 
   wish: END THIS FIGHT
-  genieCommentary: Let's rush to the boss...
+  genieCommentary: Let's rush to the boss now...
   stats: []
   bools:
   - boolRef: {fileID: 11400000, guid: 6167390de1a90064bbd3b5c1d7f78899, type: 2}
     value: 1
+  - boolRef: {fileID: 11400000, guid: 398ce6ab5b4178d46927fc03477efa52, type: 2}
+    value: 0
+  - boolRef: {fileID: 11400000, guid: f7a6532bfeb52004e95ae922a746e755, type: 2}
+    value: 0
   materials: []
