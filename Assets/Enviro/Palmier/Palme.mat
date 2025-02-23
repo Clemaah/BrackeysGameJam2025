@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Palme
-  m_Shader: {fileID: -6465566751694194690, guid: 3753319aa2a7af6488895c12038462db, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 8a85a5d76926e2c41afedc03263ba32b, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
