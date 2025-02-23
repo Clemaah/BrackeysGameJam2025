@@ -805,7 +805,7 @@ MonoBehaviour:
       probability: 1
     - room: {fileID: 5381774497645018182, guid: 0cc62c93823e1c94987ca793c35938df, type: 3}
       maxDifficulty: 0
-      maxEntrances: 4
+      maxEntrances: 1
       maxNbRooms: 1
       probability: 1
     - room: {fileID: 5381774497645018182, guid: 8054b299204f87c4587181edf4cfa23e, type: 3}
