@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Car
   m_EditorClassIdentifier: 
   wish: HAVE A CAR
-  genieCommentary: 
+  genieCommentary: A reliable option, even when the city is under attack
   stats:
   - statRef: {fileID: 11400000, guid: 90b49b8f0588d9b44aa79e068791cb0a, type: 2}
     operation: 2

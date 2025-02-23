@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefc6bbff5bb3eb49bebbff89ea9d655, type: 3}
   m_Name: BackInTime
   m_EditorClassIdentifier: 
-  wish: Back in time
-  genieCommentary: 
+  wish: BACK IN TIME
+  genieCommentary: The chance to return to the classics
   stats:
   - statRef: {fileID: 11400000, guid: d7ad82eb2df6dcc46a8e2cc881440406, type: 2}
     operation: 1

@@ -12,11 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefc6bbff5bb3eb49bebbff89ea9d655, type: 3}
   m_Name: RandomWish
   m_EditorClassIdentifier: 
-  wish: have something special
-  genieCommentary: 
+  wish: HAVE SOMETHING SPECIAL
+  genieCommentary: Everyone likes a suprise
   stats: []
   bools: []
   materials: []
-  onWishApplied:
-    m_PersistentCalls:
-      m_Calls: []

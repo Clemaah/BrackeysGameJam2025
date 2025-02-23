@@ -12,11 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefc6bbff5bb3eb49bebbff89ea9d655, type: 3}
   m_Name: ThreeMoreWishes
   m_EditorClassIdentifier: 
-  wish: I want more
-  genieCommentary: 
+  wish: HAVE MORE WISHES
+  genieCommentary: How original... No one thought of that one
   stats: []
   bools: []
   materials: []
-  onWishApplied:
-    m_PersistentCalls:
-      m_Calls: []
