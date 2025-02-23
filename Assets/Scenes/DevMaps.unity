@@ -1010,6 +1010,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 020affbd929146f49ae19055485ee2c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visibility: {fileID: 11400000, guid: 770841c9fe89bef45aa6275deb964914, type: 2}
+  saturation: {fileID: 11400000, guid: 284e26e23f5a3724889b9b0c211c407c, type: 2}
 --- !u!114 &855084360 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9101691965169396995, guid: 24fbaac8ad69d74429dc9612e2d32221, type: 3}
