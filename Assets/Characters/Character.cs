@@ -35,11 +35,11 @@ public class Character : MonoBehaviour
             );
     }
 
-    protected virtual void Update()
+    protected void LateUpdate()
     {
-        var vector3 = transform.position;
-        vector3.y = 0.5f;
-        transform.position = vector3;
+        Vector3 position = transform.position;
+        position.y = 0.55f;
+        transform.position = position;
     }
 
     public bool TryDash(Vector3 direction)
@@ -79,12 +79,5 @@ public class Character : MonoBehaviour
     {
         StartCoroutine(Tween.To(Mathf.Log(force * 0.0625f + 1.0f), direction, Vector3.zero, 
             v => characterController.Move(v * (force * Time.deltaTime)), easeType: Tween.EaseType.EaseOutCubic));
-    }
-
-    protected void Update()
-    {
-        Vector3 position = transform.position;
-        position.y = 0;
-        transform.position = position;
     }
 }

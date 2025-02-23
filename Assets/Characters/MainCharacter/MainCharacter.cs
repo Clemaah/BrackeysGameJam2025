@@ -20,9 +20,8 @@ public class MainCharacter : Character
         GameManager.Instance?.RegisterMainCharacter(this);
     }
 
-    protected new void Update()
+    protected void Update()
     {
-        base.Update();
         if (GameManager.Instance)
         {
             if (GameManager.UIManager.currentMenu != MenuType.WishesSelection 
