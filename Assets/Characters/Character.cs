@@ -35,6 +35,13 @@ public class Character : MonoBehaviour
             );
     }
 
+    protected virtual void Update()
+    {
+        var vector3 = transform.position;
+        vector3.y = 0.5f;
+        transform.position = vector3;
+    }
+
     public bool TryDash(Vector3 direction)
     {
         if (Time.time < _nextDash || !canDash.value) return false;
