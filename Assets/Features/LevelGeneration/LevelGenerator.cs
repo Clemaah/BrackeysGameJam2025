@@ -144,7 +144,7 @@ public class LevelGenerator : MonoBehaviour
     }
 
 
-    void GenerateLevel() {
+    bool GenerateLevel() {
         // Generate exit room :
         List<(int x, int y)> availableExitRooms = new List<(int x, int y)>();
 
@@ -189,6 +189,8 @@ public class LevelGenerator : MonoBehaviour
             }
         }
 
+        if (availableEntranceRooms.Count == 0) return false;
+
         (int x, int y) entranceCoordinates = availableEntranceRooms[Random.Range(0, availableEntranceRooms.Count)];
         
         Cell entranceCell = board[entranceCoordinates.x + entranceCoordinates.y * currentLevelConfig.mapSize.x];
@@ -205,9 +207,6 @@ public class LevelGenerator : MonoBehaviour
         entranceRoom.BuildRoom(entranceCell.status, 0);
 
         currentLevelConfig.rooms[1].maxNbRooms--;
-
-
-
 
         // Generate other rooms :
         for(int i = 0; i < currentLevelConfig.mapSize.x; i++) {
@@ -251,89 +250,109 @@ public class LevelGenerator : MonoBehaviour
                 }
             }
         }
+
+        return true;
     }
 
     public void GenerateMaze() {
-        board = new List<Cell>();
+        bool mazeValid = false;
 
-        for(int i = 0; i < currentLevelConfig.mapSize.x; i++) {
-            for(int j = 0; j < currentLevelConfig.mapSize.y; j++) {
-                board.Add(new Cell());
-            }
-        }
+        while (!mazeValid)
+        {
+            board = new List<Cell>();
 
-        // Initialize graph :
-        graph = new int[board.Count, board.Count];
-        for(int i = 0; i < board.Count; i++) {
-            for(int j = 0; j < board.Count; j++) {
-                graph[i, j] = 0;
-            }
-        }
-
-        int currentCell = 0;
-        Stack<int> path = new Stack<int> ();
-        int k = 0;
-
-        while(k < 1000) {
-            k++;
-            board[currentCell].visited = true;
-
-            if(currentCell == board.Count - 1) break;
-
-            List<int> neighbors = CheckNeighbors(currentCell);
-
-            if(neighbors.Count == 0) {
-                if(path.Count == 0) break;
-                else currentCell = path.Pop();
-            }
-
-            else {
-                path.Push(currentCell);
-                int newCell = neighbors[Random.Range(0, neighbors.Count)];
-
-                if(newCell > currentCell){
-                    // Going east :
-                    if(newCell - 1 == currentCell) {
-                        graph[currentCell, newCell] = 1;
-                        graph[newCell, currentCell] = 1;
-                        board[currentCell].status[2] = true;
-                        currentCell = newCell;
-                        board[currentCell].status[3] = true;
-                    }
-
-                    // Going south :
-                    else{
-                        graph[currentCell, newCell] = 1;
-                        graph[newCell, currentCell] = 1;
-                        board[currentCell].status[1] = true;
-                        currentCell = newCell;
-                        board[currentCell].status[0] = true;
-                    }
-                }
-
-                else {
-                    // Going west :
-                    if(newCell + 1 == currentCell) {
-                        graph[currentCell, newCell] = 1;
-                        graph[newCell, currentCell] = 1;
-                        board[currentCell].status[3] = true;
-                        currentCell = newCell;
-                        board[currentCell].status[2] = true;
-                    }
-
-                    // Going north :
-                    else{
-                        graph[currentCell, newCell] = 1;
-                        graph[newCell, currentCell] = 1;
-                        board[currentCell].status[0] = true;
-                        currentCell = newCell;
-                        board[currentCell].status[1] = true;
-                    }
+            for (int i = 0; i < currentLevelConfig.mapSize.x; i++)
+            {
+                for (int j = 0; j < currentLevelConfig.mapSize.y; j++)
+                {
+                    board.Add(new Cell());
                 }
             }
-        }
 
-        GenerateLevel();
+            // Initialize graph :
+            graph = new int[board.Count, board.Count];
+            for (int i = 0; i < board.Count; i++)
+            {
+                for (int j = 0; j < board.Count; j++)
+                {
+                    graph[i, j] = 0;
+                }
+            }
+
+            int currentCell = 0;
+            Stack<int> path = new Stack<int>();
+            int k = 0;
+
+            while (k < 1000)
+            {
+                k++;
+                board[currentCell].visited = true;
+
+                if (currentCell == board.Count - 1) break;
+
+                List<int> neighbors = CheckNeighbors(currentCell);
+
+                if (neighbors.Count == 0)
+                {
+                    if (path.Count == 0) break;
+                    else currentCell = path.Pop();
+                }
+
+                else
+                {
+                    path.Push(currentCell);
+                    int newCell = neighbors[Random.Range(0, neighbors.Count)];
+
+                    if (newCell > currentCell)
+                    {
+                        // Going east :
+                        if (newCell - 1 == currentCell)
+                        {
+                            graph[currentCell, newCell] = 1;
+                            graph[newCell, currentCell] = 1;
+                            board[currentCell].status[2] = true;
+                            currentCell = newCell;
+                            board[currentCell].status[3] = true;
+                        }
+
+                        // Going south :
+                        else
+                        {
+                            graph[currentCell, newCell] = 1;
+                            graph[newCell, currentCell] = 1;
+                            board[currentCell].status[1] = true;
+                            currentCell = newCell;
+                            board[currentCell].status[0] = true;
+                        }
+                    }
+
+                    else
+                    {
+                        // Going west :
+                        if (newCell + 1 == currentCell)
+                        {
+                            graph[currentCell, newCell] = 1;
+                            graph[newCell, currentCell] = 1;
+                            board[currentCell].status[3] = true;
+                            currentCell = newCell;
+                            board[currentCell].status[2] = true;
+                        }
+
+                        // Going north :
+                        else
+                        {
+                            graph[currentCell, newCell] = 1;
+                            graph[newCell, currentCell] = 1;
+                            board[currentCell].status[0] = true;
+                            currentCell = newCell;
+                            board[currentCell].status[1] = true;
+                        }
+                    }
+                }
+            }
+
+            mazeValid = GenerateLevel();
+        } 
     }
 
     List<int> CheckNeighbors(int cell) {
