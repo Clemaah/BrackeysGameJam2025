@@ -35,6 +35,5 @@ MonoBehaviour:
     value: {fileID: 2100000, guid: ceaab6486db46594e9ec54158c79cdc5, type: 2}
   - materialRef: {fileID: 11400000, guid: 1cf144e449465974dba2a9ac0487d3c1, type: 2}
     value: {fileID: 2100000, guid: ceaab6486db46594e9ec54158c79cdc5, type: 2}
-  onWishApplied:
-    m_PersistentCalls:
-      m_Calls: []
+  - materialRef: {fileID: 11400000, guid: 8c7c2d8b4820ecb439556221cc9dc886, type: 2}
+    value: {fileID: 2100000, guid: 27f96cc980184144f8e1b25fe40cf79c, type: 2}

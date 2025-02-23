@@ -12,11 +12,38 @@ public class WishesManager : MonoBehaviour
     
     private List<WishSO> _remainingWishes;
     public List<WishSO> currentWishes;
+    
+    [Header("Special Wishes")]
+    public WishSO randomWish;
+    public WishSO threeMoreWishes;
+    public WishSO backInTime;
+    public WishSO boringGame;
 
     public void Start()
     {
-        _remainingWishes = new List<WishSO>(_allWishes);
-        currentWishes = new List<WishSO>();
+        Reset();
+        randomWish.OnWishApplied += () => SelectRandomWishes(1);
+        threeMoreWishes.OnWishApplied += () => SelectRandomWishes(3);
+        backInTime.OnWishApplied += () => GameManager.Instance.GoToLevel(GameManager.Instance.CurrentLevel);
+        boringGame.OnWishApplied += () => GameManager.Instance.GoToLevel(4);
+    }
+
+    public void SelectRandomWishes(int numberOfWishes)
+    {
+        WishSO[] randomWishes = GetRandomWishes(numberOfWishes);
+        
+
+        foreach (WishSO wish in randomWishes) 
+        {
+            currentWishes.Add(wish);
+            _remainingWishes.Remove(wish);
+        }
+
+        foreach (WishSO wish in randomWishes)
+        {
+            wish.Apply();
+            OnWishAdded?.Invoke(wish);
+        }
     }
     
     public WishSO[] GetRandomWishes(int numberOfWishes)
@@ -37,10 +64,10 @@ public class WishesManager : MonoBehaviour
     
     public void SelectWish(WishSO wish)
     {
-        OnWishAdded?.Invoke(wish);
-        wish.Apply();
         currentWishes.Add(wish);
         _remainingWishes.Remove(wish);
+        OnWishAdded?.Invoke(wish);
+        wish.Apply();
     }
     
     public void RemoveWish(WishSO wish)

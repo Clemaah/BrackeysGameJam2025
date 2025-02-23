@@ -88,12 +88,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _allWishes:
-  - {fileID: 11400000, guid: de3487b87f3d98449a7ac4852bed2c3a, type: 2}
+  - {fileID: 11400000, guid: ff1ad00506fb573459cf56d8093c1b5d, type: 2}
   - {fileID: 11400000, guid: 7a0b6431814cae5459adadaeee4b9ac2, type: 2}
-  - {fileID: 11400000, guid: 8506bde2866be964ebc69ff589ba6e2e, type: 2}
-  - {fileID: 11400000, guid: 3b23766e16c719649b0da29fef723626, type: 2}
-  - {fileID: 11400000, guid: c19d2cc55ff30494c9d264d04d0f4568, type: 2}
   currentWishes: []
+  randomWish: {fileID: 11400000, guid: ff1ad00506fb573459cf56d8093c1b5d, type: 2}
+  threeMoreWishes: {fileID: 11400000, guid: b6f862fa2a1c72148a7dc4b596f79d5d, type: 2}
+  backInTime: {fileID: 11400000, guid: d730c637282c72146abc06aa1c787e02, type: 2}
+  boringGame: {fileID: 11400000, guid: 1c7d4fb9a20b05641a7ea1ac9c4d0baf, type: 2}
 --- !u!1 &7003585861931947322
 GameObject:
   m_ObjectHideFlags: 0
