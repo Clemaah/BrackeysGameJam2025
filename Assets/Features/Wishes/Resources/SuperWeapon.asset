@@ -15,27 +15,27 @@ MonoBehaviour:
   wish: HAVE A STRONGER WEAPON
   genieCommentary: Who doesn't like heavy weapons ?
   stats:
-  - statRef: {fileID: 11400000, guid: da40cab0d99e9164497e8637bf3757c3, type: 2}
-    operation: 0
-    value: 0.1
-  - statRef: {fileID: 11400000, guid: 90a3d38c32ef82c4b97d7152fe4dcce8, type: 2}
-    operation: 2
-    value: 40
   - statRef: {fileID: 11400000, guid: 64000aec49016cb4789fb2f4efe8bd32, type: 2}
     operation: 0
     value: 10
-  - statRef: {fileID: 11400000, guid: 69669869756308c4ca00de70f8f14f9e, type: 2}
-    operation: 1
-    value: 0.8
   - statRef: {fileID: 11400000, guid: 9a3767f9cdb56624996aa5638f771464, type: 2}
     operation: 2
     value: -1
+  - statRef: {fileID: 11400000, guid: 90a3d38c32ef82c4b97d7152fe4dcce8, type: 2}
+    operation: 2
+    value: 40
+  - statRef: {fileID: 11400000, guid: 69669869756308c4ca00de70f8f14f9e, type: 2}
+    operation: 1
+    value: 0.8
   - statRef: {fileID: 11400000, guid: d7ad82eb2df6dcc46a8e2cc881440406, type: 2}
     operation: 1
     value: 0.8
   - statRef: {fileID: 11400000, guid: c2b014f8fd3f9a942933e6d5359ae0de, type: 2}
     operation: 2
     value: 0.8
+  - statRef: {fileID: 11400000, guid: da40cab0d99e9164497e8637bf3757c3, type: 2}
+    operation: 0
+    value: 0.1
   bools: []
   materials: []
   onWishApplied:

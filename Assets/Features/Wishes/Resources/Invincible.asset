@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wish: BE INVINCIBLE
   genieCommentary: Don't mistake it for immortality though
-  modifiers:
+  stats:
   - statRef: {fileID: 11400000, guid: 7efc78f47b07b394ebf11ad392f55965, type: 2}
     operation: 0
     value: 0
@@ -23,8 +23,9 @@ MonoBehaviour:
     value: 0
   - statRef: {fileID: 11400000, guid: 1a6dd3d7097f9014bb308cdbd8e1d0ea, type: 2}
     operation: 0
-    value: -1
-  objectsToSpawn: []
+    value: -1.5
+  bools: []
+  materials: []
   onWishApplied:
     m_PersistentCalls:
       m_Calls: []

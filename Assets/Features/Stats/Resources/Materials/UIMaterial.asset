@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 219faae0057d74a4f8d990ac7a45fa3f, type: 3}
-  m_Name: HealAmount
+  m_Script: {fileID: 11500000, guid: 89c018d037bb41b98140100255065738, type: 3}
+  m_Name: UIMaterial
   m_EditorClassIdentifier: 
-  description: The amount of life regen by pickin a heal
-  min: 0
-  max: 100
-  baseValue: 30
-  value: 30
+  description: 
+  value: {fileID: 2100000, guid: ceaab6486db46594e9ec54158c79cdc5, type: 2}
