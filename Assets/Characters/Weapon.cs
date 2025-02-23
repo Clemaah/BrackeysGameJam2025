@@ -11,12 +11,17 @@ public class Weapon : MonoBehaviour
     
     protected void Start()
     {
-        weaponMesh.transform.localScale = Vector3.one;
-        scale.stat.OnValueChanged += _ => StartCoroutine(
-            Tween.To(0.5f, 
-                weaponMesh.transform.localScale, 
-                Vector3.one * scale.Get(), 
-                v => weaponMesh.transform.localScale = v, easeType: Tween.EaseType.EaseOutBack)
-            );
+        if (!gameObject.activeSelf) return;
+        weaponMesh.transform.localScale = Vector3.one * scale.Get();
+        scale.stat.OnValueChanged += _ =>
+        {
+            if (!gameObject.activeSelf)
+                StartCoroutine(
+                    Tween.To(0.5f,
+                        weaponMesh.transform.localScale,
+                        Vector3.one * scale.Get(),
+                        v => weaponMesh.transform.localScale = v, easeType: Tween.EaseType.EaseOutBack)
+                );
+        };
     }
 }

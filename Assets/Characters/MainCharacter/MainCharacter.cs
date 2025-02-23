@@ -11,6 +11,7 @@ public class MainCharacter : Character
     public BoolSO isShootInversed;
     public BoolSO isACar;
     public ProjectileLauncher projectileLauncher;
+    public ProjectileLauncher carProjectileLauncher;
 
     private bool _wantsToShoot;
 
@@ -60,7 +61,7 @@ public class MainCharacter : Character
         }
         else
         {
-            transform.rotation *= Quaternion.Euler(0, inputs.x, 0);
+            transform.rotation *= Quaternion.Euler(0, inputs.x * Time.deltaTime * 400, 0);
         }
 
         if (IsDashing) return;
@@ -72,7 +73,8 @@ public class MainCharacter : Character
         
         if (_wantsToShoot && canShoot.value)
         {
-            projectileLauncher.TryFire();
+            if(isACar.value) carProjectileLauncher.TryFire();
+            else projectileLauncher.TryFire();
         }
     }
 

@@ -18,6 +18,9 @@ MonoBehaviour:
   - statRef: {fileID: 11400000, guid: d334a4c3935328345a7e42dab7589fd0, type: 2}
     operation: 0
     value: 0.5
+  - statRef: {fileID: 11400000, guid: d7ad82eb2df6dcc46a8e2cc881440406, type: 2}
+    operation: 0
+    value: 1.2
   bools:
   - boolRef: {fileID: 11400000, guid: ff8930d455c38b140acd0bab22722315, type: 2}
     value: 1

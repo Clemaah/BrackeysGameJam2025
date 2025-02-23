@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
         _materials = Resources.LoadAll<MaterialSO>("");
         
         Time.timeScale = timeScale.Get();
+        
         timeScale.stat.OnValueChanged += newValue => Time.timeScale = newValue;
     }
 

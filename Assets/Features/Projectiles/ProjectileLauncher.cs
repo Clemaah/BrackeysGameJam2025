@@ -6,6 +6,7 @@ public class ProjectileLauncher : MonoBehaviour
 {
     private AudioSource _audioSource;
     
+    public Character character;
     public Projectile projectile;
     
     public FloatValue fireRate;
@@ -39,12 +40,9 @@ public class ProjectileLauncher : MonoBehaviour
         }
         
         // knock-back
-        if (Mathf.Abs(recoil.Get()) > 0.01f)
-        {
-            Character character = transform.parent.GetComponent<Character>();
-            if (character)
-                    character.Push(-transform.forward, recoil.Get());
-        }
+        if (Mathf.Abs(recoil.Get()) > 0.01f && character)
+            character.Push(-transform.forward, recoil.Get());
+        
         return true;
     }
 }

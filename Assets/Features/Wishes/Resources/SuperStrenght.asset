@@ -25,8 +25,8 @@ MonoBehaviour:
     operation: 2
     value: 10
   - statRef: {fileID: 11400000, guid: 9a3767f9cdb56624996aa5638f771464, type: 2}
-    operation: 0
-    value: 35
+    operation: 2
+    value: 30
   - statRef: {fileID: 11400000, guid: 90a3d38c32ef82c4b97d7152fe4dcce8, type: 2}
     operation: 2
     value: 20
@@ -38,6 +38,3 @@ MonoBehaviour:
     value: 0.8
   bools: []
   materials: []
-  onWishApplied:
-    m_PersistentCalls:
-      m_Calls: []

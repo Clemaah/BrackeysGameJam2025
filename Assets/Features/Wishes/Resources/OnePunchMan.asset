@@ -17,7 +17,7 @@ MonoBehaviour:
   stats:
   - statRef: {fileID: 11400000, guid: 4454ec8c5ee976e46a3258390cbd9042, type: 2}
     operation: 0
-    value: 200
+    value: 10000
   - statRef: {fileID: 11400000, guid: ea57cd153f8594342a7474a5b06331af, type: 2}
     operation: 0
     value: 0
@@ -32,6 +32,3 @@ MonoBehaviour:
   - boolRef: {fileID: 11400000, guid: c730eeaf7d48b254faaaa8ad258b088d, type: 2}
     value: 0
   materials: []
-  onWishApplied:
-    m_PersistentCalls:
-      m_Calls: []

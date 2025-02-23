@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wish: DODGE MY ENNEMIES
   genieCommentary: Who ate the weird muschroom ?
-  modifiers:
+  stats:
   - statRef: {fileID: 11400000, guid: 804fbbf81087acb41879905f8cdd03f2, type: 2}
     operation: 1
-    value: 0.5
+    value: 0.6
   - statRef: {fileID: 11400000, guid: d7ad82eb2df6dcc46a8e2cc881440406, type: 2}
     operation: 1
     value: 1.2
@@ -27,7 +27,5 @@ MonoBehaviour:
   - statRef: {fileID: 11400000, guid: 69669869756308c4ca00de70f8f14f9e, type: 2}
     operation: 1
     value: 0.5
-  objectsToSpawn: []
-  onWishApplied:
-    m_PersistentCalls:
-      m_Calls: []
+  bools: []
+  materials: []

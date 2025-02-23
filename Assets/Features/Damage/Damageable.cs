@@ -121,7 +121,7 @@ public class Damageable : MonoBehaviour
         _originalMaterials = new Material[_renderers.Length];
         
         for (int i = 0; i < _renderers.Length; i++) {
-            _originalMaterials[i] = _renderers[i].material;
+            if(_renderers[i].material != redMaterial) _originalMaterials[i] = _renderers[i].material;
             _renderers[i].material = redMaterial;
         }
         yield return new WaitForSeconds(0.1f);
